@@ -1,1016 +1,1406 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Flashcard Pro</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-<style>
-/* ═══════════════════════════════════════════════════
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Flashcard Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <style>
+    /* ═══════════════════════════════════════════════════
    TOKENS
 ═══════════════════════════════════════════════════ */
-:root {
-  --bg:          #080a10;
-  --bg1:         #0d1018;
-  --bg2:         #111520;
-  --bg3:         #161b2a;
-  --border:      rgba(255,255,255,0.07);
-  --border-hi:   rgba(255,255,255,0.15);
-  --accent:      #5b8dee;
-  --accent-dim:  rgba(91,141,238,0.15);
-  --accent-glow: rgba(91,141,238,0.25);
-  --green:       #3ecf8e;
-  --green-dim:   rgba(62,207,142,0.12);
-  --amber:       #f5a623;
-  --amber-dim:   rgba(245,166,35,0.12);
-  --red:         #f05252;
-  --red-dim:     rgba(240,82,82,0.12);
-  --purple:      #b57bee;
-  --purple-dim:  rgba(181,123,238,0.12);
-  --text:        #e8eaf2;
-  --text2:       #7a8099;
-  --text3:       #3d4260;
-  --sans:        'Syne', system-ui, sans-serif;
-  --serif:       'Instrument Serif', Georgia, serif;
-  --mono:        'IBM Plex Mono', monospace;
-  --r-sm:        8px;
-  --r-md:        14px;
-  --r-lg:        20px;
-  --r-xl:        28px;
-}
-*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { height:100%; }
-body {
-  min-height:100%;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--sans);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
+    :root {
+      --bg: #ffffff;
+      --bg1: #f8f9fc;
+      --bg2: #f1f3f8;
+      --bg3: #e5e8f0;
+      --border: rgba(0, 0, 0, 0.07);
+      --border-hi: rgba(0, 0, 0, 0.15);
+      --accent: #4a7de0;
+      --accent-dim: rgba(74, 125, 224, 0.15);
+      --accent-glow: rgba(74, 125, 224, 0.25);
+      --green: #2eb87a;
+      --green-dim: rgba(46, 184, 122, 0.12);
+      --amber: #e09311;
+      --amber-dim: rgba(224, 147, 17, 0.12);
+      --red: #e04040;
+      --red-dim: rgba(224, 64, 64, 0.12);
+      --purple: #a161e0;
+      --purple-dim: rgba(161, 97, 224, 0.12);
+      --text: #10121a;
+      --text2: #4c526b;
+      --text3: #7e86a0;
+      --sans: 'Syne', system-ui, sans-serif;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 20px;
+      --r-xl: 28px;
+    }
 
-/* ── Grain texture overlay ── */
-body::after {
-  content:'';
-  position:fixed; inset:0; pointer-events:none; z-index:1000;
-  opacity:.025;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:200px 200px;
-}
+    html.dark {
+      --bg: #080a10;
+      --bg1: #0d1018;
+      --bg2: #111520;
+      --bg3: #161b2a;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-hi: rgba(255, 255, 255, 0.15);
+      --accent: #5b8dee;
+      --accent-dim: rgba(91, 141, 238, 0.15);
+      --accent-glow: rgba(91, 141, 238, 0.25);
+      --green: #3ecf8e;
+      --green-dim: rgba(62, 207, 142, 0.12);
+      --amber: #f5a623;
+      --amber-dim: rgba(245, 166, 35, 0.12);
+      --red: #f05252;
+      --red-dim: rgba(240, 82, 82, 0.12);
+      --purple: #b57bee;
+      --purple-dim: rgba(181, 123, 238, 0.12);
+      --text: #e8eaf2;
+      --text2: #7a8099;
+      --text3: #3d4260;
+    }
 
-/* ── Ambient glow ── */
-#ambience {
-  position:fixed; inset:0; pointer-events:none; z-index:0;
-  background:
-    radial-gradient(ellipse 70% 50% at 85% 5%,  rgba(91,141,238,.07) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 70% at 5%  90%, rgba(181,123,238,.05) 0%, transparent 55%);
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ═══════════════════════════════════════════════════
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Grain texture overlay ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: .025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ── Ambient glow ── */
+    #ambience {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 85% 5%, rgba(91, 141, 238, .07) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 70% at 5% 90%, rgba(181, 123, 238, .05) 0%, transparent 55%);
+    }
+
+    /* ═══════════════════════════════════════════════════
    LAYOUT WRAPPERS
 ═══════════════════════════════════════════════════ */
-#view { position:relative; z-index:1; }
+    #view {
+      position: relative;
+      z-index: 1;
+    }
 
-.page {
-  min-height:100vh;
-  max-width:1080px;
-  margin:0 auto;
-  padding:32px 36px 48px;
-  display:flex;
-  flex-direction:column;
-  gap:28px;
-}
-@media(max-width:640px){ .page{ padding:18px 16px 36px; gap:20px; } }
+    .page {
+      min-height: 100vh;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 36px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
 
-/* ═══════════════════════════════════════════════════
+    @media(max-width:640px) {
+      .page {
+        padding: 18px 16px 36px;
+        gap: 20px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
    COMMON COMPONENTS
 ═══════════════════════════════════════════════════ */
-/* ── Logo ── */
-.logo {
-  font-family:var(--serif);
-  font-style:italic;
-  font-size:clamp(26px,5vw,36px);
-  color:var(--text);
-  letter-spacing:-.5px;
-  display:flex; align-items:baseline; gap:10px;
-}
-.logo em { color:var(--accent); font-style:normal; }
-.logo-tag {
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--text3);
-  font-style:normal;
-  margin-left:2px;
-  align-self:center;
-}
+    /* ── Logo ── */
+    .logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(26px, 5vw, 36px);
+      color: var(--text);
+      letter-spacing: -.5px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
 
-/* ── Header bar ── */
-.topbar {
-  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
-}
-.topbar-right { margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .logo em {
+      color: var(--accent);
+      font-style: normal;
+    }
 
-/* ── Divider ── */
-.hr { height:1px; background:var(--border); flex-shrink:0; }
+    .logo-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      font-style: normal;
+      margin-left: 2px;
+      align-self: center;
+    }
 
-/* ── Section label ── */
-.section-label {
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:2px;
-  color:var(--text3);
-  text-transform:uppercase;
-}
+    /* ── Header bar ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-/* ── Toggle pills ── */
-.toggle {
-  display:inline-flex; align-items:center; gap:5px;
-  padding:5px 12px;
-  border-radius:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:.5px;
-  cursor:pointer;
-  border:1px solid transparent;
-  transition:all .2s;
-  background:none;
-  user-select:none;
-}
-.toggle:hover { filter:brightness(1.2); }
-.toggle:active { transform:scale(.95); }
-.toggle.on  { color:var(--green);  border-color:rgba(62,207,142,.3);  background:var(--green-dim); }
-.toggle.off { color:var(--red);    border-color:rgba(240,82,82,.3);   background:var(--red-dim); }
-.toggle-dot { width:6px; height:6px; border-radius:50%; }
-.toggle.on  .toggle-dot { background:var(--green); box-shadow:0 0 6px var(--green); }
-.toggle.off .toggle-dot { background:var(--red); }
+    .topbar-right {
+      margin-left: auto;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-/* ── Back button ── */
-.back {
-  display:inline-flex; align-items:center; gap:6px;
-  padding:6px 14px;
-  border-radius:var(--r-sm);
-  border:1px solid var(--border);
-  background:none;
-  color:var(--text2);
-  font-family:var(--mono);
-  font-size:11px;
-  cursor:pointer;
-  transition:all .15s;
-}
-.back:hover { border-color:var(--border-hi); color:var(--text); }
+    /* ── Divider ── */
+    .hr {
+      height: 1px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
 
-/* ── Status bar ── */
-.status {
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--text3);
-  text-align:center;
-  min-height:18px;
-  transition:color .3s, opacity .3s;
-}
-.status.lit { color:var(--accent); }
+    /* ── Section label ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--text3);
+      text-transform: uppercase;
+    }
 
-/* ═══════════════════════════════════════════════════
+    /* ── Toggle pills ── */
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .5px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all .2s;
+      background: none;
+      user-select: none;
+    }
+
+    .toggle:hover {
+      filter: brightness(1.2);
+    }
+
+    .toggle:active {
+      transform: scale(.95);
+    }
+
+    .toggle.on {
+      color: var(--green);
+      border-color: rgba(62, 207, 142, .3);
+      background: var(--green-dim);
+    }
+
+    .toggle.off {
+      color: var(--red);
+      border-color: rgba(240, 82, 82, .3);
+      background: var(--red-dim);
+    }
+
+    .toggle-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .toggle.on .toggle-dot {
+      background: var(--green);
+      box-shadow: 0 0 6px var(--green);
+    }
+
+    .toggle.off .toggle-dot {
+      background: var(--red);
+    }
+
+    /* ── Back button ── */
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--text2);
+      font-family: var(--mono);
+      font-size: 11px;
+      cursor: pointer;
+      transition: all .15s;
+    }
+
+    .back:hover {
+      border-color: var(--border-hi);
+      color: var(--text);
+    }
+
+    /* ── Status bar ── */
+    .status {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      text-align: center;
+      min-height: 18px;
+      transition: color .3s, opacity .3s;
+    }
+
+    .status.lit {
+      color: var(--accent);
+    }
+
+    /* ═══════════════════════════════════════════════════
    HOME — SUBJECT GRID
 ═══════════════════════════════════════════════════ */
-.subject-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
-  gap:14px;
-  flex:1;
-}
-.subj-card {
-  background:var(--bg2);
-  border:1px solid var(--border);
-  border-radius:var(--r-lg);
-  padding:26px 22px 20px;
-  cursor:pointer;
-  transition:transform .2s, border-color .2s, background .2s, box-shadow .2s;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  position:relative;
-  overflow:hidden;
-}
-.subj-card::before {
-  content:'';
-  position:absolute; top:0; left:0; right:0; height:2px;
-  background:linear-gradient(90deg, var(--accent), var(--purple));
-  opacity:0; transition:opacity .2s;
-}
-.subj-card:hover { transform:translateY(-3px); border-color:var(--border-hi); box-shadow:0 8px 32px rgba(0,0,0,.4); }
-.subj-card:hover::before { opacity:1; }
-.subj-card:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-.subj-icon { font-size:32px; line-height:1; }
-.subj-name {
-  font-size:16px;
-  font-weight:700;
-  color:var(--text);
-  line-height:1.2;
-}
-.subj-count {
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--text3);
-}
-.subj-files {
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--text3);
-  margin-top:-6px;
-}
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      flex: 1;
+    }
 
-/* ── Empty state ── */
-.empty {
-  flex:1;
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  gap:18px; text-align:center;
-}
-.empty-title {
-  font-family:var(--serif);
-  font-style:italic;
-  font-size:28px;
-  color:var(--text2);
-}
-.empty-body {
-  font-size:14px;
-  color:var(--text3);
-  line-height:1.8;
-  max-width:420px;
-}
-.empty-body code {
-  font-family:var(--mono);
-  font-size:12px;
-  background:var(--bg3);
-  border:1px solid var(--border);
-  padding:2px 7px;
-  border-radius:5px;
-  color:var(--amber);
-}
+    .subj-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 26px 22px 20px;
+      cursor: pointer;
+      transition: transform .2s, border-color .2s, background .2s, box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* ── Instructions box ── */
-.instructions {
-  background:var(--bg2);
-  border:1px solid var(--border);
-  border-left:3px solid var(--accent);
-  border-radius:var(--r-md);
-  padding:20px 24px;
-  font-size:13px;
-  line-height:1.9;
-  color:var(--text2);
-}
-.instructions h3 {
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:1.5px;
-  color:var(--accent);
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-.instructions code {
-  font-family:var(--mono);
-  font-size:11px;
-  background:var(--bg3);
-  border:1px solid var(--border);
-  padding:2px 6px;
-  border-radius:4px;
-  color:var(--amber);
-}
+    .subj-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+      opacity: 0;
+      transition: opacity .2s;
+    }
 
-/* ═══════════════════════════════════════════════════
+    .subj-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-hi);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+    }
+
+    .subj-card:hover::before {
+      opacity: 1;
+    }
+
+    .subj-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .subj-icon {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .subj-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .subj-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+    }
+
+    .subj-files {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text3);
+      margin-top: -6px;
+    }
+
+    /* ── Empty state ── */
+    .empty {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .empty-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 28px;
+      color: var(--text2);
+    }
+
+    .empty-body {
+      font-size: 14px;
+      color: var(--text3);
+      line-height: 1.8;
+      max-width: 420px;
+    }
+
+    .empty-body code {
+      font-family: var(--mono);
+      font-size: 12px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 5px;
+      color: var(--amber);
+    }
+
+    /* ── Instructions box ── */
+    .instructions {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 20px 24px;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--text2);
+    }
+
+    .instructions h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .instructions code {
+      font-family: var(--mono);
+      font-size: 11px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--amber);
+    }
+
+    /* ═══════════════════════════════════════════════════
    FILE SELECT
 ═══════════════════════════════════════════════════ */
-.file-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
-  gap:12px;
-  flex:1;
-}
-.file-card {
-  background:var(--bg2);
-  border:1px solid var(--border);
-  border-radius:var(--r-md);
-  padding:20px 18px 16px;
-  cursor:pointer;
-  transition:transform .2s, border-color .2s, background .2s;
-  display:flex; flex-direction:column; gap:6px;
-}
-.file-card:hover { transform:translateY(-2px); border-color:var(--border-hi); background:var(--bg3); }
-.file-card.all-files {
-  border-color:rgba(91,141,238,.3);
-  background:var(--accent-dim);
-  grid-column:1/-1;
-  flex-direction:row;
-  align-items:center;
-  gap:16px;
-  padding:18px 22px;
-}
-.file-card.all-files:hover { border-color:rgba(91,141,238,.6); }
-.file-card.all-files .fc-name { font-size:16px; color:var(--accent); }
-.fc-icon { font-size:22px; line-height:1; }
-.fc-name { font-size:14px; font-weight:700; color:var(--text); }
-.fc-count { font-family:var(--mono); font-size:11px; color:var(--text3); }
-.fc-spacer { flex:1; }
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      flex: 1;
+    }
 
-/* ═══════════════════════════════════════════════════
+    .file-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 20px 18px 16px;
+      cursor: pointer;
+      transition: transform .2s, border-color .2s, background .2s;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .file-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hi);
+      background: var(--bg3);
+    }
+
+    .file-card.all-files {
+      border-color: rgba(91, 141, 238, .3);
+      background: var(--accent-dim);
+      grid-column: 1/-1;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 22px;
+    }
+
+    .file-card.all-files:hover {
+      border-color: rgba(91, 141, 238, .6);
+    }
+
+    .file-card.all-files .fc-name {
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .fc-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .fc-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .fc-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+    }
+
+    .fc-spacer {
+      flex: 1;
+    }
+
+    /* ═══════════════════════════════════════════════════
    FLASHCARD SCREEN
 ═══════════════════════════════════════════════════ */
-.fc-page {
-  height:100vh;
-  max-width:1080px;
-  margin:0 auto;
-  padding:20px 28px 20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  position:relative; z-index:1;
-}
-@media(max-width:640px){ .fc-page{ padding:12px 14px; gap:10px; } }
+    .fc-page {
+      height: 100vh;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 28px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ── Top bar ── */
-.fc-topbar {
-  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-  flex-shrink:0;
-}
-.subj-title {
-  font-family:var(--serif);
-  font-style:italic;
-  font-size:20px;
-  color:var(--text);
-}
-.counter {
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--text3);
-  background:var(--bg2);
-  border:1px solid var(--border);
-  padding:4px 10px;
-  border-radius:20px;
-  margin-left:auto;
-}
+    @media(max-width:640px) {
+      .fc-page {
+        padding: 12px 14px;
+        gap: 10px;
+      }
+    }
 
-/* ── Progress ── */
-.progress-track {
-  height:2px;
-  background:var(--border);
-  border-radius:1px;
-  flex-shrink:0;
-  overflow:hidden;
-}
-.progress-fill {
-  height:100%;
-  background:linear-gradient(90deg, var(--accent), var(--purple));
-  border-radius:1px;
-  transition:width .5s cubic-bezier(.4,0,.2,1);
-}
+    /* ── Top bar ── */
+    .fc-topbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
 
-/* ── Card ── */
-.card-wrap { flex:1; position:relative; min-height:0; }
+    .subj-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 20px;
+      color: var(--text);
+    }
 
-.card {
-  position:absolute; inset:0;
-  border-radius:var(--r-xl);
-  border:1px solid var(--border);
-  display:flex; flex-direction:column;
-  cursor:pointer;
-  overflow:hidden;
-  transition:background .3s, border-color .3s, box-shadow .3s;
-  background:var(--bg2);
-}
-.card:hover { border-color:var(--border-hi); box-shadow:0 4px 40px rgba(0,0,0,.5); }
-.card.is-back { background:var(--bg1); }
+    .counter {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-left: auto;
+    }
 
-.card-stripe {
-  height:3px;
-  flex-shrink:0;
-  transition:background .3s;
-}
-.card.is-front .card-stripe { background:linear-gradient(90deg, var(--accent), var(--purple)); }
-.card.is-back  .card-stripe { background:linear-gradient(90deg, var(--green), var(--accent)); }
+    /* ── Progress ── */
+    .progress-track {
+      height: 2px;
+      background: var(--border);
+      border-radius: 1px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
 
-.card-label {
-  font-family:var(--mono);
-  font-size:9px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  padding:12px 24px 0;
-  flex-shrink:0;
-  transition:color .3s;
-}
-.card.is-front .card-label { color:rgba(91,141,238,.5); }
-.card.is-back  .card-label { color:rgba(62,207,142,.5); }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+      border-radius: 1px;
+      transition: width .5s cubic-bezier(.4, 0, .2, 1);
+    }
 
-.card-body {
-  flex:1;
-  overflow-y:auto;
-  padding:16px 36px 28px;
-  display:flex;
-  flex-direction:column;
-  gap:0;
-  scrollbar-width:thin;
-  scrollbar-color:var(--border) transparent;
-}
-@media(max-width:640px){ .card-body{ padding:12px 18px 20px; } }
+    /* ── Card ── */
+    .card-wrap {
+      flex: 1;
+      position: relative;
+      min-height: 0;
+    }
 
-.card-q-preview {
-  font-size:13px;
-  color:var(--text3);
-  line-height:1.6;
-  padding-bottom:14px;
-  border-bottom:1px solid var(--border);
-  margin-bottom:16px;
-  flex-shrink:0;
-}
-.card-back-label {
-  font-family:var(--mono);
-  font-size:9px;
-  letter-spacing:2.5px;
-  color:rgba(62,207,142,.45);
-  text-transform:uppercase;
-  margin-bottom:10px;
-  flex-shrink:0;
-}
+    .card {
+      position: absolute;
+      inset: 0;
+      border-radius: var(--r-xl);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background .3s, border-color .3s, box-shadow .3s;
+      background: var(--bg2);
+    }
 
-.card-text {
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  font-family:var(--serif);
-  font-size:clamp(17px,3.5vw,24px);
-  line-height:1.65;
-  color:var(--text);
-  min-height:80px;
-}
-.card-text.left-align {
-  text-align:left;
-  align-items:flex-start;
-  font-size:clamp(15px,3vw,20px);
-}
+    .card:hover {
+      border-color: var(--border-hi);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, .5);
+    }
 
-/* KaTeX */
-.katex { color:var(--amber) !important; font-size:1.05em !important; }
-.katex-display { margin:.5em 0 !important; }
+    .card.is-back {
+      background: var(--bg1);
+    }
 
-/* ── Flip animation ── */
-@keyframes flip-out { 0%{transform:rotateY(0) scale(1)} 50%{transform:rotateY(90deg) scale(.96)} 100%{transform:rotateY(0) scale(1)} }
-.card.flipping { animation:flip-out .4s cubic-bezier(.4,0,.2,1); }
+    .card-stripe {
+      height: 3px;
+      flex-shrink: 0;
+      transition: background .3s;
+    }
 
-/* ── TTS waveform indicator ── */
-.tts-indicator {
-  position:absolute;
-  top:14px; right:18px;
-  display:flex; align-items:flex-end; gap:3px;
-  height:16px;
-  opacity:0;
-  transition:opacity .3s;
-}
-.tts-indicator.active { opacity:1; }
-.tts-bar {
-  width:3px;
-  border-radius:2px;
-  background:var(--accent);
-  animation:wave 1.2s ease-in-out infinite;
-}
-.tts-bar:nth-child(1){height:6px;animation-delay:0s}
-.tts-bar:nth-child(2){height:12px;animation-delay:.1s}
-.tts-bar:nth-child(3){height:9px;animation-delay:.2s}
-.tts-bar:nth-child(4){height:14px;animation-delay:.05s}
-.tts-bar:nth-child(5){height:7px;animation-delay:.15s}
-@keyframes wave {
-  0%,100%{transform:scaleY(.5);opacity:.6}
-  50%{transform:scaleY(1);opacity:1}
-}
+    .card.is-front .card-stripe {
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+    }
 
-/* ── Buttons ── */
-.btn-row {
-  display:flex; gap:8px; align-items:stretch;
-  flex-shrink:0;
-}
-.btn {
-  border:none;
-  border-radius:var(--r-md);
-  padding:12px 16px;
-  font-family:var(--sans);
-  font-size:13px;
-  font-weight:700;
-  cursor:pointer;
-  transition:filter .15s, transform .1s, box-shadow .15s;
-  display:flex; align-items:center; justify-content:center; gap:6px;
-  white-space:nowrap;
-  user-select:none;
-}
-.btn:hover   { filter:brightness(1.1); }
-.btn:active  { transform:scale(.95); }
+    .card.is-back .card-stripe {
+      background: linear-gradient(90deg, var(--green), var(--accent));
+    }
 
-.btn-flip {
-  flex:1;
-  background:var(--accent);
-  color:#050710;
-  box-shadow:0 2px 16px rgba(91,141,238,.3);
-}
-.btn-flip:hover { box-shadow:0 4px 24px rgba(91,141,238,.45); }
-.btn-nav {
-  background:var(--bg3);
-  color:var(--text2);
-  border:1px solid var(--border);
-  min-width:80px;
-}
-.btn-shuf {
-  background:var(--amber-dim);
-  color:var(--amber);
-  border:1px solid rgba(245,166,35,.25);
-  padding:12px 14px;
-}
-.btn-auto {
-  padding:12px 16px;
-  border:1px solid transparent;
-}
-.btn-auto.idle    { background:var(--purple-dim); color:var(--purple); border-color:rgba(181,123,238,.25); }
-.btn-auto.playing { background:var(--green-dim);  color:var(--green);  border-color:rgba(62,207,142,.3); }
+    .card-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 12px 24px 0;
+      flex-shrink: 0;
+      transition: color .3s;
+    }
 
-@media(max-width:480px){
-  .btn { padding:10px 12px; font-size:12px; }
-  .btn-flip { flex:2; }
-  .btn-nav span { display:none; }
-}
+    .card.is-front .card-label {
+      color: rgba(91, 141, 238, .5);
+    }
 
-/* ── Voice help ── */
-.voice-help {
-  background:var(--bg2);
-  border:1px solid var(--border);
-  border-radius:var(--r-sm);
-  padding:8px 14px;
-  display:flex; flex-wrap:wrap; gap:4px 18px;
-  align-items:center;
-  flex-shrink:0;
-}
-.vh-item { display:flex; gap:5px; align-items:center; font-size:11px; }
-.vh-key  { font-family:var(--mono); color:var(--amber); font-weight:500; }
-.vh-val  { color:var(--text3); }
+    .card.is-back .card-label {
+      color: rgba(62, 207, 142, .5);
+    }
 
-/* ── Reading progress ring (tiny, in counter area) ── */
-.speaking-ring {
-  display:inline-flex; align-items:center; gap:5px;
-  font-family:var(--mono); font-size:10px; color:var(--accent);
-  opacity:0; transition:opacity .3s;
-}
-.speaking-ring.active { opacity:1; }
+    .card-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
 
-/* ═══════════════════════════════════════════════════
+    @media(max-width:640px) {
+      .card-body {
+        padding: 12px 18px 20px;
+      }
+    }
+
+    .card-q-preview {
+      font-size: 13px;
+      color: var(--text3);
+      line-height: 1.6;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .card-back-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      color: rgba(62, 207, 142, .45);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .card-text {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: clamp(17px, 3.5vw, 24px);
+      line-height: 1.65;
+      color: var(--text);
+      min-height: 80px;
+    }
+
+    .card-text.left-align {
+      text-align: left;
+      align-items: flex-start;
+      font-size: clamp(15px, 3vw, 20px);
+    }
+
+    /* KaTeX */
+    .katex {
+      color: var(--amber) !important;
+      font-size: 1.05em !important;
+    }
+
+    .katex-display {
+      margin: .5em 0 !important;
+    }
+
+    /* ── Flip animation ── */
+    @keyframes flip-out {
+      0% {
+        transform: rotateY(0) scale(1)
+      }
+
+      50% {
+        transform: rotateY(90deg) scale(.96)
+      }
+
+      100% {
+        transform: rotateY(0) scale(1)
+      }
+    }
+
+    .card.flipping {
+      animation: flip-out .4s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* ── TTS waveform indicator ── */
+    .tts-indicator {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 16px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .tts-indicator.active {
+      opacity: 1;
+    }
+
+    .tts-bar {
+      width: 3px;
+      border-radius: 2px;
+      background: var(--accent);
+      animation: wave 1.2s ease-in-out infinite;
+    }
+
+    .tts-bar:nth-child(1) {
+      height: 6px;
+      animation-delay: 0s
+    }
+
+    .tts-bar:nth-child(2) {
+      height: 12px;
+      animation-delay: .1s
+    }
+
+    .tts-bar:nth-child(3) {
+      height: 9px;
+      animation-delay: .2s
+    }
+
+    .tts-bar:nth-child(4) {
+      height: 14px;
+      animation-delay: .05s
+    }
+
+    .tts-bar:nth-child(5) {
+      height: 7px;
+      animation-delay: .15s
+    }
+
+    @keyframes wave {
+
+      0%,
+      100% {
+        transform: scaleY(.5);
+        opacity: .6
+      }
+
+      50% {
+        transform: scaleY(1);
+        opacity: 1
+      }
+    }
+
+    /* ── Buttons ── */
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      border: none;
+      border-radius: var(--r-md);
+      padding: 12px 16px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: filter .15s, transform .1s, box-shadow .15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn:active {
+      transform: scale(.95);
+    }
+
+    .btn-flip {
+      flex: 1;
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 2px 16px var(--accent-dim);
+    }
+
+    .btn-flip:hover {
+      box-shadow: 0 4px 24px var(--accent-glow);
+      filter: brightness(1.1);
+    }
+
+    .btn-nav {
+      background: var(--bg3);
+      color: var(--text2);
+      border: 1px solid var(--border);
+      min-width: 80px;
+    }
+
+    .btn-shuf {
+      background: var(--amber-dim);
+      color: var(--amber);
+      border: 1px solid rgba(245, 166, 35, .25);
+      padding: 12px 14px;
+    }
+
+    .btn-auto {
+      padding: 12px 16px;
+      border: 1px solid transparent;
+    }
+
+    .btn-auto.idle {
+      background: var(--purple-dim);
+      color: var(--purple);
+      border-color: rgba(181, 123, 238, .25);
+    }
+
+    .btn-auto.playing {
+      background: var(--green-dim);
+      color: var(--green);
+      border-color: rgba(62, 207, 142, .3);
+    }
+
+    @media(max-width:480px) {
+      .btn {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .btn-flip {
+        flex: 2;
+      }
+
+      .btn-nav span {
+        display: none;
+      }
+    }
+
+    /* ── Voice help ── */
+    .voice-help {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 8px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .vh-item {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-size: 11px;
+    }
+
+    .vh-key {
+      font-family: var(--mono);
+      color: var(--amber);
+      font-weight: 500;
+    }
+
+    .vh-val {
+      color: var(--text3);
+    }
+
+    /* ── Reading progress ring (tiny, in counter area) ── */
+    .speaking-ring {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .speaking-ring.active {
+      opacity: 1;
+    }
+
+    /* ═══════════════════════════════════════════════════
    CONFETTI
 ═══════════════════════════════════════════════════ */
-.conf {
-  position:fixed;
-  width:7px; height:7px;
-  border-radius:2px;
-  pointer-events:none;
-  z-index:9999;
-  animation:conffall linear forwards;
-}
-@keyframes conffall {
-  0%   { transform:translateY(-20px) rotate(0deg);   opacity:1; }
-  100% { transform:translateY(110vh) rotate(540deg); opacity:0; }
-}
+    .conf {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 9999;
+      animation: conffall linear forwards;
+    }
 
-/* ═══════════════════════════════════════════════════
+    @keyframes conffall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(540deg);
+        opacity: 0;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
    VOICE PERMISSION TOAST
 ═══════════════════════════════════════════════════ */
-.toast {
-  position:fixed; bottom:32px; left:50%; transform:translateX(-50%);
-  background:var(--bg3); border:1px solid var(--border-hi);
-  border-radius:var(--r-md); padding:12px 20px;
-  font-size:12px; color:var(--text2);
-  z-index:500; white-space:nowrap;
-  animation:toastIn .3s ease;
-  pointer-events:none;
-}
-@keyframes toastIn { from{opacity:0;transform:translateX(-50%) translateY(10px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg3);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--r-md);
+      padding: 12px 20px;
+      font-size: 12px;
+      color: var(--text2);
+      z-index: 500;
+      white-space: nowrap;
+      animation: toastIn .3s ease;
+      pointer-events: none;
+    }
 
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width:4px; height:4px; }
-::-webkit-scrollbar-track { background:transparent; }
-::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
-</style>
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0)
+      }
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+  </style>
 </head>
+
 <body>
-<div id="ambience"></div>
-<div id="view"></div>
+  <div id="ambience"></div>
+  <div id="view"></div>
 
-<script>
-/* ═══════════════════════════════════════════════════════════════════════════
-   STATE
-═══════════════════════════════════════════════════════════════════════════ */
-const S = {
-  subjects:     {},   // { subjectName: [{front,back},...] }
-  subjectMeta:  {},   // { subjectName: { files:[{name,cards:[]}], total:n } }
-  subject:      null, // current subject name
-  cards:        [],   // current card list
-  idx:          0,
-  front:        true,
-  listening:    false,
-  reading:      true,
-  auto:         false,
-  speaking:     false,
-  ttsVoice:     null,
-  recog:        null,
-  statusTimer:  null,
-  autoRunning:  false,
-};
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   TTS — smart voice selection
-═══════════════════════════════════════════════════════════════════════════ */
-const synth = window.speechSynthesis;
-
-// Voice priority list — we pick the first match found on the device
-const VOICE_PREFS = [
-  // Microsoft neural (Windows / Edge)
-  'Microsoft Aria Online (Natural)',
-  'Microsoft Jenny Online (Natural)',
-  'Microsoft Guy Online (Natural)',
-  'Microsoft Zira - English (United States)',
-  // Google (Android / Chrome)
-  'Google US English',
-  'Google UK English Female',
-  // Apple (macOS / iOS)
-  'Samantha',
-  'Karen',
-  // Generic fallbacks
-  'en-US',
-];
-
-function pickVoice() {
-  const voices = synth.getVoices();
-  if (!voices.length) return null;
-
-  // Try exact name match first
-  for (const pref of VOICE_PREFS) {
-    const v = voices.find(v => v.name === pref);
-    if (v) return v;
-  }
-  // Try en-US female
-  const enUS = voices.filter(v => v.lang.startsWith('en-US'));
-  const female = enUS.find(v => /female|woman|aria|jenny|samantha|karen|zira|ava/i.test(v.name));
-  if (female) return female;
-  // Any en-US
-  if (enUS.length) return enUS[0];
-  // Any English
-  const en = voices.find(v => v.lang.startsWith('en'));
-  return en || voices[0] || null;
-}
-
-function initVoice() {
-  if (!synth) return;
-  S.ttsVoice = pickVoice();
-  synth.onvoiceschanged = () => { S.ttsVoice = pickVoice(); };
-}
-
-function speak(text, onEnd) {
-  if (!synth || !S.reading) { onEnd && onEnd(); return; }
-  synth.cancel();
-  const utt = new SpeechSynthesisUtterance(latexToSpeech(text));
-  if (S.ttsVoice) utt.voice = S.ttsVoice;
-  utt.rate  = 0.92;  // slightly slower = more natural
-  utt.pitch = 1.0;
-  utt.volume = 1.0;
-  utt.lang = 'en-US';
-  S.speaking = true;
-  ttsIndicator(true);
-  utt.onend = utt.onerror = () => {
-    S.speaking = false;
-    ttsIndicator(false);
-    onEnd && onEnd();
-  };
-  synth.speak(utt);
-}
-
-function stopSpeech() {
-  if (synth) synth.cancel();
-  S.speaking = false;
-  ttsIndicator(false);
-}
-
-function ttsIndicator(on) {
-  const el = document.getElementById('tts-ind');
-  if (el) el.classList.toggle('active', on);
-  const ring = document.getElementById('speaking-ring');
-  if (ring) ring.classList.toggle('active', on);
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   LaTeX → speech
-═══════════════════════════════════════════════════════════════════════════ */
-function latexToSpeech(t) {
-  t = t.replace(/\$\$([^$]+)\$\$/g, ' $1 ').replace(/\$([^$]+)\$/g, ' $1 ');
-  const rules = [
-    [/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1 over $2'],
-    [/\\sqrt\{([^}]+)\}/g, 'square root of $1'],
-    [/\\sqrt/g, 'square root'],
-    [/\\infty/g,'infinity'], [/\\pi/g,'pi'], [/\\theta/g,'theta'],
-    [/\\alpha/g,'alpha'],   [/\\beta/g,'beta'],   [/\\gamma/g,'gamma'],
-    [/\\delta/g,'delta'],   [/\\epsilon/g,'epsilon'], [/\\lambda/g,'lambda'],
-    [/\\mu/g,'mu'],         [/\\sigma/g,'sigma'],  [/\\omega/g,'omega'],
-    [/\\times/g,'times'],   [/\\cdot/g,'dot'],    [/\\pm/g,'plus or minus'],
-    [/\\leq/g,'less than or equal to'], [/\\geq/g,'greater than or equal to'],
-    [/\\neq/g,'not equal to'],  [/\\approx/g,'approximately'],
-    [/\\rightarrow/g,'becomes'],[/\\leftarrow/g,'from'],
-    [/\\sin/g,'sine'],  [/\\cos/g,'cosine'],  [/\\tan/g,'tangent'],
-    [/\\log/g,'log'],   [/\\ln/g,'natural log'], [/\\lim/g,'limit'],
-    [/\\int/g,'integral of'], [/\\sum/g,'sum of'], [/\\prod/g,'product of'],
-    [/\^{([^}]+)}/g,'to the power of $1'], [/\^(\w)/g,'to the $1'],
-    [/_{([^}]+)}/g,'sub $1'], [/_(\w)/g,'sub $1'],
-    [/\\left|\\right/g,''], [/\\[a-zA-Z]+/g,''], [/[{}|]/g,''],
-  ];
-  for (const [p,r] of rules) t = t.replace(p, r);
-  return t.replace(/\s+/g,' ').trim();
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   VOICE RECOGNITION
-═══════════════════════════════════════════════════════════════════════════ */
-function startListening() {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) { toast('Voice recognition not supported in this browser'); return; }
-  try {
-    S.recog = new SR();
-    S.recog.continuous = true;
-    S.recog.interimResults = false;
-    S.recog.lang = 'en-US';
-    S.recog.onresult = e => {
-      const t = e.results[e.results.length-1][0].transcript.toLowerCase().trim();
-      console.log('[Voice]', t);
-      handleVoice(t);
+  <script>
+    /* ═══════════════════════════════════════════════════════════════════════════
+       STATE
+    ═══════════════════════════════════════════════════════════════════════════ */
+    const S = {
+      subjects: {},   // { subjectName: [{front,back},...] }
+      subjectMeta: {},   // { subjectName: { files:[{name,cards:[]}], total:n } }
+      subject: null, // current subject name
+      cards: [],   // current card list
+      idx: 0,
+      front: true,
+      listening: false,
+      reading: true,
+      auto: false,
+      speaking: false,
+      ttsVoice: null,
+      recog: null,
+      statusTimer: null,
+      autoRunning: false,
+      autoDelaySec: 2,
+      themeDark: false,
     };
-    S.recog.onerror = err => {
-      if (err.error === 'no-speech') return;
-      if (err.error === 'not-allowed') {
-        toast('Microphone permission denied');
-        S.listening = false;
-        refreshToggles();
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       TTS — smart voice selection
+    ═══════════════════════════════════════════════════════════════════════════ */
+    const synth = window.speechSynthesis;
+
+    // Voice priority list — we pick the first match found on the device
+    const VOICE_PREFS = [
+      // Microsoft neural (Windows / Edge)
+      'Microsoft Aria Online (Natural)',
+      'Microsoft Jenny Online (Natural)',
+      'Microsoft Guy Online (Natural)',
+      'Microsoft Zira - English (United States)',
+      // Google (Android / Chrome)
+      'Google US English',
+      'Google UK English Female',
+      // Apple (macOS / iOS)
+      'Samantha',
+      'Karen',
+      // Generic fallbacks
+      'en-US',
+    ];
+
+    function pickVoice() {
+      const voices = synth.getVoices();
+      if (!voices.length) return null;
+
+      // Try exact name match first
+      for (const pref of VOICE_PREFS) {
+        const v = voices.find(v => v.name === pref);
+        if (v) return v;
       }
-    };
-    S.recog.onend = () => {
-      if (S.listening) setTimeout(() => { try { S.recog.start(); } catch(e){} }, 400);
-    };
-    S.recog.start();
-    S.listening = true;
-  } catch(e) { console.error(e); S.listening = false; }
-}
-
-function stopListening() {
-  if (S.recog) { try { S.recog.stop(); } catch(e){} }
-  S.listening = false;
-}
-
-const CMDS = {
-  flip:    ['flip','turn','reveal','show answer','answer','over','other side','opposite','back'],
-  next:    ['next','forward','skip','go ahead','ahead','continue'],
-  prev:    ['previous','prev','go back','before','last','prior','back up'],
-  shuffle: ['shuffle','random','mix','jumble','randomize'],
-  home:    ['home','menu','exit','subjects','go home'],
-  stop:    ['stop','quiet','silence','mute','hush'],
-  read:    ['read','speak','say it','again','repeat','read again'],
-  auto:    ['auto','autoplay','auto play','play','pause','automatic'],
-};
-
-function handleVoice(cmd) {
-  setStatus(`🎤 "${cmd}"`, 2500);
-  if (!S.subject) {
-    // Home screen — open subject by fuzzy name match
-    for (const name of Object.keys(S.subjects)) {
-      const n = name.toLowerCase();
-      if (cmd.includes(n) || n.includes(cmd)) { openSubject(name); return; }
+      // Try en-US female
+      const enUS = voices.filter(v => v.lang.startsWith('en-US'));
+      const female = enUS.find(v => /female|woman|aria|jenny|samantha|karen|zira|ava/i.test(v.name));
+      if (female) return female;
+      // Any en-US
+      if (enUS.length) return enUS[0];
+      // Any English
+      const en = voices.find(v => v.lang.startsWith('en'));
+      return en || voices[0] || null;
     }
-    return;
-  }
-  if (CMDS.flip.some(w => cmd.includes(w)))    { flipCard(); return; }
-  if (CMDS.next.some(w => cmd.includes(w)))    { nextCard(); return; }
-  if (CMDS.prev.some(w => cmd.includes(w)))    { prevCard(); return; }
-  if (CMDS.shuffle.some(w => cmd.includes(w))) { shuffleCards(); return; }
-  if (CMDS.home.some(w => cmd.includes(w)))    { goHome(); return; }
-  if (CMDS.stop.some(w => cmd.includes(w)))    { stopSpeech(); cancelAuto(); return; }
-  if (CMDS.read.some(w => cmd.includes(w)))    { speak(cardText()); return; }
-  if (CMDS.auto.some(w => cmd.includes(w)))    { toggleAuto(); return; }
-}
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   CSV LOADING — fetch from subjects/ folder
-═══════════════════════════════════════════════════════════════════════════ */
-/* manifest.json expected at subjects/manifest.json, listing subject folders.
-   Falls back to a hardcoded attempt if not found. */
+    function initVoice() {
+      if (!synth) return;
+      S.ttsVoice = pickVoice();
+      synth.onvoiceschanged = () => { S.ttsVoice = pickVoice(); };
+    }
 
-async function loadSubjectsFromServer() {
-  try {
-    // Try manifest first
-    const mResp = await fetch('subjects/manifest.json');
-    if (mResp.ok) {
-      const manifest = await mResp.json();
-      // manifest: { "Subject Name": ["file1.csv","file2.csv"], ... }
-      for (const [subj, files] of Object.entries(manifest)) {
-        S.subjects[subj] = [];
-        S.subjectMeta[subj] = { files:[], total:0 };
-        for (const fname of files) {
-          try {
-            const r = await fetch(`subjects/${encodeURIComponent(subj)}/${encodeURIComponent(fname)}`);
-            if (!r.ok) continue;
-            const text = await r.text();
-            const cards = parseCSV(text);
-            S.subjects[subj].push(...cards);
-            S.subjectMeta[subj].files.push({ name: fname, cards });
-            S.subjectMeta[subj].total += cards.length;
-          } catch(e) { console.warn('Could not load', fname, e); }
+    function speak(text, onEnd) {
+      if (!synth || !S.reading) { onEnd && onEnd(); return; }
+      synth.cancel();
+      const utt = new SpeechSynthesisUtterance(latexToSpeech(text));
+      if (S.ttsVoice) utt.voice = S.ttsVoice;
+      utt.rate = 0.92;  // slightly slower = more natural
+      utt.pitch = 1.0;
+      utt.volume = 1.0;
+      utt.lang = 'en-US';
+      S.speaking = true;
+      ttsIndicator(true);
+      utt.onend = utt.onerror = () => {
+        S.speaking = false;
+        ttsIndicator(false);
+        onEnd && onEnd();
+      };
+      synth.speak(utt);
+    }
+
+    function stopSpeech() {
+      if (synth) synth.cancel();
+      S.speaking = false;
+      ttsIndicator(false);
+    }
+
+    function ttsIndicator(on) {
+      const el = document.getElementById('tts-ind');
+      if (el) el.classList.toggle('active', on);
+      const ring = document.getElementById('speaking-ring');
+      if (ring) ring.classList.toggle('active', on);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       LaTeX → speech
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function latexToSpeech(t) {
+      t = t.replace(/\$\$([^$]+)\$\$/g, ' $1 ').replace(/\$([^$]+)\$/g, ' $1 ');
+      const rules = [
+        [/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1 over $2'],
+        [/\\sqrt\{([^}]+)\}/g, 'square root of $1'],
+        [/\\sqrt/g, 'square root'],
+        [/\\infty/g, 'infinity'], [/\\pi/g, 'pi'], [/\\theta/g, 'theta'],
+        [/\\alpha/g, 'alpha'], [/\\beta/g, 'beta'], [/\\gamma/g, 'gamma'],
+        [/\\delta/g, 'delta'], [/\\epsilon/g, 'epsilon'], [/\\lambda/g, 'lambda'],
+        [/\\mu/g, 'mu'], [/\\sigma/g, 'sigma'], [/\\omega/g, 'omega'],
+        [/\\times/g, 'times'], [/\\cdot/g, 'dot'], [/\\pm/g, 'plus or minus'],
+        [/\\leq/g, 'less than or equal to'], [/\\geq/g, 'greater than or equal to'],
+        [/\\neq/g, 'not equal to'], [/\\approx/g, 'approximately'],
+        [/\\rightarrow/g, 'becomes'], [/\\leftarrow/g, 'from'],
+        [/\\sin/g, 'sine'], [/\\cos/g, 'cosine'], [/\\tan/g, 'tangent'],
+        [/\\log/g, 'log'], [/\\ln/g, 'natural log'], [/\\lim/g, 'limit'],
+        [/\\int/g, 'integral of'], [/\\sum/g, 'sum of'], [/\\prod/g, 'product of'],
+        [/\^{([^}]+)}/g, 'to the power of $1'], [/\^(\w)/g, 'to the $1'],
+        [/_{([^}]+)}/g, 'sub $1'], [/_(\w)/g, 'sub $1'],
+        [/\\left|\\right/g, ''], [/\\[a-zA-Z]+/g, ''], [/[{}|]/g, ''],
+      ];
+      for (const [p, r] of rules) t = t.replace(p, r);
+      return t.replace(/\s+/g, ' ').trim();
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       VOICE RECOGNITION
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function startListening() {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) { toast('Voice recognition not supported in this browser'); return; }
+      try {
+        S.recog = new SR();
+        S.recog.continuous = true;
+        S.recog.interimResults = false;
+        S.recog.lang = 'en-US';
+        S.recog.onresult = e => {
+          const t = e.results[e.results.length - 1][0].transcript.toLowerCase().trim();
+          console.log('[Voice]', t);
+          handleVoice(t);
+        };
+        S.recog.onerror = err => {
+          if (err.error === 'no-speech') return;
+          if (err.error === 'not-allowed') {
+            toast('Microphone permission denied');
+            S.listening = false;
+            refreshToggles();
+          }
+        };
+        S.recog.onend = () => {
+          if (S.listening) setTimeout(() => { try { S.recog.start(); } catch (e) { } }, 400);
+        };
+        S.recog.start();
+        S.listening = true;
+      } catch (e) { console.error(e); S.listening = false; }
+    }
+
+    function stopListening() {
+      if (S.recog) { try { S.recog.stop(); } catch (e) { } }
+      S.listening = false;
+    }
+
+    const CMDS = {
+      flip: ['flip', 'turn', 'reveal', 'show answer', 'answer', 'over', 'other side', 'opposite', 'back'],
+      next: ['next', 'forward', 'skip', 'go ahead', 'ahead', 'continue'],
+      prev: ['previous', 'prev', 'go back', 'before', 'last', 'prior', 'back up'],
+      shuffle: ['shuffle', 'random', 'mix', 'jumble', 'randomize'],
+      home: ['home', 'menu', 'exit', 'subjects', 'go home'],
+      stop: ['stop', 'quiet', 'silence', 'mute', 'hush'],
+      read: ['read', 'speak', 'say it', 'again', 'repeat', 'read again'],
+      auto: ['auto', 'autoplay', 'auto play', 'play', 'pause', 'automatic'],
+    };
+
+    function handleVoice(cmd) {
+      setStatus(`🎤 "${cmd}"`, 2500);
+      if (!S.subject) {
+        // Home screen — open subject by fuzzy name match
+        for (const name of Object.keys(S.subjects)) {
+          const n = name.toLowerCase();
+          if (cmd.includes(n) || n.includes(cmd)) { openSubject(name); return; }
         }
-        if (!S.subjects[subj].length) delete S.subjects[subj];
+        return;
       }
-      return true;
+      if (CMDS.flip.some(w => cmd.includes(w))) { flipCard(); return; }
+      if (CMDS.next.some(w => cmd.includes(w))) { nextCard(); return; }
+      if (CMDS.prev.some(w => cmd.includes(w))) { prevCard(); return; }
+      if (CMDS.shuffle.some(w => cmd.includes(w))) { shuffleCards(); return; }
+      if (CMDS.home.some(w => cmd.includes(w))) { goHome(); return; }
+      if (CMDS.stop.some(w => cmd.includes(w))) { stopSpeech(); cancelAuto(); return; }
+      if (CMDS.read.some(w => cmd.includes(w))) { speak(cardText()); return; }
+      if (CMDS.auto.some(w => cmd.includes(w))) { toggleAuto(); return; }
     }
-  } catch(e) {}
-  return false;
-}
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   CSV PARSER
-═══════════════════════════════════════════════════════════════════════════ */
-function parseCSV(raw) {
-  const lines = raw.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n');
-  const nonEmpty = lines.filter(l => l.trim());
-  if (!nonEmpty.length) return [];
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CSV LOADING — fetch from subjects/ folder
+    ═══════════════════════════════════════════════════════════════════════════ */
+    /* manifest.json expected at subjects/manifest.json, listing subject folders.
+       Falls back to a hardcoded attempt if not found. */
 
-  const header = csvSplit(nonEmpty[0]).map(h => h.trim().replace(/^["']|["']$/g,'').toLowerCase());
-  const FRONT_KEYS = ['front','question','term','concept','q'];
-  const BACK_KEYS  = ['back','answer','definition','explanation','a'];
-  let fi = header.findIndex(h => FRONT_KEYS.includes(h));
-  let bi = header.findIndex(h => BACK_KEYS.includes(h));
-  if (fi < 0) fi = 0;
-  if (bi < 0) bi = fi === 0 ? 1 : 0;
-
-  const cards = [];
-  for (let i = 1; i < nonEmpty.length; i++) {
-    const cols = csvSplit(nonEmpty[i]);
-    const f = (cols[fi]||'').trim().replace(/^["']|["']$/g,'');
-    const b = (cols[bi]||'').trim().replace(/^["']|["']$/g,'');
-    if (f || b) cards.push({ front:f, back:b });
-  }
-  return cards;
-}
-
-function csvSplit(line) {
-  const cols = []; let cur = ''; let inQ = false; let qc = '';
-  for (let i = 0; i < line.length; i++) {
-    const c = line[i];
-    if (!inQ && (c==='"'||c==="'")) { inQ=true; qc=c; }
-    else if (inQ && c===qc) { inQ=false; }
-    else if (!inQ && c===',') { cols.push(cur); cur=''; }
-    else { cur+=c; }
-  }
-  cols.push(cur);
-  return cols;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   UTILITIES
-═══════════════════════════════════════════════════════════════════════════ */
-function esc(s) {
-  return String(s)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-}
-
-const ICONS = ['◈','⬡','◇','⬠','△','◉','⬟','◎','⬢','▷','◈','⬣'];
-function iconFor(n) {
-  let h=0; for (const c of n) h=(h*31+c.charCodeAt(0))>>>0;
-  return ICONS[h%ICONS.length];
-}
-
-function setStatus(msg, dur=3500) {
-  const el = document.getElementById('status');
-  if (!el) return;
-  el.textContent = msg;
-  el.className = 'status lit';
-  clearTimeout(S.statusTimer);
-  S.statusTimer = setTimeout(() => {
-    if (el) {
-      el.textContent = S.listening ? '🎤 Listening…' : '';
-      el.className = 'status';
+    async function loadSubjectsFromServer() {
+      try {
+        // Try manifest first
+        const mResp = await fetch('subjects/manifest.json');
+        if (mResp.ok) {
+          const manifest = await mResp.json();
+          // manifest: { "Subject Name": ["file1.csv","file2.csv"], ... }
+          for (const [subj, files] of Object.entries(manifest)) {
+            S.subjects[subj] = [];
+            S.subjectMeta[subj] = { files: [], total: 0 };
+            for (const fname of files) {
+              try {
+                const r = await fetch(`subjects/${encodeURIComponent(subj)}/${encodeURIComponent(fname)}`);
+                if (!r.ok) continue;
+                const text = await r.text();
+                const cards = parseCSV(text);
+                S.subjects[subj].push(...cards);
+                S.subjectMeta[subj].files.push({ name: fname, cards });
+                S.subjectMeta[subj].total += cards.length;
+              } catch (e) { console.warn('Could not load', fname, e); }
+            }
+            if (!S.subjects[subj].length) delete S.subjects[subj];
+          }
+          return true;
+        }
+      } catch (e) { }
+      return false;
     }
-  }, dur);
-}
 
-function toast(msg, dur=3500) {
-  const el = document.createElement('div');
-  el.className = 'toast';
-  el.textContent = msg;
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), dur);
-}
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CSV PARSER
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function parseCSV(raw) {
+      const lines = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
+      const nonEmpty = lines.filter(l => l.trim());
+      if (!nonEmpty.length) return [];
 
-function refreshToggles() {
-  const vt = document.getElementById('vtoggle');
-  const rt = document.getElementById('rtoggle');
-  if (vt) {
-    vt.className = `toggle ${S.listening?'on':'off'}`;
-    vt.innerHTML = `<span class="toggle-dot"></span>VOICE ${S.listening?'ON':'OFF'}`;
-  }
-  if (rt) {
-    rt.className = `toggle ${S.reading?'on':'off'}`;
-    rt.innerHTML = `<span class="toggle-dot"></span>READ ${S.reading?'ON':'OFF'}`;
-  }
-}
+      const header = csvSplit(nonEmpty[0]).map(h => h.trim().replace(/^["']|["']$/g, '').toLowerCase());
+      const FRONT_KEYS = ['front', 'question', 'term', 'concept', 'q'];
+      const BACK_KEYS = ['back', 'answer', 'definition', 'explanation', 'a'];
+      let fi = header.findIndex(h => FRONT_KEYS.includes(h));
+      let bi = header.findIndex(h => BACK_KEYS.includes(h));
+      if (fi < 0) fi = 0;
+      if (bi < 0) bi = fi === 0 ? 1 : 0;
 
-function cardText() {
-  const c = S.cards[S.idx];
-  return c ? (S.front ? c.front : c.back) : '';
-}
+      const cards = [];
+      for (let i = 1; i < nonEmpty.length; i++) {
+        const cols = csvSplit(nonEmpty[i]);
+        const f = (cols[fi] || '').trim().replace(/^["']|["']$/g, '');
+        const b = (cols[bi] || '').trim().replace(/^["']|["']$/g, '');
+        if (f || b) cards.push({ front: f, back: b });
+      }
+      return cards;
+    }
 
-function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+    function csvSplit(line) {
+      const cols = []; let cur = ''; let inQ = false; let qc = '';
+      for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (!inQ && (c === '"' || c === "'")) { inQ = true; qc = c; }
+        else if (inQ && c === qc) { inQ = false; }
+        else if (!inQ && c === ',') { cols.push(cur); cur = ''; }
+        else { cur += c; }
+      }
+      cols.push(cur);
+      return cols;
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   CONFETTI
-═══════════════════════════════════════════════════════════════════════════ */
-function confetti() {
-  const colors = ['#5b8dee','#3ecf8e','#f5a623','#b57bee','#f05252','#89ddff'];
-  for (let i = 0; i < 50; i++) {
-    const el = document.createElement('div');
-    el.className = 'conf';
-    const dur = 1.5 + Math.random() * 1.5;
-    el.style.cssText = `left:${Math.random()*100}vw;top:-10px;background:${colors[i%colors.length]};animation-duration:${dur}s;animation-delay:${Math.random()*.6}s;border-radius:${Math.random()>0.5?'50%':'2px'};`;
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), (dur+0.6)*1000);
-  }
-}
+    /* ═══════════════════════════════════════════════════════════════════════════
+       UTILITIES
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function esc(s) {
+      return String(s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   KEYBOARD
-═══════════════════════════════════════════════════════════════════════════ */
-function _kb(e) {
-  if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
-  if (!S.subject) return;
-  if (e.code==='Space')       { e.preventDefault(); flipCard(); }
-  else if (e.code==='ArrowRight') nextCard();
-  else if (e.code==='ArrowLeft')  prevCard();
-  else if (e.key==='r'||e.key==='R') shuffleCards();
-  else if (e.code==='Escape')      goHome();
-  else if (e.key==='a'||e.key==='A') toggleAuto();
-}
-document.addEventListener('keydown', _kb);
+    const ICONS = ['◈', '⬡', '◇', '⬠', '△', '◉', '⬟', '◎', '⬢', '▷', '◈', '⬣'];
+    function iconFor(n) {
+      let h = 0; for (const c of n) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+      return ICONS[h % ICONS.length];
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   RENDER ENGINE
-═══════════════════════════════════════════════════════════════════════════ */
-const view = document.getElementById('view');
-function render(html) { view.innerHTML = html; }
+    function setStatus(msg, dur = 3500) {
+      const el = document.getElementById('status');
+      if (!el) return;
+      el.textContent = msg;
+      el.className = 'status lit';
+      clearTimeout(S.statusTimer);
+      S.statusTimer = setTimeout(() => {
+        if (el) {
+          el.textContent = S.listening ? '🎤 Listening…' : '';
+          el.className = 'status';
+        }
+      }, dur);
+    }
 
-/* ── HOME ───────────────────────────────────────────────────────────────── */
-function showHome() {
-  stopSpeech(); cancelAuto();
-  S.subject = null; S.cards = [];
+    function toast(msg, dur = 3500) {
+      const el = document.createElement('div');
+      el.className = 'toast';
+      el.textContent = msg;
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), dur);
+    }
 
-  const names = Object.keys(S.subjects);
-  const hasSubjects = names.length > 0;
+    function refreshToggles() {
+      const vt = document.getElementById('vtoggle');
+      const rt = document.getElementById('rtoggle');
+      if (vt) {
+        vt.className = `toggle ${S.listening ? 'on' : 'off'}`;
+        vt.innerHTML = `<span class="toggle-dot"></span>VOICE ${S.listening ? 'ON' : 'OFF'}`;
+      }
+      if (rt) {
+        rt.className = `toggle ${S.reading ? 'on' : 'off'}`;
+        rt.innerHTML = `<span class="toggle-dot"></span>READ ${S.reading ? 'ON' : 'OFF'}`;
+      }
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = S.themeDark ? '☀️ LIGHT' : '🌙 DARK';
+      });
+    }
 
-  const cards = names.map(n => {
-    const meta = S.subjectMeta[n];
-    const total = meta ? meta.total : S.subjects[n].length;
-    const fileCount = meta ? meta.files.length : 1;
-    return `
+    function cardText() {
+      const c = S.cards[S.idx];
+      return c ? (S.front ? c.front : c.back) : '';
+    }
+
+    function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CONFETTI
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function confetti() {
+      const colors = ['#5b8dee', '#3ecf8e', '#f5a623', '#b57bee', '#f05252', '#89ddff'];
+      for (let i = 0; i < 50; i++) {
+        const el = document.createElement('div');
+        el.className = 'conf';
+        const dur = 1.5 + Math.random() * 1.5;
+        el.style.cssText = `left:${Math.random() * 100}vw;top:-10px;background:${colors[i % colors.length]};animation-duration:${dur}s;animation-delay:${Math.random() * .6}s;border-radius:${Math.random() > 0.5 ? '50%' : '2px'};`;
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), (dur + 0.6) * 1000);
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       KEYBOARD
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function _kb(e) {
+      if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+      if (!S.subject) return;
+      if (e.code === 'Space') { e.preventDefault(); flipCard(); }
+      else if (e.code === 'ArrowRight') nextCard();
+      else if (e.code === 'ArrowLeft') prevCard();
+      else if (e.key === 'r' || e.key === 'R') shuffleCards();
+      else if (e.code === 'Escape') goHome();
+      else if (e.key === 'a' || e.key === 'A') toggleAuto();
+    }
+    document.addEventListener('keydown', _kb);
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       RENDER ENGINE
+    ═══════════════════════════════════════════════════════════════════════════ */
+    const view = document.getElementById('view');
+    function render(html) { view.innerHTML = html; }
+
+    /* ── HOME ───────────────────────────────────────────────────────────────── */
+    function showHome() {
+      stopSpeech(); cancelAuto();
+      S.subject = null; S.cards = [];
+
+      const names = Object.keys(S.subjects);
+      const hasSubjects = names.length > 0;
+
+      const cards = names.map(n => {
+        const meta = S.subjectMeta[n];
+        const total = meta ? meta.total : S.subjects[n].length;
+        const fileCount = meta ? meta.files.length : 1;
+        return `
       <div class="subj-card" tabindex="0"
            onclick="openSubject('${esc(n)}')"
            onkeydown="if(event.key==='Enter')openSubject('${esc(n)}')">
         <div class="subj-icon">${iconFor(n)}</div>
         <div class="subj-name">${esc(n)}</div>
-        <div class="subj-count">${total} card${total!==1?'s':''}</div>
-        ${fileCount>1?`<div class="subj-files">${fileCount} files</div>`:''}
+        <div class="subj-count">${total} card${total !== 1 ? 's' : ''}</div>
+        ${fileCount > 1 ? `<div class="subj-files">${fileCount} files</div>` : ''}
       </div>`;
-  }).join('');
+      }).join('');
 
-  render(`<div class="page">
+      render(`<div class="page">
     <div class="topbar">
       <div>
         <div class="logo"><em>Flashcard</em> Pro</div>
       </div>
       <div class="topbar-right">
-        <button class="toggle ${S.listening?'on':'off'}" id="vtoggle" onclick="toggleListening()">
-          <span class="toggle-dot"></span>VOICE ${S.listening?'ON':'OFF'}
+        <button class="toggle theme-toggle-btn" onclick="toggleTheme()" style="color:var(--text2)">
+          ${S.themeDark ? '☀️ LIGHT' : '🌙 DARK'}
         </button>
-        <button class="toggle ${S.reading?'on':'off'}" id="rtoggle" onclick="toggleReading()">
-          <span class="toggle-dot"></span>READ ${S.reading?'ON':'OFF'}
+        <button class="toggle ${S.listening ? 'on' : 'off'}" id="vtoggle" onclick="toggleListening()">
+          <span class="toggle-dot"></span>VOICE ${S.listening ? 'ON' : 'OFF'}
+        </button>
+        <button class="toggle ${S.reading ? 'on' : 'off'}" id="rtoggle" onclick="toggleReading()">
+          <span class="toggle-dot"></span>READ ${S.reading ? 'ON' : 'OFF'}
         </button>
       </div>
     </div>
     <div class="hr"></div>
 
     ${hasSubjects
-      ? `<div class="section-label">Your Subjects</div>
+          ? `<div class="section-label">Your Subjects</div>
          <div class="subject-grid">${cards}</div>`
-      : `<div class="empty">
+          : `<div class="empty">
            <div class="empty-title">No subjects yet</div>
            <div class="empty-body">
              Create a <code>subjects/</code> folder next to this HTML file,
@@ -1019,7 +1409,7 @@ function showHome() {
              Then serve with: <code>python -m http.server 8080</code>
            </div>
          </div>`
-    }
+        }
 
     <div class="hr"></div>
     <div class="instructions">
@@ -1032,41 +1422,44 @@ function showHome() {
       Serve locally: <code>python -m http.server 8080</code> then open <code>localhost:8080</code>
     </div>
 
-    ${hasSubjects ? `<div class="status" id="status">${S.listening?'🎤 Listening for commands…':''}</div>` : ''}
+    ${hasSubjects ? `<div class="status" id="status">${S.listening ? '🎤 Listening for commands…' : ''}</div>` : ''}
   </div>`);
-}
+    }
 
-/* ── FILE SELECT ────────────────────────────────────────────────────────── */
-function openSubject(name) {
-  const meta = S.subjectMeta[name];
-  if (!meta || meta.files.length <= 1) {
-    loadAllCards(name); return;
-  }
-  showFileSelect(name);
-}
+    /* ── FILE SELECT ────────────────────────────────────────────────────────── */
+    function openSubject(name) {
+      const meta = S.subjectMeta[name];
+      if (!meta || meta.files.length <= 1) {
+        loadAllCards(name); return;
+      }
+      showFileSelect(name);
+    }
 
-function showFileSelect(name) {
-  stopSpeech(); cancelAuto();
-  S.subject = name;
-  const meta = S.subjectMeta[name];
+    function showFileSelect(name) {
+      stopSpeech(); cancelAuto();
+      S.subject = name;
+      const meta = S.subjectMeta[name];
 
-  const fileCards = meta.files.map(f => `
+      const fileCards = meta.files.map(f => `
     <div class="file-card" onclick="loadFile('${esc(name)}','${esc(f.name)}')" tabindex="0">
       <div class="fc-icon">◻</div>
-      <div class="fc-name">${esc(f.name.replace(/\.csv$/i,'').replace(/_/g,' '))}</div>
+      <div class="fc-name">${esc(f.name.replace(/\.csv$/i, '').replace(/_/g, ' '))}</div>
       <div class="fc-count">${f.cards.length} cards</div>
     </div>`).join('');
 
-  render(`<div class="page">
+      render(`<div class="page">
     <div class="topbar">
       <button class="back" onclick="showHome()">← Home</button>
       <div class="logo" style="font-size:20px">${iconFor(name)} <em>${esc(name)}</em></div>
       <div class="topbar-right">
-        <button class="toggle ${S.listening?'on':'off'}" id="vtoggle" onclick="toggleListening()">
-          <span class="toggle-dot"></span>VOICE ${S.listening?'ON':'OFF'}
+        <button class="toggle theme-toggle-btn" onclick="toggleTheme()" style="color:var(--text2)">
+          ${S.themeDark ? '☀️ LIGHT' : '🌙 DARK'}
         </button>
-        <button class="toggle ${S.reading?'on':'off'}" id="rtoggle" onclick="toggleReading()">
-          <span class="toggle-dot"></span>READ ${S.reading?'ON':'OFF'}
+        <button class="toggle ${S.listening ? 'on' : 'off'}" id="vtoggle" onclick="toggleListening()">
+          <span class="toggle-dot"></span>VOICE ${S.listening ? 'ON' : 'OFF'}
+        </button>
+        <button class="toggle ${S.reading ? 'on' : 'off'}" id="rtoggle" onclick="toggleReading()">
+          <span class="toggle-dot"></span>READ ${S.reading ? 'ON' : 'OFF'}
         </button>
       </div>
     </div>
@@ -1083,31 +1476,31 @@ function showFileSelect(name) {
     </div>
     <div class="status" id="status"></div>
   </div>`);
-}
+    }
 
-function loadAllCards(name) {
-  S.subject = name;
-  S.cards = [...S.subjects[name]];
-  S.idx = 0; S.front = true;
-  showFC();
-}
+    function loadAllCards(name) {
+      S.subject = name;
+      S.cards = [...S.subjects[name]];
+      S.idx = 0; S.front = true;
+      showFC();
+    }
 
-function loadFile(name, fname) {
-  const meta = S.subjectMeta[name];
-  const f = meta && meta.files.find(x => x.name === fname);
-  if (!f) { loadAllCards(name); return; }
-  S.subject = name;
-  S.cards = [...f.cards];
-  S.idx = 0; S.front = true;
-  showFC();
-}
+    function loadFile(name, fname) {
+      const meta = S.subjectMeta[name];
+      const f = meta && meta.files.find(x => x.name === fname);
+      if (!f) { loadAllCards(name); return; }
+      S.subject = name;
+      S.cards = [...f.cards];
+      S.idx = 0; S.front = true;
+      showFC();
+    }
 
-/* ── FLASHCARD SCREEN ───────────────────────────────────────────────────── */
-function showFC() {
-  stopSpeech();
-  if (!S.cards.length) { setStatus('⚠ No cards'); showHome(); return; }
+    /* ── FLASHCARD SCREEN ───────────────────────────────────────────────────── */
+    function showFC() {
+      stopSpeech();
+      if (!S.cards.length) { setStatus('⚠ No cards'); showHome(); return; }
 
-  render(`<div class="fc-page">
+      render(`<div class="fc-page">
     <div class="fc-topbar">
       <button class="back" onclick="goHome()">← Home</button>
       <div class="subj-title">${iconFor(S.subject)} ${esc(S.subject)}</div>
@@ -1115,12 +1508,22 @@ function showFC() {
         <span class="speaking-ring" id="speaking-ring">♪ reading</span>
         <div class="counter" id="counter">1 / ${S.cards.length}</div>
       </div>
-      <div style="display:flex;gap:7px;flex-wrap:wrap">
+      <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center;">
+        <label title="Auto play delay (seconds)" style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text3);margin-right:8px;">
+          ⏱️
+          <input type="number" min="1" max="20" value="${S.autoDelaySec}" 
+            onchange="S.autoDelaySec=parseInt(this.value)||1; if(S.autoDelaySec>20)S.autoDelaySec=20; if(S.autoDelaySec<1)S.autoDelaySec=1; this.value=S.autoDelaySec;"
+            style="width:40px;font-family:var(--mono);font-size:11px;background:var(--bg2);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:2px 4px;text-align:center;">
+          sec
+        </label>
         <button id="auto-btn" class="btn btn-auto idle" onclick="toggleAuto()">▶ Auto</button>
-        <button class="toggle ${S.listening?'on':'off'}" id="vtoggle" onclick="toggleListening()">
+        <button class="toggle theme-toggle-btn" onclick="toggleTheme()" style="color:var(--text2)">
+          ${S.themeDark ? '☀️ LIGHT' : '🌙 DARK'}
+        </button>
+        <button class="toggle ${S.listening ? 'on' : 'off'}" id="vtoggle" onclick="toggleListening()">
           <span class="toggle-dot"></span>VOICE
         </button>
-        <button class="toggle ${S.reading?'on':'off'}" id="rtoggle" onclick="toggleReading()">
+        <button class="toggle ${S.reading ? 'on' : 'off'}" id="rtoggle" onclick="toggleReading()">
           <span class="toggle-dot"></span>READ
         </button>
       </div>
@@ -1159,203 +1562,216 @@ function showFC() {
       <span class="vh-item"><span class="vh-key">🎤</span><span class="vh-val">flip · next · prev · shuffle · auto · stop · read · home</span></span>
     </div>
 
-    <div class="status" id="status">${S.listening?'🎤 Listening…':''}</div>
+    <div class="status" id="status">${S.listening ? '🎤 Listening…' : ''}</div>
   </div>`);
 
-  renderCard();
-  if (S.reading) speak(cardText());
-}
+      renderCard();
+      if (S.reading) speak(cardText());
+    }
 
-function pct() {
-  return Math.round(((S.idx+1) / S.cards.length) * 100);
-}
+    function pct() {
+      return Math.round(((S.idx + 1) / S.cards.length) * 100);
+    }
 
-/* ── Render card content ── */
-function renderCard() {
-  const card  = document.getElementById('card');
-  const label = document.getElementById('card-label');
-  const body  = document.getElementById('card-body');
-  const ctr   = document.getElementById('counter');
-  const prog  = document.getElementById('progress');
-  if (!card || !body) return;
+    /* ── Render card content ── */
+    function renderCard() {
+      const card = document.getElementById('card');
+      const label = document.getElementById('card-label');
+      const body = document.getElementById('card-body');
+      const ctr = document.getElementById('counter');
+      const prog = document.getElementById('progress');
+      if (!card || !body) return;
 
-  const c = S.cards[S.idx];
+      const c = S.cards[S.idx];
 
-  card.className = `card ${S.front?'is-front':'is-back'}`;
-  if (label) label.textContent = S.front ? 'FRONT' : 'FRONT';
-  if (ctr)   ctr.textContent   = `${S.idx+1} / ${S.cards.length}`;
-  if (prog)  prog.style.width  = pct()+'%';
+      card.className = `card ${S.front ? 'is-front' : 'is-back'}`;
+      if (label) label.textContent = S.front ? 'FRONT' : 'FRONT';
+      if (ctr) ctr.textContent = `${S.idx + 1} / ${S.cards.length}`;
+      if (prog) prog.style.width = pct() + '%';
 
-  if (S.front) {
-    body.innerHTML = `<div class="card-text" id="ct">${esc(c.front)}</div>`;
-  } else {
-    body.innerHTML = `
+      if (S.front) {
+        body.innerHTML = `<div class="card-text" id="ct">${esc(c.front)}</div>`;
+      } else {
+        body.innerHTML = `
       <div class="card-q-preview">${esc(c.front)}</div>
       <div class="card-back-label">ANSWER</div>
       <div class="card-text left-align" id="ct">${esc(c.back)}</div>`;
-  }
-
-  // KaTeX render
-  const ct = document.getElementById('ct');
-  if (ct) {
-    const tryRender = () => {
-      if (window.renderMathInElement) {
-        renderMathInElement(ct, {
-          delimiters:[
-            {left:'$$',right:'$$',display:true},
-            {left:'$',right:'$',display:false},
-            {left:'\\(',right:'\\)',display:false},
-            {left:'\\[',right:'\\]',display:true},
-          ],
-          throwOnError:false
-        });
-      } else {
-        setTimeout(tryRender, 150);
       }
-    };
-    tryRender();
-  }
-}
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   CARD ACTIONS
-═══════════════════════════════════════════════════════════════════════════ */
-function flipCard() {
-  if (!S.cards.length) return;
-  cancelAuto();
-  const card = document.getElementById('card');
-  if (card) { card.classList.add('flipping'); setTimeout(()=>card.classList.remove('flipping'),420); }
-  S.front = !S.front;
-  renderCard();
-  if (S.reading) speak(cardText());
-}
+      // KaTeX render
+      const ct = document.getElementById('ct');
+      if (ct) {
+        const tryRender = () => {
+          if (window.renderMathInElement) {
+            renderMathInElement(ct, {
+              delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true },
+              ],
+              throwOnError: false
+            });
+          } else {
+            setTimeout(tryRender, 150);
+          }
+        };
+        tryRender();
+      }
+    }
 
-function nextCard() {
-  if (!S.cards.length) return;
-  cancelAuto();
-  S.idx = (S.idx + 1) % S.cards.length;
-  if (S.idx === 0) confetti();
-  S.front = true;
-  renderCard();
-  if (S.reading) speak(cardText());
-}
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CARD ACTIONS
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function flipCard() {
+      if (!S.cards.length) return;
+      cancelAuto();
+      const card = document.getElementById('card');
+      if (card) { card.classList.add('flipping'); setTimeout(() => card.classList.remove('flipping'), 420); }
+      S.front = !S.front;
+      renderCard();
+      if (S.reading) speak(cardText());
+    }
 
-function prevCard() {
-  if (!S.cards.length) return;
-  cancelAuto();
-  S.idx = (S.idx - 1 + S.cards.length) % S.cards.length;
-  S.front = true;
-  renderCard();
-  if (S.reading) speak(cardText());
-}
+    function nextCard() {
+      if (!S.cards.length) return;
+      cancelAuto();
+      S.idx = (S.idx + 1) % S.cards.length;
+      if (S.idx === 0) confetti();
+      S.front = true;
+      renderCard();
+      if (S.reading) speak(cardText());
+    }
 
-function shuffleCards() {
-  if (!S.cards.length) return;
-  cancelAuto();
-  for (let i = S.cards.length-1; i > 0; i--) {
-    const j = Math.floor(Math.random()*(i+1));
-    [S.cards[i],S.cards[j]] = [S.cards[j],S.cards[i]];
-  }
-  S.idx = 0; S.front = true;
-  renderCard();
-  setStatus('⇌ Shuffled!');
-  if (S.reading) speak(cardText());
-}
+    function prevCard() {
+      if (!S.cards.length) return;
+      cancelAuto();
+      S.idx = (S.idx - 1 + S.cards.length) % S.cards.length;
+      S.front = true;
+      renderCard();
+      if (S.reading) speak(cardText());
+    }
 
-function goHome() {
-  stopSpeech(); cancelAuto(); showHome();
-}
+    function shuffleCards() {
+      if (!S.cards.length) return;
+      cancelAuto();
+      for (let i = S.cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [S.cards[i], S.cards[j]] = [S.cards[j], S.cards[i]];
+      }
+      S.idx = 0; S.front = true;
+      renderCard();
+      setStatus('⇌ Shuffled!');
+      if (S.reading) speak(cardText());
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   AUTOPLAY
-═══════════════════════════════════════════════════════════════════════════ */
-function toggleAuto() {
-  S.auto = !S.auto;
-  const btn = document.getElementById('auto-btn');
-  if (btn) {
-    btn.className = `btn btn-auto ${S.auto?'playing':'idle'}`;
-    btn.textContent = S.auto ? '⏸ Pause' : '▶ Auto';
-  }
-  if (S.auto) {
-    S.reading = true; refreshToggles();
-    setStatus('▶ Autoplay ON');
-    runAuto();
-  } else {
-    setStatus('⏸ Autoplay paused');
-  }
-}
+    function goHome() {
+      stopSpeech(); cancelAuto(); showHome();
+    }
 
-async function runAuto() {
-  if (S.autoRunning) return;
-  S.autoRunning = true;
-  while (S.auto && S.cards.length) {
-    // Read front
-    await new Promise(res => speak(cardText(), res));
-    if (!S.auto) break;
-    await delay(900);
-    if (!S.auto) break;
-    // Flip to back
-    S.front = false;
-    renderCard();
-    await new Promise(res => speak(cardText(), res));
-    if (!S.auto) break;
-    await delay(1400);
-    if (!S.auto) break;
-    // Next card
-    S.idx = (S.idx + 1) % S.cards.length;
-    if (S.idx === 0) confetti();
-    S.front = true;
-    renderCard();
-  }
-  S.autoRunning = false;
-}
+    /* ═══════════════════════════════════════════════════════════════════════════
+       AUTOPLAY
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function toggleAuto() {
+      S.auto = !S.auto;
+      const btn = document.getElementById('auto-btn');
+      if (btn) {
+        btn.className = `btn btn-auto ${S.auto ? 'playing' : 'idle'}`;
+        btn.textContent = S.auto ? '⏸ Pause' : '▶ Auto';
+      }
+      if (S.auto) {
+        S.reading = true; refreshToggles();
+        setStatus('▶ Autoplay ON');
+        runAuto();
+      } else {
+        setStatus('⏸ Autoplay paused');
+      }
+    }
 
-function cancelAuto() {
-  S.auto = false;
-  S.autoRunning = false;
-  const btn = document.getElementById('auto-btn');
-  if (btn) { btn.className = 'btn btn-auto idle'; btn.textContent = '▶ Auto'; }
-}
+    async function runAuto() {
+      if (S.autoRunning) return;
+      S.autoRunning = true;
+      while (S.auto && S.cards.length) {
+        // Read front
+        await new Promise(res => speak(cardText(), res));
+        if (!S.auto) break;
+        await delay(900);
+        if (!S.auto) break;
+        // Flip to back
+        S.front = false;
+        renderCard();
+        await new Promise(res => speak(cardText(), res));
+        if (!S.auto) break;
+        await delay(S.autoDelaySec * 1000);
+        if (!S.auto) break;
+        // Next card
+        S.idx = (S.idx + 1) % S.cards.length;
+        if (S.idx === 0) confetti();
+        S.front = true;
+        renderCard();
+      }
+      S.autoRunning = false;
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   TOGGLES
-═══════════════════════════════════════════════════════════════════════════ */
-function toggleListening() {
-  if (S.listening) { stopListening(); }
-  else { startListening(); }
-  refreshToggles();
-  setStatus(S.listening ? '🎤 Voice ON' : '🎤 Voice OFF');
-}
+    function cancelAuto() {
+      S.auto = false;
+      S.autoRunning = false;
+      const btn = document.getElementById('auto-btn');
+      if (btn) { btn.className = 'btn btn-auto idle'; btn.textContent = '▶ Auto'; }
+    }
 
-function toggleReading() {
-  S.reading = !S.reading;
-  if (!S.reading) { stopSpeech(); cancelAuto(); }
-  refreshToggles();
-  setStatus(S.reading ? '🔊 Read ON' : '🔊 Read OFF');
-}
+    /* ═══════════════════════════════════════════════════════════════════════════
+       TOGGLES
+    ═══════════════════════════════════════════════════════════════════════════ */
+    function toggleListening() {
+      if (S.listening) { stopListening(); }
+      else { startListening(); }
+      refreshToggles();
+      setStatus(S.listening ? '🎤 Voice ON' : '🎤 Voice OFF');
+    }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   BOOT
-═══════════════════════════════════════════════════════════════════════════ */
-(async function init() {
-  initVoice();
+    function toggleReading() {
+      S.reading = !S.reading;
+      if (!S.reading) { stopSpeech(); cancelAuto(); }
+      refreshToggles();
+      setStatus(S.reading ? '🔊 Read ON' : '🔊 Read OFF');
+    }
 
-  // Load subjects from server
-  const loaded = await loadSubjectsFromServer();
-  if (!loaded) {
-    console.info('No manifest.json found. Create subjects/manifest.json to load your CSV files.');
-  }
+    function toggleTheme() {
+      S.themeDark = !S.themeDark;
+      document.documentElement.classList.toggle('dark', S.themeDark);
+      localStorage.setItem('themeDark', S.themeDark ? '1' : '');
+      refreshToggles();
+    }
 
-  showHome();
+    /* ═══════════════════════════════════════════════════════════════════════════
+       BOOT
+    ═══════════════════════════════════════════════════════════════════════════ */
+    (async function init() {
+      initVoice();
 
-  // Auto-start voice
-  setTimeout(() => {
-    startListening();
-    refreshToggles();
-    const el = document.getElementById('status');
-    if (el) { el.textContent = S.listening ? '🎤 Listening for commands…' : ''; }
-  }, 600);
-})();
-</script>
+      if (localStorage.getItem('themeDark') === '1') {
+        S.themeDark = true;
+        document.documentElement.classList.add('dark');
+      }
+
+      // Load subjects from server
+      const loaded = await loadSubjectsFromServer();
+      if (!loaded) {
+        console.info('No manifest.json found. Create subjects/manifest.json to load your CSV files.');
+      }
+
+      showHome();
+
+      // Auto-start voice
+      setTimeout(() => {
+        startListening();
+        refreshToggles();
+        const el = document.getElementById('status');
+        if (el) { el.textContent = S.listening ? '🎤 Listening for commands…' : ''; }
+      }, 600);
+    })();
+  </script>
 </body>
+
 </html>
