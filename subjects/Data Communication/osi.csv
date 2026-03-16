@@ -1,0 +1,78 @@
+What is the definition of a computer network?,A collection of interconnected computers and devices that share resources and facilitate communication.
+"In networking, what is a 'communications protocol'?",A system of rules that governs how information is transmitted over physical or wireless technologies.
+"Which network service is typically associated with the protocols POP, IMAP, and SMTP?",Email services.
+"Which network service uses protocols such as Telnet, SSH, and RDP?",Remote access (Terminal services).
+What are the five components of a data communications system?,"Message, Sender, Receiver, Medium, and Protocol."
+Term: Message,"The specific information or data to be communicated, such as text, audio, or video."
+What is a 'Sender' in a data communication system?,The device that initiates and sends the data message.
+Definition: Transmission Medium,"The physical path, such as fibre-optic cable or radio waves, through which a message travels."
+Why is a protocol necessary for two connected devices to communicate?,It provides a common agreement on the rules of communication so devices can understand each other.
+What does the advantage 'Central Storage of Data' allow in an organisation?,Files can be stored on a single file server and shared with every user in the network.
+How do computer networks facilitate faster problem-solving?,Extensive procedures are disintegrated into smaller processes handled by multiple associated devices.
+"In the 'RISHI' mnemonic for network advantages, what does the 'R' stand for?",Reliability.
+How does a computer network improve 'Reliability' regarding data?,"It allows for backing up information so if one PC crashes, a copy is available on another workstation."
+How do networks enhance 'Cost Efficiency' for expensive software?,High-cost software can be installed on a central server and used by multiple workstations online.
+What is the primary security risk of connecting a standalone computer to a network?,Hackers can gain unauthorised access remotely using various tools.
+Why is the 'Rapid Spread of Computer Viruses' considered a disadvantage of networking?,"If one system is affected, the virus can quickly spread to all other interconnected systems."
+What is a major disadvantage regarding the central file server in a network?,"The entire network depends on it; if it malfunctions, the network may stop functioning."
+"Which network criterion is measured by transit time, response time, and throughput?",Performance.
+How is 'Reliability' measured as a network criterion?,"By the frequency of failure, recovery time from a link failure, and robustness during catastrophes."
+What does 'Security' involve in the context of network criteria?,"Protecting data from unauthorised access and damage, and implementing recovery policies."
+Describe the 'Simplex' data flow mode.,"Communication is unidirectional, where one device only transmits and the other only receives."
+Describe the 'Half-duplex' data flow mode.,"Both stations can transmit and receive, but only one at a time, not simultaneously."
+Describe the 'Full-duplex' data flow mode.,Both stations can transmit and receive data simultaneously.
+Which organisation created the OSI reference model in $1994$?,The International Organisation for Standardisation (ISO).
+What is the primary purpose of the OSI model?,To provide a framework for creating networking standards and describing communication functions.
+How many layers are in the OSI reference model?,$7$ layers.
+List the seven layers of the OSI model in order from top to bottom.,"Application, Presentation, Session, Transport, Network, Data Link, Physical."
+What is the primary responsibility of the OSI Application Layer?,"Providing network services, such as email or web access, directly to the user."
+Which protocol is used specifically for terminal emulation to access remote server resources?,TELNET.
+What is the function of the File Transfer Protocol (FTP)?,It allows for the actual transfer of files between systems.
+What is the purpose of the Network File System (NFS) protocol?,It allows remote hosts to mount and interact with file systems as if they were local.
+What does the Domain Name Service (DNS) do?,It resolves textual addresses (domain names) into IP addresses.
+What is the main concern of the OSI Presentation Layer?,The syntax and semantics of the information exchanged between two systems.
+Which OSI layer is responsible for data encryption and decryption?,The Presentation Layer.
+What is the goal of data compression at the Presentation Layer?,To reduce the number of bits that need to be transmitted over the network.
+What is the primary objective of the OSI Session Layer?,"To establish, maintain, and synchronise interactions between communicating systems."
+What are 'checkpoints' in the context of the Session Layer?,Synchronisation points added to data streams to ensure long communications are successfully received.
+Which OSI layer is often referred to as the 'Heart of the OSI model'?,The Transport Layer.
+What is 'Segmentation' in the Transport Layer?,The process of dividing a large message into smaller units called segments for efficient handling.
+Which OSI layer is responsible for logical communication between application processes on different hosts?,The Transport Layer.
+How does the Transport Layer handle error detection and recovery?,"It identifies damaged, lost, or duplicated packets and applies error-correction techniques."
+Identify the two main end-to-end protocols used in the Transport Layer.,TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
+Contrast TCP and UDP regarding reliability.,"TCP is a reliable connection-oriented protocol, whereas UDP is an unreliable connectionless protocol."
+What is the primary responsibility of the OSI Network Layer?,Packet routing and logical addressing.
+Which OSI layer defines the selection of the shortest path to transmit a packet?,The Network Layer.
+What is the function of the Address Resolution Protocol (ARP)?,To associate an IP address with a physical MAC address.
+How many bits are used in an IPv4 addressing scheme?,$32$ bits.
+What are the three main responsibilities of the Data Link Layer?,"Data framing, error control, and physical addressing."
+What is a MAC address?,A unique physical hardware address 'burnt-in' to a computer's network interface card.
+Name the two sublayers of the OSI Data Link Layer.,LLC (Logical Link Control) and MAC (Media Access Control).
+What is the role of the LLC sublayer?,It manages communication over a single link and multiplexes higher-layer protocols.
+Which OSI layer establishes the mechanical and electrical specifications for the transmission medium?,The Physical Layer.
+What is 'Bit synchronisation' at the Physical Layer?,Providing a clock to control both sender and receiver to ensure bits are synchronised.
+Which network devices operate at the OSI Physical Layer or below?,"Hubs, repeaters, cables, and wireless media."
+At which OSI layer do Routers operate?,The Network Layer (Layer $3$).
+Which OSI layer uses Bridges and Switches?,The Data Link Layer (Layer $2$).
+"Who created the TCP/IP model, and when?","DARPA, in the $1970$s."
+Name the four layers of the TCP/IP reference model.,"Application, Transport, Internet, and Network Access (Host-to-network)."
+"In the TCP/IP model, which layer is a combination of the OSI's Physical and Data Link layers?",The Host-to-network Layer (Network Access Layer).
+What is the primary protocol used at the TCP/IP Internet Layer?,Internet Protocol (IP).
+Which TCP/IP layer handles the reassembly of out-of-order packets?,The Internet Layer.
+"In the TCP/IP model, does the Transport Layer guarantee the delivery of packets?","No, it does not guarantee delivery, though TCP specifically provides reliability."
+What is a 'Port' in network addressing?,A $16$-bit unsigned integer used to identify a specific process or service on a device.
+What is the range for 'Well Known Ports'?,$0$ to $1023$.
+What is the range for 'Dynamic' (Ephemeral) ports?,$49152$ to $65535$.
+"In a MAC address, what do the first $3$ bytes ($24$ bits) represent?","The Organisationally Unique Identifier (OUI), which identifies the manufacturer."
+How do network switches use MAC addresses?,They build MAC tables to know which device is connected to which port for efficient forwarding.
+What is the difference between the Internet and the World Wide Web (WWW)?,"The Internet is the physical backbone/infrastructure, while the WWW is a service/software running on it."
+What is an 'Analog Signal'?,A continuous electrical signal where one time-varying quantity represents another variable.
+What is a 'Digital Signal'?,A discrete signal that carries binary data ($0$ or $1$) in the form of bits.
+Why are digital signals less subject to noise compared to analog signals?,"They contain only distinct, stable values (square waves) rather than a continuous range of values."
+"In a basic communication system, what is the role of the 'Input Transducer'?",To convert a physical quantity (like sound) into an electrical signal.
+What is the primary function of the 'Transmitter' in an analog communication system?,"To modify the message signal, usually through modulation, for efficient transmission over a channel."
+What is 'Demodulation'?,The process of extracting the original message signal from the modulated carrier signal at the receiver.
+"In a digital communication system, what does a 'Channel Encoder' do?",It adds redundancy (error control bits) to the bit stream to help the receiver detect and correct errors.
+Which component of a digital communication system converts binary output back into symbols?,The Source Decoder.
+What is the standard port number for the HTTP protocol?,Port $80$.
+What is the standard port number for the SMTP protocol?,Port $25$.

@@ -1,0 +1,80 @@
+What does the abbreviation 'RTL' stand for in the context of digital circuit design?,Register Transfer Logic
+How is Register Transfer Logic (RTL) defined in computer architecture?,It describes how data is transferred between registers and the operations performed on that data.
+RTL acts as a bridge between which two stages of digital system design?,Hardware description and actual circuit implementation.
+What is a register within a processor or digital circuit?,"A small, fast storage unit used to hold binary data during computation."
+Registers are primarily used for _____ storage during computation.,temporary
+What is the term for the process of moving data from one register to another?,Register transfer
+Which two signals usually control the process of register transfer?,A clock signal and specific control signals.
+What are micro-operations in the context of registers?,Elementary operations performed on data stored within registers.
+The micro-operation that transfers data from memory to a register is known as a _____.,Load
+The micro-operation that transfers data from a register to memory is known as a _____.,Store
+Give an example of an arithmetic micro-operation performed on register contents.,Addition or Subtraction.
+Which category of micro-operation involves bitwise manipulations like shifting bits left or right?,Shift or Rotate operations.
+What is the primary purpose of control signals in RTL?,To manage and coordinate register transfers and operations.
+Which component of the CPU typically generates control signals?,The control unit.
+"In RTL notation, what does the expression $R2 \leftarrow R1$ signify?",The contents of register $R1$ are transferred to register $R2$.
+"In RTL notation, what does the expression $R3 \leftarrow R1 + R2$ signify?","The contents of $R1$ and $R2$ are added, and the result is stored in $R3$."
+What is 'Interregister Transfer'?,The direct movement of data from one register to another within a digital system.
+"In the basic notation $R2 \leftarrow R1$, what happens to the contents of the source register $R1$ after the transfer?",The contents of $R1$ remain unchanged.
+Define a 'Simple Register Transfer'.,The movement of data from one register to another without any modification.
+What is a 'Conditional Transfer' in RTL?,A data transfer that occurs only if a specific control condition or signal is met.
+"In the conditional statement 'If $P=1$, then $R2 \leftarrow R1$', what is '$P$'?",A control signal that must be active for the transfer to occur.
+What is a 'Multiple Register Transfer'?,An operation where data is transferred between multiple registers simultaneously.
+How is a simultaneous multiple register transfer represented in RTL notation?,"By separating the transfer operations with a comma, such as $R3 \leftarrow R1, R4 \leftarrow R2$."
+When do 'Arithmetic and Logic Operations during Transfer' occur?,When data is manipulated or processed before being stored in the destination register.
+What are the three main categories of micro-operations?,"Arithmetic, logic, and shift micro-operations."
+What is the purpose of arithmetic micro-operations?,"To perform basic calculations like addition, subtraction, increment, and decrement."
+Describe the result of the micro-operation $R1 \leftarrow R1 + R2$.,"The contents of $R1$ and $R2$ are added, and the original value in $R1$ is replaced by the result."
+What kind of operations do logic micro-operations perform?,"Bitwise operations such as AND, OR, XOR, and NOT."
+"In RTL, the micro-operation $R1 \leftarrow R1 \text{ AND } R2$ performs a _____ AND operation.",bitwise
+What do shift micro-operations involve?,Shifting the bits within a register to the left or to the right.
+What is the effect of the micro-operation $R1 \leftarrow \text{Shift Left } R1$?,Every bit in register $R1$ is moved one position to the left.
+What does a 'Conditional Control Statement' specify in RTL?,That a particular micro-operation should execute only if a certain condition is true.
+Upon what factors are conditions in control statements typically based?,"Status flags, control signals, or specific bits within registers."
+"In the symbolic control statement $P: R1 \leftarrow R2$, what does the colon ($:$) represent?",It separates the control condition from the micro-operation to be executed.
+What is 'Fixed-Point Binary Data'?,A method of representing real numbers where the position of the binary point is predefined and unchanging.
+In what type of systems is fixed-point binary representation preferred?,"Systems where hardware simplicity, speed, and memory efficiency are priorities."
+What are the two structural parts of a fixed-point binary number?,The integer part and the fractional part.
+Does the position of the binary point change during operations in a fixed-point system?,"No, it remains fixed."
+When does 'Overflow' occur in a digital system?,When an arithmetic result exceeds the maximum value representable by the available number of bits.
+Overflow typically happens during operations involving _____ registers.,fixed-size
+What is an 'Instruction Code' (opcode)?,A binary code that specifies the particular operation a processor must perform.
+What are the two main parts that typically constitute an instruction code?,An opcode (Operation Code) and one or more operands.
+What does the 'Opcode' portion of an instruction specify?,"The specific action to execute, such as move, jump, or add."
+What does the 'Operand' portion of an instruction specify?,The data or the memory address on which the operation will be performed.
+List three things that an operand can represent.,"Registers, memory addresses, or immediate values."
+How is a 'Macro-operation' defined in a digital system?,A high-level operation consisting of a sequence of smaller micro-operations executed to complete a task.
+"From a programmer's perspective, a macro-operation is performed as a _____ logical step.",single
+How does the CPU's control unit handle a single macro-operation instruction?,It interprets the instruction and breaks it down into simpler micro-operations for execution.
+Which type of operation is an elementary step like data transfer or incrementing?,Micro-operation
+"In the execution of the macro-operation ADD R1, R2, what is the first micro-operation step?",Fetch the instruction from memory.
+"In the ADD R1, R2 macro-operation, what occurs during the 'Decode' micro-operation step?",The instruction is identified to determine the required operation.
+"In the sequence for ADD R1, R2, what are the temporary registers used for in the 'Read Operands' step?","To store the contents of $R1$ and $R2$ (e.g., $TEMP \leftarrow R1$, $TEMP2 \leftarrow R2$) before the calculation."
+"What is the final micro-operation step in the ADD R1, R2 macro-operation?",Store the calculated result back into register $R1$ ($R1 \leftarrow TEMP$).
+What are the three main components of a simple computer design?,"Central Processing Unit (CPU), Memory, and Input/Output (I/O) Units."
+What are the two primary units contained within the CPU?,The Arithmetic Logic Unit (ALU) and the Control Unit (CU).
+What is the function of the Arithmetic Logic Unit (ALU)?,To perform arithmetic calculations and logical operations.
+Which CPU unit directs the flow of data and instructions?,The Control Unit (CU).
+What are the three main actions performed by the Control Unit during instruction processing?,"Fetching, decoding, and executing instructions."
+"Registers are part of the CPU and serve as small, _____ storage units.",fast
+What is the role of the Accumulator (AC) register?,To store the results of arithmetic operations.
+Which register holds the address of the next instruction to be executed?,The Program Counter (PC).
+What is the function of the Instruction Register (IR)?,To store the instruction currently being executed.
+"What are General-purpose Registers (like $R1, R2$) used for?",Temporary storage of data during processing.
+How is the Memory Unit organised for data storage?,"As an array of locations, where each location has a unique address."
+How is specific data retrieved from the Memory Unit?,By specifying its unique memory address.
+What is the primary role of an Input Unit?,"To accept data and instructions from external sources, such as a keyboard or mouse."
+What is the primary role of an Output Unit?,To display or output processed data to devices like monitors or printers.
+How do I/O units communicate with the CPU?,Via data buses and control signals.
+"Summary: In a simple computer, which component manages data flow while the ALU performs calculations?",The Control Unit (CU).
+"Concept: $R3 \leftarrow R1, R4 \leftarrow R2$",Definition: A Multiple Register Transfer where both transfers occur simultaneously.
+Concept: Instruction Opcode,Definition: The part of a machine instruction that tells the CPU what action to execute. Example: 0001 for ADD.
+Concept: $P: R1 \leftarrow R2$,Definition: A Conditional Control Statement where $R1 \leftarrow R2$ executes only if control condition $P$ is true.
+The binary point's position in fixed-point data is _____ and does not change during operations.,fixed
+"A macro-operation like ADD R1, R2 is made up of several _____.",micro-operations
+Which register is specifically designed to hold the address of the next instruction?,Program Counter (PC)
+Which component of the CPU is responsible for generating the control signals that coordinate micro-operations?,The Control Unit (CU).
+Bitwise operations like AND and OR belong to which category of micro-operations?,Logic micro-operations.
+Arithmetic operations like increment and decrement are examples of _____ micro-operations.,arithmetic
+"In RTL, the symbolic expression for transferring the content of $R1$ to $R2$ is _____.",$R2 \leftarrow R1$
+Which part of the CPU is considered the 'brain' that performs mathematical calculations?,The Arithmetic Logic Unit (ALU).

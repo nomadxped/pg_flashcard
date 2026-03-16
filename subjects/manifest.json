@@ -1,0 +1,20 @@
+{
+  "Data Communication": [
+    "application.csv",
+    "data.csv",
+    "network.csv",
+    "osi.csv",
+    "physical.csv",
+    "transport.csv"
+  ],
+  "Digital System": [
+    "cpu.csv",
+    "design.csv",
+    "digital.csv",
+    "flip.csv",
+    "micro.csv",
+    "register.csv",
+    "rtl.csv",
+    "shift.csv"
+  ]
+}

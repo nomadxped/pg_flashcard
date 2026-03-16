@@ -1,0 +1,81 @@
+Which field focuses on the architecture and development of small-scale computer systems built around microprocessors?,Microcomputer System Design
+What are the three primary areas involved in Microcomputer System Design besides hardware components?,Interfacing techniques and software integration.
+"In a microcomputer system structure, which unit contains the ALU, CU, and Registers?",The Microprocessor
+What component in a microprocessor is responsible for performing mathematical and logical operations?,Arithmetic Logic Unit (ALU)
+What is the function of the Control Unit (CU) within a microprocessor?,It manages and coordinates the operations of the processor.
+Which microcomputer component provides temporary storage for data and instructions during processing?,Registers
+What is the name of the communication pathway that connects the microprocessor to memory and I/O ports?,System Bus
+"In the microcomputer system structure, what are the two main types of internal memory connected to the bus?",RAM and ROM
+What is the primary role of an I/O Port in a microcomputer system?,To serve as an interface between the system bus and external I/O devices.
+Which layer of software in a microcomputer system interacts directly with the hardware to manage system resources?,System software
+What term refers to the internal structure and operational principles of a microcomputer system?,Microcomputer Organisation
+Why is understanding microcomputer architecture essential for developers?,It is necessary for designing and optimising microcomputer-based applications.
+What defines a microcomputer as a 'self-contained' computer?,"It is built around a microprocessor as its CPU and includes memory, I/O, and storage."
+Name one common field where microcomputers are extensively used in automation.,Embedded systems
+"Which instruction category is responsible for moving data between registers, memory, and I/O devices?",Data Transfer Instructions
+What is the purpose of the 'IN' instruction in a microprocessor?,To input a byte or word from an I/O device.
+Which instruction is used to output a byte or word to a peripheral device?,OUT
+What does the mnemonic 'LEA' stand for in data transfer?,Load effective address
+Which instructions are used to load a pointer using the DS and ES segment registers respectively?,LDS and LES
+What is the function of the 'ENTER' instruction regarding the stack?,To build a stack frame.
+Which instruction is used to tear down a stack frame before returning from a procedure?,LEAVE
+What does the 'LAHF' instruction perform?,It loads the AH register from the flags.
+Which instruction stores the contents of the AH register into the flags?,SAHF
+What are the specific operations for pushing and popping flags to and from the stack?,PUSHF and POPF
+Which instruction adds a byte or word while specifically accounting for a previous carry?,ADC (Add with carry)
+What is the purpose of the 'INC' instruction?,To increment a byte or word by 1.
+Which instruction performs a decimal adjustment specifically after an addition operation?,DAA
+What is the function of the 'SBB' instruction?,To subtract a byte or word with a borrow.
+Which arithmetic instruction is used to decrease a value by 1?,DEC (Decrement)
+What does the 'NEG' instruction do to a byte or word?,It negates the value (finds the two's complement).
+Which instruction compares two operands by subtracting them without storing the result?,CMP (Compare)
+What are the two 'adjust' instructions used specifically for subtraction in ASCII or Decimal formats?,AAS and DAS
+"Which category of instructions performs bitwise operations such as AND, OR, and XOR?",Logical Instructions
+"In logical instructions, what does the 'Complement' operation achieve?",It reverses the bits of the operand (NOT operation).
+Which instruction category manages processor control and the flow of execution?,Control Instructions
+What is the effect of the 'NOP' instruction?,No operation is performed (used for timing or padding).
+Which instruction stops the execution of the processor until an external reset or interrupt occurs?,HLT (Halt)
+What do the instructions 'DI' and 'EI' control in a microprocessor?,Disabling and Enabling interrupts.
+Which instructions are used to set or reset the interrupt mask?,SIM and RIM
+How do branching instructions alter the normal sequence of program execution?,By changing the value of the program counter.
+What is the difference between a 'JMP' and a 'JC' instruction?,"JMP is an unconditional jump, while JC only jumps if the carry flag is set."
+Which branching instruction triggers a jump only if the zero flag is not set?,JNZ (Jump if no zero)
+What is the primary use of the stack in microcomputing?,"Storing temporary data such as parameters, return addresses, and local variables."
+Which instruction loads the Stack Pointer (SP) with the value of the HL register pair?,SPHL
+What does the 'XCHG' instruction perform between registers?,It exchanges the contents of the HL and DE register pairs.
+Which instruction exchanges the HL register pair with the top of the stack?,XTHL
+What is the definition of 'Addressing Modes' in assembly language?,"They define how an instruction accesses operands in registers, memory, or immediate values."
+"In which addressing mode is the operand specified directly within the instruction (e.g., MOV AL, $05H$)?",Immediate Addressing Mode
+How is the operand accessed in Direct Addressing Mode?,It is stored at a memory address explicitly specified in the instruction.
+Which addressing mode uses a register to store the memory address where the actual data is located?,Indirect Addressing Mode
+What specific registers are typically used in Indexed Addressing Mode to access memory with an offset?,The SI or DI index registers.
+Which addressing mode involves using the BX or BP registers with an offset to calculate a memory address?,Based Addressing Mode
+How does Base-Indexed Addressing Mode calculate a memory address?,By using both a base register and an index register.
+"Which addressing mode combines a base register, an index register, and a displacement?",Base-Indexed with Displacement Addressing Mode
+In which addressing mode is the target address specified as an offset relative to the current instruction pointer?,Relative Addressing Mode
+Which register is the primary reference for Stack Addressing Mode?,The Stack Pointer (SP) or Base Pointer (BP).
+What is the fundamental data structure principle of a stack?,"Last In, First Out (LIFO)"
+Which instruction is used to add data onto the stack?,PUSH
+What is a subroutine in microcomputer programming?,A block of code that performs a specific task and can be called multiple times.
+"During a 'CALL' instruction, what piece of information is automatically pushed onto the stack?",The return address (the address of the next instruction).
+Which instruction pops the return address from the stack to resume the main program after a subroutine?,RET
+What is an 'Interrupt' in a computer system?,A mechanism that temporarily halts program execution to handle special events.
+What are the three main types of interrupts based on their source?,"Hardware, Software, and Internal interrupts (Exceptions)."
+Give an example of a software interrupt trigger.,"The 'INT' instruction (e.g., $INT\ 21H$)."
+Which software routine is executed by the CPU to handle a specific interrupt?,Interrupt Service Routine (ISR)
+Which instruction is used to restore the previous state and resume execution after an interrupt?,IRET (Interrupt Return)
+What is the primary purpose of the Input-Output (I/O) Interface?,To facilitate communication and data transfer between the CPU and peripheral devices.
+Which component of an I/O interface manages the actual communication between the CPU and hardware?,I/O Controller
+What role do 'Device Drivers' play in an I/O system?,They enable communication between the operating system and the hardware.
+"In 'Programmed I/O', why is the process considered slow?",Because the CPU directly controls and is fully engaged in handling every I/O operation.
+How does 'Interrupt-Driven I/O' improve efficiency over 'Programmed I/O'?,The CPU continues other tasks after requesting I/O until the device sends an interrupt signal.
+What does the acronym 'DMA' stand for?,Direct Memory Access
+What is the defining characteristic of DMA data transfer?,Data is transferred directly between memory and an I/O device without CPU intervention.
+In what scenario is DMA particularly beneficial for system performance?,"During large data transfers, such as disk operations."
+How does a microcomputer system benefit from reducing the CPU workload via DMA?,It allows the CPU to perform other processing tasks while data transfer occurs independently.
+Which I/O method requires the CPU to handle every single byte of data transferred?,Traditional I/O (Programmed I/O or Interrupt-driven I/O).
+Which component converts user actions into signals that a microcomputer can process?,Input Devices
+What are 'Ports and Connectors' in the context of an I/O interface?,"Physical interfaces such as USB, HDMI, or Ethernet."
+"What is an 'Internal Interrupt' often called, and when is it generated?",An Exception; it is generated by the CPU when an error (like division by zero) occurs.
+"Identify the addressing mode for: MOV AX, $[1000H]$.",Direct Addressing Mode
+"Identify the addressing mode for: MOV AX, $[BX+SI+05H]$.",Base-Indexed with Displacement Addressing Mode

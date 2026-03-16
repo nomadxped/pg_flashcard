@@ -1,0 +1,77 @@
+Which layer is responsible for the 'process-to-process' delivery of an entire message?,The Transport Layer.
+"The Network Layer is responsible for _____ delivery, which moves datagrams between two specific computers.",host-to-host
+"The Data Link Layer is responsible for _____ delivery, moving frames between two neighbouring nodes over a link.",node-to-node
+What specific type of address is included in the Transport Layer header to identify a process on a computer?,A service point address (or port address).
+"The Transport Layer process of dividing a message into smaller units, each containing a sequence number, is known as _____.",segmentation
+How does the Transport Layer ensure a message is correctly reconstructed at the destination?,It uses sequence numbers for reassembling the segments and replaces any packets lost in transmission.
+"In a _____ Transport Layer, each segment is treated as an independent packet and delivered without a pre-established path.",connectionless
+What must occur in a connection-oriented Transport Layer before any packets are delivered to the destination machine?,A connection must be established with the transport layer at the destination machine.
+"Unlike the Data Link Layer, flow control in the Transport Layer is performed _____.",end to end
+How does the Transport Layer typically handle error correction to ensure complete message arrival?,It performs end-to-end error control through retransmission.
+Which transport protocol is defined as a connection-oriented protocol providing reliable services between processes?,Transmission Control Protocol (TCP).
+"TCP provides _____ operation, allowing data to be sent and received simultaneously.",full duplex
+The unit of data transferred between two processes in TCP is called a _____.,segment
+"In a TCP header, the Source Port and Destination Port fields are each _____ in size.",$2$ bytes ($16$ bits)
+What is the size of the Sequence Number field in a TCP header?,$4$ bytes ($32$ bits).
+The _____ Number in a TCP header specifies the sequence number of the next byte of data that the receiver expects to get.,Acknowledgement
+"In a TCP header, the Header Length field is a _____ bit field indicating the number of words in the header.",$4$
+How many bits are allocated to the 'Reserved' field in a standard TCP header?,$6$ bits.
+What does the 'URG' flag in the TCP header indicate?,The Urgent Pointer field is valid.
+"In TCP, the _____ flag is used to request that a connection be reset.",RST
+Which TCP flag is used to synchronise sequence numbers during the initialisation of a connection?,The SYN flag.
+The _____ flag in a TCP header is used to terminate or finalise the connection.,FIN
+What information does the 'Window' field in a TCP header provide to the sender?,It specifies the size of the receiver's available buffer space for incoming data.
+Under what specific condition is the $16$-bit Urgent Pointer field in a TCP header considered valid?,It is only valid if the URG bit in the flags field is set to $1$.
+What is the maximum size of the 'Options' field in a TCP header?,$32$ bytes.
+TCP is described as a _____ delivery service because it handles a continuous flow of bytes rather than discrete packets.,stream
+What is the first step of the TCP three-way handshake?,The client sends a SYN segment to the server to inform it of the starting sequence number.
+"In the TCP three-way handshake, the server responds to a client's request with a _____ signal.",SYN-ACK
+What is the final step of the TCP three-way handshake before actual data transfer begins?,The client sends an ACK segment to acknowledge the server's response.
+"Which transport protocol is characterised as connectionless and unreliable, providing best-effort delivery?",User Datagram Protocol (UDP).
+"Unlike TCP, UDP does not provide _____ control or error control mechanisms.",flow
+Why is UDP often considered faster than TCP for real-time applications?,"It avoids the overhead of connection establishment, handshaking, and flow control."
+The unit of data transferred between processes using the UDP protocol is called a _____.,user datagram
+What does the 'Length' field in a UDP header specify?,"The total length of the user datagram, including both the header and the data."
+"In the UDP header, the _____ field is a $16$-bit field that is optional for the sender to include.",Checksum
+Name one application-level protocol that typically uses UDP for data transmission.,"Domain Name System (DNS) (or TFTP, SNMP, RIP)."
+Term: Best-effort delivery,Definition: A network service where the protocol does not guarantee that data will be delivered or that it will arrive in order.
+"While TCP connection is a byte stream, a UDP connection is considered a _____ stream.",message
+Which transport protocol supports broadcasting and multicasting?,UDP (TCP does not support these).
+Define 'congestion' in the context of computer networking.,"A condition where the demand for network resources exceeds the available capacity, leading to performance degradation."
+What is the primary difference between Open Loop and Closed Loop congestion control?,"Open Loop prevents congestion before it happens, while Closed Loop removes congestion after it has occurred."
+"In Open Loop congestion control, how does the Retransmission Policy aim to minimise congestion?",By selecting proper timeouts to avoid unnecessary retransmissions.
+Why is the 'Selective Repeat' window policy preferred over 'Go-back-n' for preventing network congestion?,It only resends the specific lost packet rather than duplicating multiple successfully received packets.
+Describe the Discarding Policy used by routers to manage congestion.,"Routers may discard less sensitive packets, such as parts of an audio file, to preserve the quality of the overall message while reducing load."
+How can an Acknowledgement Policy be adjusted to reduce network traffic load?,The receiver can send a single acknowledgement for $N$ packets (cumulative ACK) rather than one for every individual packet.
+The _____ Policy prevents congestion by checking resource requirements and denying new virtual connections if resources are unavailable.,Admission
+Which Closed Loop congestion control method involves a congested node signalling upstream nodes to slow down the data flow?,Backpressure.
+Backpressure is a _____ congestion control technique that can only be applied to virtual circuit networks.,node-to-node
+What is a 'choke packet' in network congestion control?,A special control message sent by a congested router directly to the source to inform it to reduce the traffic rate.
+How does 'Implicit Signalling' allow a sender to detect network congestion?,"The sender infers congestion based on delayed acknowledgements, timeouts, or packet loss without direct communication from routers."
+"In Explicit Signalling for congestion control, where is the signal bit usually placed?",The signal is included within the data packets themselves rather than in a separate control packet.
+What is the difference between 'Forward Signalling' and 'Backward Signalling' in congestion control?,"Forward signalling warns the destination about congestion, while backward signalling warns the source to slow down."
+"The _____ Algorithm is a traffic shaping mechanism that averages bursty traffic into a constant, fixed-rate output.",Leaky Bucket
+"In the Leaky Bucket algorithm, what happens to incoming packets when the 'bucket' (finite queue) is full?",Additional packets are discarded or 'spilled'.
+Which traffic shaping algorithm allows for bursty data transfers by accumulating 'permits' over idle periods?,The Token Bucket Algorithm.
+"In the Token Bucket algorithm, what is the requirement for a packet to be transmitted immediately?",A token must be available in the bucket to be consumed by the packet.
+What does the networking concept 'Quality of Service' (QoS) aim to manage?,It prioritises data and manages network traffic to ensure predictable performance for critical applications.
+Identify the four primary flow characteristics controlled by QoS.,"Reliability, Delay, Jitter, and Bandwidth."
+Concept: Jitter,Definition: The variation in the delay of received packets within a single flow.
+What is the process of grouping network traffic based on parameters like IP address or port number called?,Classification.
+"In QoS, what is 'Marking'?",The process of tagging classified packets with priority values so network devices know how to treat them.
+How does 'Policing' differ from 'Shaping' in traffic management?,"Policing enforces strict rate limits by dropping excess traffic, whereas shaping buffers and delays excess traffic."
+Which QoS scheduling technique assigns more 'weight' to higher priority packets to improve service quality?,Weighted Fair Queuing (WFQ).
+The _____ Service Model is the simplest model where all traffic is treated equally with no prioritisation guarantees.,Best Effort
+What is 'Drop Tail' in the context of the Best Effort service model?,A mechanism where new incoming packets are simply discarded if a router's buffer is completely full.
+The analogy of a 'Reserved Seat on a Train' best describes which QoS service model?,Integrated Services (IntServ).
+Which explicit signalling protocol is used by Integrated Services (IntServ) to request resource reservations?,Resource Reservation Protocol (RSVP).
+"In the IntServ model, what does the 'Tspec' (Transport Specification) define?","The characteristics of the traffic flow, such as its data rate."
+"In IntServ, the _____ Service Class ensures a specific minimum end-to-end delay between the sender and receiver.",Guaranteed
+What is the primary scalability limitation of the Integrated Services (IntServ) model?,It requires every router along the path to maintain state for every individual traffic flow.
+The _____ QoS model classifies traffic into aggregates rather than individual flows to improve scalability.,Differentiated Services (DiffServ)
+"In DiffServ, what does the 'DSCP' (Differentiated Services Code Point) marking represent?",A priority tag in the IP header that tells routers how to treat the packet.
+What is 'Per-Hop Behaviour' (PHB) in the Differentiated Services model?,"The specific way a router treats a packet based on its DSCP tag, such as sending it to a priority queue."
+Which QoS model is described as 'Soft QoS' because it provides statistical preference rather than strict hard guarantees?,Differentiated Services (DiffServ).
+DiffServ implements QoS by using the DS field within the _____ field of the IP header.,Type of Service (ToS)
+How does the 'Controlled-load' service class in IntServ handle traffic?,It supports applications that are sensitive to packet loss but can tolerate some delay.
+What happens in the Admission Control phase of the IntServ model if a router cannot meet a resource request?,The request is rejected and the end-to-end connection fails.

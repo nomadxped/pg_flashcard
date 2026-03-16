@@ -1,0 +1,88 @@
+What are the two primary responsibilities of the network layer?,Route discovery and logical addressing.
+"In the network layer, what is the specific function of determining the suitable path from a source to a destination called?",Routing.
+Where does the network layer place the sender and receiver's IP addresses to identify devices uniquely?,In the packet header.
+An IPv4 address is a unique identifier consisting of how many bits?,32 bits.
+What is the total address space of IPv4?,$2^{32}$ addresses.
+"IP addresses are commonly represented as four decimal values separated by points, a format known as _____ notation.",Dotted decimal.
+What are the two components that every IP address is divided into?,The network part and the host part.
+Which two factors determine which part of an IP address belongs to the network and which part belongs to the node?,The class of the address and the subnet mask.
+How many sub-classes is the 32-bit IP address divided into under classful addressing?,"Five (A, B, C, D, and E)."
+Which class of IP address is specifically reserved for multicast purposes?,Class D.
+Class E IP addresses are reserved for what specific purpose?,Experimental or future use.
+How can you determine the class of an IP address by looking at its binary format?,By examining the first 4 bits of the address.
+"In Class A addressing, how many bits are used for the Network ID (excluding the leading 0)?",7 bits.
+"In Class B addressing, how many bits are allocated to the Host ID?",16 bits.
+"In Class C addressing, how many bits are allocated to the Network ID (excluding the leading 110)?",21 bits.
+What is the decimal range of the first octet for a Class A IP address?,0 to 127.
+What is the decimal range of the first octet for a Class B IP address?,128 to 191.
+What is the decimal range of the first octet for a Class C IP address?,192 to 223.
+What was the primary reason for replacing classful networking with Classless Inter-Domain Routing (CIDR) in 1993?,Significant wastage of addresses in Classes A and B and insufficient addresses in Class C.
+What is the primary function of a subnet mask?,To separate an IP address into its network and host components.
+What is the term for smaller networks created by organising a single network with multiple subnet masks?,Subnetworks or subnets.
+What device is required for systems on different subnets to communicate with each other?,A router.
+What is the default subnet mask for a Class A IP address?,255.0.0.0 (or /8).
+What is the default subnet mask for a Class B IP address?,255.255.0.0 (or /16).
+What is the default subnet mask for a Class C IP address?,255.255.255.0 (or /24).
+"In a binary representation of a subnet mask, what does the bit '1' represent?",A network bit.
+Who provides globally recognisable Public IP addresses?,An ISP (Internet Service Provider) or IANA (Internet Assigned Numbers Authority).
+How do Private IP addresses behave regarding the global internet?,They never leave the Local Area Network (LAN).
+Which entity has overall responsibility for the global Internet Protocol (IP) address pool?,The Internet Assigned Numbers Authority (IANA).
+What are the organisations called that IANA distributes large blocks of addresses to for regional management?,Regional Internet Registries (RIRs).
+Which RIR is responsible for the Asia Pacific region?,APNIC.
+"Which RIR is responsible for Europe, the Middle East, and parts of Central Asia?",RIPE NCC.
+What is the private IP address range for Class C?,192.168.0.0 to 192.168.255.255.
+What is the private IP address range for Class A?,10.0.0.0 to 10.255.255.255.
+How does subnetting help reduce network traffic?,By reducing the volume of broadcast traffic.
+What are the two main types of subnetting?,FLSM (Fixed Length Subnet Mask) and VLSM (Variable Length Subnet Mask).
+What bitwise operation is performed on an IP address and a subnet mask to find the network address?,AND operation.
+How is the broadcast address of a subnet found using the binary representation of an IP address?,By setting all the host bits ($32-n$ bits) to 1.
+"In the IP encapsulation process, the network layer takes data segments from which layer?",Layer 4 (Transport Layer).
+"In the IPv4 header, what does the IHL field indicate?",Internet Header Length; the length of the entire IP header.
+Which field in the IPv4 header carries information about congestion seen along the route?,ECN (Explicit Congestion Notification).
+What is the purpose of the 'Identification' field in the IPv4 header?,To identify which original IP packet various fragments belong to.
+"In the 3-bit IPv4 Flags field, what is the MSB (Most Significant Bit) always set to?",0.
+Which IPv4 header field tells the exact position of a fragment within the original IP packet?,Fragment Offset.
+What happens to an IPv4 packet when its TTL (Time to Live) value reaches zero?,The packet is discarded.
+What is the protocol number for ICMP in the IPv4 'Protocol' field?,1.
+What is the protocol number for TCP in the IPv4 'Protocol' field?,6.
+Which IPv4 header field is used to verify that the header was received error-free?,Header Checksum.
+What is the bit length of an IPv6 address?,128 bits.
+IPv6 addresses are represented using 8 groups of four _____ digits.,Hexadecimal.
+What is the notation format used for IPv6 addresses?,Colon-Hexa representation.
+"In a standard IPv6 address structure, how many bits are typically used for the network part and the node part respectively?",64 bits for the network and 64 bits for the node.
+The lower 64 bits of an IPv6 address are often derived from the MAC address using which format?,EUI-64 (Extended Unique Identifier).
+Which IPv6 address type is globally routable on the internet?,Global Unicast Address.
+What is the scope of an IPv6 'Link Local' address?,A single network link; it is not routed internally or externally.
+How does IPv6 handle the recalculation of checksums at every router hop compared to IPv4?,"IPv6 contains no IP-level checksum, so recalculation is not needed, making processing more efficient."
+"Instead of broadcasting, what method does IPv6 use to send bandwidth-intensive flows to multiple destinations?",Multicast.
+Which field in the IPv6 header is used by routers to handle traffic based on priority?,Traffic Class.
+What is the purpose of the 20-bit 'Flow Label' field in the IPv6 header?,To differentiate data flows for non-default Quality of Service (QoS) or real-time services.
+"In an IPv6 header, which field indicates the type of extension header that follows the main header?",Next Header.
+Which IPv4 field is equivalent to the 'Hop Limit' field in IPv6?,TTL (Time to Live).
+How does the requirement for IPSec (Internet Protocol Security) differ between IPv4 and IPv6?,It is optional in IPv4 and mandatory in IPv6.
+What is the size of the fixed header in IPv6 compared to the minimum header in IPv4?,40 bytes in IPv6 versus 20 bytes in IPv4.
+Which information base is used by a router to find the next hop address and outgoing interface for a specific destination?,FIB (Forwarding Information Base).
+What is the difference between a RIB and a FIB in a router?,"The RIB (Routing Information Base) contains all known routes, while the FIB is generated from the RIB to handle actual packet forwarding."
+In which type of routing does an administrator manually add routes to the routing table?,Static routing (non-adaptive).
+What is a significant security advantage of static routing?,Only the administrator can allow routing to specific networks.
+What is a 'stub router'?,A router that has only one route to reach all other networks.
+When is a 'default route' typically chosen by a router?,Only when a specific route for the destination is not found in the routing table.
+Dynamic routing protocols use _____ to discover network destinations automatically.,Protocols (like RIP or OSPF).
+What is the primary difference between IGPs and EGPs?,"IGPs (Interior Gateway Protocols) communicate within an Autonomous System, whereas EGPs communicate between different Autonomous Systems."
+Distance vector algorithms find the best path based on which two factors?,Distance (hop count) and direction (vector).
+Which classic algorithm is associated with Distance Vector routing protocols?,Bellman-Ford algorithm.
+What is the standard update interval for sharing information in a Distance Vector algorithm?,Every 30 seconds.
+How does Link State routing differ from Distance Vector routing regarding what information is sent?,"Link State sends info only about directly connected neighbors but broadcasts it to all routers, whereas Distance Vector sends its whole table but only to neighbors."
+Which algorithm is used by Link State protocols to calculate the shortest path?,Dijkstra's algorithm (or SPF).
+What is the term for the process in Link State routing where a router sends its Link State Table to all other routers in the network?,Flooding.
+What is the specific name of the topology map stored by OSPF?,LSDB (Link-State Database).
+What are the three tables maintained by OSPF to manage routing information?,"Neighbor Table, Topology Table, and Routing Table."
+What is the default 'Hello time' and 'Dead time' for OSPF?,10 seconds for Hello; 40 seconds for Dead.
+Which metric does OSPF use to determine the best path?,Cost (computed based on link bandwidth).
+What is the standard administrative distance for OSPF routes?,110.
+Which protocol is the primary routing protocol used to exchange information between networks on the global Internet?,BGP (Border Gateway Protocol).
+The Hybrid routing protocol EIGRP uses which specific algorithm?,DUAL (Diffusing Update Algorithm).
+Which network layer protocol is used for error reporting and diagnostics because IP has no inbuilt failure notification?,ICMP (Internet Control Message Protocol).
+How are ICMP messages physically transmitted across a network?,They are encapsulated within IP datagrams.
+What must an ICMP error message contain so the end system knows which specific packet failed?,The entire IP header from the original failed message.
+"In the context of IPv6, what is the 'all-nodes multicast address' used for auto-configuration?",Link-local scope all-nodes multicast address.

@@ -1,0 +1,31 @@
+How are digital signals represented in terms of time and amplitude?,Digital signals are discrete-time and discrete-amplitude.
+Explain why digital signals are highly immune to noise compared to analog signals.,Digital signals can be perfectly regenerated using repeaters because distorted pulses are still recognisable as finite logic levels.
+Under what conditions is power mostly drawn in digital CMOS technology?,Power is primarily drawn only during state transitions.
+Contrast the storage of analog data with digital data retrieval.,"Analog storage is prone to degradation over time, whereas digital binary bits allow for perfect retrieval with zero degradation."
+Why is digital data considered more secure than analog signals?,Digital data can be easily encrypted using algorithms like AES or RSA before transmission.
+"In decimal-to-binary integer conversion, which remainder represents the Most Significant Bit (MSB)?",The last remainder produced by the division process.
+Which method is used to convert a number in base-$r$ back to a decimal number?,Polynomial expansion weighting.
+Describe the function of a NOT gate.,The output is the logical reversal of the input.
+Define 'Universal Gates'.,"Gates that can be used to construct any other logic gate, such as NAND and NOR."
+"Which gate acts as a 'Difference Detector', outputting $1$ only when inputs are different?",XOR (Exclusive OR) gate.
+"Which gate acts as an 'Equality Detector', outputting $1$ only when inputs are identical?",XNOR (Exclusive NOR) gate.
+An XOR gate is said to have _____ Parity logic.,Odd
+An XNOR gate is said to have _____ Parity logic.,Even
+Describe the function of a Buffer gate.,The output is logically identical to the input.
+State one practical reason for using a Buffer gate in a circuit.,Signal amplification to drive more inputs (Fan-out) or intentional propagation delay.
+Inverting the output of an XNOR gate results in which logic function?,XOR
+State the Principle of Duality in Boolean Algebra.,A valid equation remains valid if AND/OR operators and $0/1$ constants are swapped.
+Boolean Algebra: $A \cdot 1 =$,A (Identity Law)
+Boolean Algebra: $A \cdot A' =$,0 (Inverse Law)
+State the dual form of the Distributive Law ($A \cdot (B + C) = A \cdot B + A \cdot C$).,$A + (B \cdot C) = (A + B) \cdot (A + C)$
+Boolean Algebra: $A + A \cdot B =$,A (Absorption Law)
+Why do engineers use complements to perform subtraction in digital systems?,"It allows the hardware to perform subtraction using only addition circuits, saving space and complexity."
+What are the two types of complements available for any base $r$?,Radix complement ($r$'s) and Diminished Radix complement ($r-1$'s).
+How is the 1's complement of a binary number calculated?,"Every bit is flipped (0 becomes 1, 1 becomes 0)."
+Under what condition is the Sum bit of a Full Adder HIGH ($1$)?,If the number of input 1s is ODD.
+Under what condition is the Carry bit of a Full Adder HIGH ($1$)?,If there are two or more 1s in the inputs (Majority Gate logic).
+Identify the logic gate that corresponds to the 'Sum' output of a binary adder.,XOR gate.
+Define 'Fan-out' in the context of digital logic.,The number of gate inputs that a single output can reliably drive.
+What is the hexadecimal value of the binary string $1010$?,$A$
+"In binary integer conversion, which bit is the Least Significant Bit (LSB)?",The first remainder produced by the division process.
+Boolean Algebra: $A + A' \cdot B =$,$A + B$ (using the Distributive Dual Law).

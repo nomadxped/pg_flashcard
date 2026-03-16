@@ -1,0 +1,78 @@
+"In the OSI reference model, which layer is positioned directly above the physical layer?",The Data Link Layer.
+What is the primary function of framing at the Data Link Layer?,Dividing data from the network layer into manageable units called frames.
+Which function of the Data Link Layer is responsible for adding MAC addresses to frames?,Physical Addressing.
+What is the purpose of flow control in data transmission?,Managing the rate of data transmission to prevent overwhelming the receiver.
+The process of regulating how devices share a transmission medium is known as _____.,Access Control
+How is a single-bit error defined in data transmission?,A condition where only one bit in a frame is corrupt.
+What occurs during a burst error?,More than one consecutive bit in a frame is corrupted.
+Which error control method involves computing and appending a checksum to each outgoing frame?,Checksum.
+What are the two general types of checksum-based error handling?,Error detecting and error correcting.
+Which type of noise is often caused by external electromagnetic signals or arcing relays?,Impulse noise.
+The variation in signal timings that causes transmission errors is known as _____.,Jitter
+What are the additional bits added to a message to facilitate error detection called?,Redundancy bits.
+"In an even parity check, what value is added as a parity bit if the data block contains an odd number of 1s?",1.
+How does a two-dimensional parity check differ from a simple parity check?,It calculates parity bits for both each row and each column of data.
+"In the checksum scheme, what arithmetic method is used to get the sum of segments?",1's complement arithmetic.
+What result must a receiver get after complementing the sum of received segments for the data to be accepted?,Zero.
+Which error detection technique is based on binary division rather than addition?,Cyclic Redundancy Check (CRC).
+What is the term for the actual data bits plus the CRC remainder?,A codeword.
+"In CRC, how is the divisor generated?",Using polynomials.
+What is the difference between backward and forward error correction?,"Backward requires retransmission, while forward automatically corrects errors using specific codes."
+Which error control mechanism relies on acknowledgements and timeouts for reliability?,Automatic Repeat Request (ARQ).
+What determines if an ARQ scheme is forward or backward?,ARQ is a form of backward error correction.
+Which block code is capable of detecting two simultaneous bit errors and correcting one?,Hamming Code.
+What formula is used to calculate the number of redundant bits $r$ required for $d$ data bits?,$2^r \ge d + r + 1$.
+At what bit positions are redundant bits placed in a Hamming code?,"Positions that are powers of 2, such as 1, 2, 4, and 8."
+How many redundant bits are required if the number of data bits is 7?,4.
+Which error correction code is specifically designed to handle burst errors in received data blocks?,Reed-Solomon Code.
+What is a negative acknowledgement (NACK)?,A message sent by a receiver indicating that a data packet was received incorrectly.
+"In Stop-and-Wait flow control, when does the sender transmit the next frame?",Only after receiving an acknowledgement for the previous frame.
+What is the main disadvantage of the Stop-and-Wait protocol?,It is inefficient because only one frame is in transition at any given time.
+"In Stop-and-Wait ARQ, how are data frames and ACKs numbered for identification?",They are numbered alternatively as 0 and 1.
+What technique involves combining a data frame with an acknowledgement to save bandwidth?,Piggybacking.
+How does the sliding window protocol improve on the efficiency of stop-and-wait?,By allowing multiple frames to be transmitted before receiving an acknowledgement.
+What is the maximum window size in a sliding window protocol with $m$ bits for sequence numbers?,$2^m - 1$.
+"In the Go-Back-N ARQ protocol, what is the size of the receiver's window?",1.
+What does a receiver do in Go-Back-N ARQ if a frame arrives out of order?,It discards the out-of-order frame and all subsequent frames.
+How does Selective Repeat ARQ handle out-of-order frames?,It buffers them and sends a NACK only for the missing or damaged frame.
+Which protocol is more bandwidth-efficient for noisy links: Go-Back-N or Selective Repeat?,Selective Repeat.
+What is the primary use of the Point-to-Point Protocol (PPP)?,Transmitting multiprotocol data between two directly connected nodes over a serial link.
+PPP was designed as a replacement for which older protocol?,SLIP (Serial Line IP).
+Does High-level Data Link Control (HDLC) support multipoint links?,"Yes, it supports both point-to-point and multipoint links."
+Is High-level Data Link Control (HDLC) a bit-oriented or byte-oriented protocol?,It is a bit-oriented protocol.
+What is the purpose of HDLC Supervisory frames (S-frames)?,Flow and error control when piggybacking on data frames is not required.
+What do HDLC Unnumbered frames (U-frames) manage?,Miscellaneous functions such as link management.
+Which Data Link Layer sublayer is responsible for resolving access to shared media?,The Media Access Control (MAC) sublayer.
+"In Pure ALOHA, what happens if a collision occurs?",The node waits for a random period of time and then re-sends the frame.
+How does Slotted ALOHA improve the efficiency of Pure ALOHA?,By restricting nodes to transmit only at the beginning of synchronised time slots.
+What principle is the CSMA protocol based on?,"The principle of 'carrier sense', where devices check if the channel is idle before transmitting."
+What does the 'CD' in CSMA/CD stand for?,Collision Detection.
+Why is CSMA/CA used in wireless networks instead of CSMA/CD?,Wireless networks cannot reliably detect collisions while transmitting.
+What algorithm does CSMA/CD use to determine the wait time after a collision?,Exponential back-off.
+What is the Distributed Coordination Function (DCF) used for in CSMA/CA?,Collision avoidance.
+"In controlled access protocols, which method requires a station to make a reservation before sending data?",The Reservation method.
+How is access controlled in the Polling method?,A primary station polls secondary stations one by one to grant them permission to transmit.
+What is a 'token' in the Token Passing access method?,A special frame that circulates among stations; only the holder can transmit.
+What table does a switch maintain to filter and forward packets?,A CAM (Content Addressable Memory) table.
+What is the main benefit of using a Virtual Local Area Network (VLAN)?,It groups devices into logical networks regardless of their physical location.
+How does a VLAN improve network performance?,By reducing the size of broadcast domains and breaking them into smaller parts.
+What defines a Static VLAN?,A network administrator manually assigns switch ports to a specific virtual network.
+Which wireless standard defines the protocol for Bluetooth?,IEEE 802.15.
+What is the maximum number of stations in a Bluetooth piconet?,Eight (one primary and seven secondaries).
+What is formed when multiple Bluetooth piconets are combined?,A scatternet.
+Which IEEE standard governs Ethernet?,IEEE 802.3.
+What encoding technique is used by Ethernet?,Manchester Encoding.
+What is the transmission speed of Fast Ethernet?,100 Mbps.
+Which Ethernet variant provides a speed of 1 Gbps?,Gigabit Ethernet.
+How does Virtual Circuit Switching differ from datagram routing?,It establishes a dedicated logical path that all packets in a session must follow.
+What is the cell size in Asynchronous Transfer Mode (ATM) networking?,53 bytes.
+"In Frame Relay, what is used to identify virtual circuits?",DLCI (Data Link Connection Identifier) numbers.
+What is the role of a DTE (Data Terminal Equipment) in Frame Relay?,It is the customer-side device that generates and consumes data.
+What does a DCE (Data Circuit-terminating Equipment) provide in Frame Relay?,"Connectivity, timing signals, and virtual circuit management within the network cloud."
+Which frame type in HDLC carries user data and piggybacked flow/error control information?,I-frames (Information frames).
+"In the context of CSMA/CA, what does IFG stand for?",Inter-frame gap.
+What is the typical frame size for Frame Relay?,9000 bytes.
+How does a switch differ from a hub in terms of data handling?,"A switch performs 'filter and forwarding' to specific ports, while a hub broadcasts to all ports."
+Which error detection method uses a generator polynomial?,Cyclic Redundancy Check (CRC).
+Under what condition is a frame retransmitted in the Stop-and-Wait ARQ protocol?,If an acknowledgement is not received within an allocated time period.
+"In a Bluetooth piconet, which station's clock do secondaries synchronise with?",The primary station's clock.

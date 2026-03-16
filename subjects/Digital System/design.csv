@@ -1,0 +1,75 @@
+What does the term 'Computer Design' refer to in the context of system architecture?,"The process of planning and creating the architecture, components, and systems that make up a computer."
+Computer design involves the integration of which two types of design to form a functional system?,Hardware design and software design.
+"Computer design encompasses the creation of individual components such as processors, memory, and _____ devices.",I/O (Input/Output)
+What are the three core requirements a unified computer system must typically meet during integration?,"Performance, power, and cost requirements."
+Aspect of Computer Design: Computer Architecture,The conceptual design and fundamental operational structure of a computer system.
+Aspect of Computer Design: Hardware Design,The physical components and circuitry that constitute the computer's tangible structure.
+Aspect of Computer Design: Software Design,The creation of programs and operating systems that manage hardware and perform tasks.
+"In computer design, what does 'Performance Optimisation' entail?",Adjusting the system to ensure it operates at maximum efficiency and speed.
+Why is 'Power and Energy Efficiency' a key aspect of modern computer design?,To reduce electricity consumption and heat generation while maintaining performance.
+Aspect of Computer Design: Scalability,The ability of a system to handle a growing amount of work or its potential to be enlarged.
+What does 'Integration and Packaging' refer to in hardware design?,The physical arrangement and housing of electronic components within a device.
+Aspect of Computer Design: Security Considerations,The implementation of features to protect data and hardware from unauthorised access or damage.
+Which design aspect focuses on the limitations imposed by budget and delivery deadlines?,Cost and Time Constraints.
+"In a computer block diagram, which unit is responsible for receiving external data?",Input Unit.
+What are the two subdivisions of the Storage Unit in a standard computer architecture?,Primary Storage and Secondary Storage.
+"In a computer block diagram, the 'Information' is produced by which unit?",Output Unit.
+What are the two main components within the Central Processing Unit (CPU)?,The Control Unit (CU) and the Arithmetic and Logical Unit (ALU).
+"In a block diagram, what does a solid line with an arrow typically represent?",Data flow.
+"In a block diagram, what does a dashed line with an arrow typically represent?",Control flow.
+How does a digital computer represent data?,Using binary digits ($0$s and $1$s).
+What is the primary function of a digital computer?,"To perform computations, store information, and execute programs based on logical and arithmetic operations."
+Feature of Digital Computers: Programmability,The ability to follow a set of instructions (software) to perform a variety of different tasks.
+Which feature of digital computers allows them to process data with high precision and minimal delay?,High Speed and Accuracy.
+Feature of Digital Computers: Automation,The ability to execute tasks automatically without manual intervention once a program is loaded.
+Which hardware components provide 'Storage Capability' in a digital computer?,"Memory units such as RAM, hard drives, and SSDs."
+Feature of Digital Computers: Connectivity,The ability to connect to networks and the internet for communication and data exchange.
+Which type of digital computer is extremely powerful and used for tasks like weather forecasting?,Supercomputers.
+What is the primary use of 'Mainframe Computers' in large organisations?,Bulk data processing.
+Define 'Minicomputers' in terms of their scale and application.,Mid-sized computers used for specific industrial or scientific applications.
+What is the common name for 'Microcomputers' used by individuals?,Personal Computers (PCs).
+List three common applications of digital computers in healthcare.,"Medical imaging, patient data management, and research."
+What is a 'computer instruction'?,A command given to a computer to perform a specific operation.
+Which part of the computer is responsible for executing instructions?,The Central Processing Unit (CPU).
+Instruction Type: Data Transfer Instructions,Commands that move data between memory and registers or between different registers.
+Provide three examples of 'Data Transfer Instructions'.,"MOV, LOAD, and STORE."
+Instruction Type: Arithmetic Instructions,"Commands that perform mathematical operations such as addition, subtraction, multiplication, and division."
+Provide four examples of 'Arithmetic Instructions'.,"ADD, SUB, MUL, and DIV."
+Instruction Type: Logical Instructions,"Commands that perform operations based on Boolean logic, such as AND, OR, NOT, and XOR."
+Provide four examples of 'Logical Instructions'.,"AND, OR, XOR, and NOT."
+Instruction Type: Control Instructions,"Commands that direct the sequence of execution in a program, enabling branching and looping."
+Provide four examples of 'Control Instructions'.,"JUMP, CALL, RETURN, and HALT."
+Instruction Type: Input/Output Instructions,Commands that handle data input from devices and output to display units.
+Provide two examples of 'Input/Output Instructions'.,IN and OUT.
+Instruction Type: Comparison Instructions,Commands that compare two values and set flags used for decision-making.
+What is the standard example of a 'Comparison Instruction'?,CMP (Compare).
+Instruction Type: Machine Control Instructions,"Commands that control CPU operations, such as enabling or disabling interrupts."
+What is an example of a 'Machine Control Instruction' that stops CPU operation?,HLT (Halt).
+What are the two primary parts of a typical computer instruction format?,The Opcode (Operation Code) and the Operands.
+"In an instruction, what does the 'Opcode' specify?",The specific operation to be performed.
+"In an instruction, what do the 'Operands' specify?","The data to be operated on, such as registers or memory addresses."
+"Instruction Analysis: In the command $MOV AX, 05$, what is the result?",The value $05$ is moved into register AX.
+"Instruction Analysis: In the command $ADD AX, BX$, what is the result?",The value in register BX is added to the value in register AX.
+What is the purpose of 'Timing and Control' in a computer system?,To coordinate the execution of instructions by managing the flow of data and signals.
+Which component of the CPU is vital for generating signals and managing the clock cycle?,The Control Unit.
+The systematic process followed for the execution of instructions is known as the _____.,Instruction Cycle (or Machine Cycle).
+What are the four core steps in the structured execution cycle (FDES)?,"Fetch, Decode, Execute, and Store."
+Instruction Cycle: Fetch,The process of retrieving an instruction from the computer's memory.
+Instruction Cycle: Decode,The process by which the Control Unit interprets the instruction to determine the required action.
+Instruction Cycle: Execute,The stage where the CPU (often via the ALU) performs the operation specified by the instruction.
+Instruction Cycle: Store,The stage where the results of the execution are written back to memory or a register.
+Which three factors determine the efficiency of instruction execution in a CPU?,"Clock speed, control signals, and CPU architecture."
+"In the system configuration diagram, which unit is situated between the Input Unit and Output Unit to hold data?",Storage Unit.
+Which specific unit is responsible for 'logical' decision making in the CPU?,Arithmetic and Logical Unit (ALU).
+How does the 'Binary System' feature differ from 'Connectivity' in digital computers?,"The Binary System relates to data representation ($0$s and $1$s), whereas Connectivity relates to network communication."
+Term: ALU,Definition: Arithmetic and Logical Unit; the part of the CPU that handles mathematical and logical calculations.
+Term: CU,Definition: Control Unit; the component of the CPU that directs operations and coordinates hardware timing.
+The process of integrating components into a system that meets specific power requirements is part of _____.,Computer Design.
+Which type of instruction would $JUMP$ be classified as?,Control Instruction.
+Which type of instruction would $AND$ be classified as?,Logical Instruction.
+Which type of instruction would $LOAD$ be classified as?,Data Transfer Instruction.
+Which computer type would likely be used for managing a bank's massive database of transactions?,Mainframe Computers.
+Identify one 'Scientific Simulation' mentioned as an application for digital computers.,Weather forecasting (using Supercomputers).
+"In the FDES cycle, where is the instruction held immediately after being fetched?",Within the CPU (typically in a register).
+What is the role of 'flags' in comparison instructions?,They are set to indicate the outcome of a comparison to assist in decision-making.
+Why is 'Hardware/Software Co-design' necessary for an efficient system?,To ensure that the physical architecture and the programs running on it are optimised to work together.

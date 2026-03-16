@@ -1,0 +1,80 @@
+What is the primary function of a counter in a digital system?,It is a sequential logic circuit that accumulates the number of input pulses.
+"In addition to counting clock pulses, name one task a digital counter can perform.",Frequency division.
+Digital counters are used to generate precise _____ and pulse trains.,time ticks
+How are counters typically classified in digital electronics?,"By type, working principle, or counting mode."
+What defines the state changes in a synchronous counter?,The state change of every flip-flop is associated with the same edge of the clock signal.
+Why do synchronous counters provide highly reliable and accurate counts?,All stages of the counter are updated at exactly the same instant.
+For what speed category are synchronous counters specifically suited?,High-speed applications.
+Name an application of synchronous counters in communication systems.,Bit error counting.
+"In network switching devices, synchronous counters are used for _____.",packet counting
+Why is the design of a synchronous counter considered relatively complex?,It requires careful consideration of clock distribution and signal propagation delays.
+Define 'timing closure' in the context of synchronous counter design.,The process of ensuring the counter operates correctly within specific timing constraints.
+What design method is adopted to manage the complexity of synchronous counters?,Modular design.
+"In a modular synchronous counter, what does each stage consist of?",A flip-flop and its appropriate logic.
+What is a benefit of using a modular approach for synchronous counters?,It reduces the risk of errors and simplifies the overall design process.
+How does the number of digits (bits) affect a synchronous counter?,Higher-bit counters handle larger ranges but increase design and timing complexity.
+Give an example of synchronous counter use in instrumentation.,Data acquisition.
+"In automation systems, synchronous counters are used for _____ and monitoring.",control
+What is the alternative name for an asynchronous counter?,Ripple counter.
+How do flip-flops transition in an asynchronous counter?,They transition independently in response to changes in the input signal rather than a common clock.
+For which application type are asynchronous counters best suited?,Low-speed and simple counting or control tasks.
+What is a significant advantage of the asynchronous counter's design?,It is relatively simple and does not require complex clock distribution circuits.
+How many input signals are required to trigger a state change in an asynchronous flip-flop?,Exactly one input signal.
+What is a potential disadvantage of the asynchrony in ripple counters?,It can cause timing and stability issues.
+Name one specific hazard phenomenon designers must avoid in asynchronous counters.,State races (or timing hazards).
+Provide an example of an asynchronous counter used in consumer entertainment.,Counting fractions in video games.
+Asynchronous counters are used to implement _____ in traffic light controllers.,state machines
+What feature allows an asynchronous counter to start at a specific non-zero value?,The preset function.
+Give an application for the preset function in counters.,Setting the initial time in a countdown timer.
+Why are asynchronous counters used in battery-operated mobile devices?,Due to their low-power nature and simplicity.
+What is a Binary Counter?,A specialized sequential logic circuit capable of counting in binary numbers.
+What is the mathematical range of an $n$-bit binary counter?,$0$ to $2^n - 1$.
+"In the binary counter range formula, what does '$n$' represent?",The total number of bits in the counter.
+What is the maximum decimal value a 3-bit binary counter can reach before recycling?,7.
+What is the binary state for '5' in a 3-bit binary counter?,101.
+What binary state follows 111 in a 3-bit binary counter sequence?,000 (recycles).
+What defines an Up/Down counter?,A counter that can transition through its state sequence in both ascending and descending directions.
+What does BCD stand for in the context of counters?,Binary Coded Decimal.
+How many states does a BCD counter transition through in one full cycle?,Ten states.
+At what count does a BCD counter return to zero?,After the count of 9.
+What is the binary range of states for a single BCD counter digit?,0000 to 1001.
+What is the minimum number of flip-flops required to create a BCD counter?,Four flip-flops.
+Why are at least four flip-flops needed for a BCD counter?,Because a decimal digit requires a 4-bit binary code to represent values up to 9.
+"In a 3-bit binary counter, what is the state of $Q_2, Q_1, Q_0$ after 3 clock pulses if the initial state was 000?",011.
+"In a 4-bit BCD decade counter, what is the state of $Q_3, Q_2, Q_1, Q_0$ at the 8th clock pulse?",1000.
+What term describes the phenomenon where one flip-flop triggers the next in an asynchronous counter?,Ripple.
+Synchronous counters are essential for measurement accuracy and _____ control.,precise
+"According to the synchronous counter block diagram, which input of the first flip-flop is tied to 'Logic 1'?",Both $J_A$ and $K_A$ inputs.
+"In an asynchronous counter block diagram, the output $Q_A$ of the first flip-flop is connected to the _____ of the second flip-flop.",clock (CLK) input
+Which type of counter is more likely to be used in high-performance computing for time measurement?,Synchronous counter.
+Which counter type is often used for simple digital displays?,Asynchronous counter.
+"In a binary counter, the range ends at $2^n - 1$; what decimal value is this for a 4-bit counter?",15.
+"In a BCD counter, what happens on the 10th clock pulse?",The counter recycles to 0000.
+What is the main advantage of the modular design method in counters?,It simplifies the design process by breaking it into manageable stages.
+Why is 'clock distribution' a critical factor in synchronous counter design?,To ensure that the clock signal reaches all flip-flops at the same time.
+Asynchronous counters allow flip-flops to transition state _____ in response to input changes.,independently
+What digital component is used as the basic building block for both synchronous and asynchronous counters?,The flip-flop.
+Concept: Sequential Logic Circuit,"Definition: A type of logic circuit whose output depends on both current inputs and past states, such as a digital counter."
+What specific binary code represents the '9' state in a BCD decade counter?,1001.
+True or False: Asynchronous counters are generally faster than synchronous counters.,False (Synchronous counters are preferred for high-speed applications).
+True or False: A BCD counter is a type of decade counter.,True.
+"In a 3-bit binary counter, what decimal number corresponds to the binary state 110?",6.
+"In a 3-bit binary counter, what decimal number corresponds to the binary state 100?",4.
+Which counter type is more susceptible to propagation delay 'rippling' through the circuit?,Asynchronous counter.
+"In a 3-bit binary counter sequence, which bit is the Least Significant Bit (LSB)?",$Q_0$.
+"In a 3-bit binary counter sequence, which bit is the Most Significant Bit (MSB)?",$Q_2$.
+"For a BCD counter, which bits are High (1) at the 9th pulse?",$Q_3$ and $Q_0$.
+"In the BCD counter state sequence, what are the logic levels of $Q_2$ and $Q_1$ during the '9' state?",Logic 0.
+What is the main task of a counter in automation systems?,Control and monitoring.
+Which counter feature is specifically used to avoid starting from zero in a countdown application?,Preset function.
+A BCD counter is also known as a _____ counter because it has ten states.,decade
+The 'rippling' effect in asynchronous counters is caused by the _____ of one flip-flop acting as the clock for the next.,output
+How many states are 'skipped' or unused in a single-digit BCD counter compared to a 4-bit binary counter?,Six states (1010 through 1111).
+"In a synchronous counter, what ensures that various stages are updated at the same instant?",Strict clock synchronisation.
+What is the primary trade-off when increasing the bit-count of a synchronous counter?,Larger counting range versus increased design/timing complexity.
+Which type of counter is commonly used for frequency measurement in electronic communications?,Synchronous counter.
+State a common use for asynchronous counters in simple consumer electronics.,Simple digital displays.
+What is the binary value of a 4-bit BCD counter at the 7th pulse?,0111.
+"In a 4-bit BCD counter, which bit corresponds to the decimal value $2^3$ during states 8 and 9?",$Q_3$.
+What ensures the stability and reliability of synchronous counters in high-performance computing?,In-depth timing analysis and design experience.
+Why is 'timing hazard' a concern for asynchronous counters?,"Because flip-flops do not change state simultaneously, leading to temporary incorrect intermediate states."

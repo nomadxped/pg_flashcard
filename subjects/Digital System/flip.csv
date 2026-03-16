@@ -1,0 +1,85 @@
+"What type of logic circuit is a flip-flop, used specifically for storing 1-bit of information?",A sequential logic circuit.
+"In terms of memory, how is a flip-flop categorised within a digital system?",It is referred to as an elementary memory element.
+How many outputs does a standard flip-flop typically possess?,Two outputs.
+What specific signal is required as an input for a flip-flop to function in a synchronised manner?,A clock signal.
+List three common applications of flip-flops in digital electronics.,"Computer memory, registers, and counters."
+What are the two stable states that a flip-flop can maintain?,Set and reset.
+Under what condition does the state of a flip-flop update its output?,When it is triggered by an appropriate clock pulse.
+What are the four primary types of flip-flops distinguished by their inputs?,"SR flip-flop, JK flip-flop, D flip-flop, and T flip-flop."
+Which triggering method occurs when a flip-flop responds directly to input signals that are not synchronised with a clock pulse?,Asynchronous triggering.
+What is the alternative name for the asynchronous triggering method?,Direct triggering method.
+"In asynchronous triggering, when does the flip-flop update its output states?","Immediately when the inputs are applied, regardless of the clock pulse."
+Which triggering method ensures a flip-flop operation is aligned with the clock pulse?,Synchronous triggering.
+"In synchronous triggering, what happens to the flip-flop output if a clock pulse is absent?",It maintains its previous state of output.
+What do timing diagrams graphically represent in a digital system?,How signals change over time.
+For what three purposes are timing diagrams primarily used in digital logic?,"Understanding circuit behaviour, debugging issues, and designing logic."
+What is the Boolean expression for the NAND gate output $F$ with inputs $x$ and $y$?,$F = (xy)^{\prime}$
+"In a NAND gate timing diagram, what is the output $Z$ when inputs $X=1$ and $Y=1$?",0
+"In a NAND gate timing diagram, what is the output $Z$ when at least one input ($X$ or $Y$) is 0?",1
+What is the primary function of a Flip-Flop Excitation Table?,To determine the required inputs for transitioning from a current state to a specific next state.
+Excitation tables are particularly essential when implementing which type of sequential logic architecture?,State machines.
+"In a JK flip-flop excitation table, what are the required inputs for a transition from $Q=0$ to $Q^{+}=0$?","$J=0, K=X$ (where $X$ is a don't care condition)."
+"In a JK flip-flop excitation table, what are the required inputs for a transition from $Q=0$ to $Q^{+}=1$?","$J=1, K=X$"
+"In a JK flip-flop excitation table, what are the required inputs for a transition from $Q=1$ to $Q^{+}=0$?","$J=X, K=1$"
+"In a JK flip-flop excitation table, what are the required inputs for a transition from $Q=1$ to $Q^{+}=1$?","$J=X, K=0$"
+"In an SR flip-flop excitation table, what are the required inputs for a transition from $Q=0$ to $Q^{+}=0$?","$S=0, R=X$"
+"In an SR flip-flop excitation table, what are the required inputs for a transition from $Q=0$ to $Q^{+}=1$?","$S=1, R=0$"
+"In an SR flip-flop excitation table, what are the required inputs for a transition from $Q=1$ to $Q^{+}=0$?","$S=0, R=1$"
+"In an SR flip-flop excitation table, what are the required inputs for a transition from $Q=1$ to $Q^{+}=1$?","$S=X, R=0$"
+"For a D flip-flop, if the desired next state $Q^{+}$ is 1, what must the input $D$ be?",1
+"In a T flip-flop excitation table, what is the input $T$ required for the state to toggle from $Q=0$ to $Q^{+}=1$?",1
+"In a T flip-flop excitation table, what is the input $T$ required for the state to remain at $Q=1$ ($Q^{+}=1$)?",0
+Which table describes the behaviour of sequential circuits in relation to both input variables and state variables?,The state table.
+From which pictorial representation is the information in a state table typically transformed?,The state diagram.
+"Using the provided state table example, if the present state is $a$ and input $X=0$, what is the next state?",$b$
+"Using the provided state table example, if the present state is $a$ and input $X=1$, what is the next state?",$d$
+"Using the provided state table example, if the present state is $b$ and input $X=1$, what is the output?",1
+"Using the provided state table example, if the present state is $e$ and input $X=0$, what is the next state?",$a$
+"Using the provided state table example, if the present state is $e$ and input $X=0$, what is the output?",1
+What is the definition of a state diagram in sequential circuit design?,A pictorial representation showing the transition of states from the present state to the next state.
+"In the provided state diagram example, what input leads to a transition from state $a$ to state $b$?",0
+"In the provided state diagram example, what are the input and output values for the transition from state $b$ to state $c$?","$1/1$ (Input 1, Output 1)."
+"In the provided state diagram example, what is the output when the system transitions from state $e$ to state $a$?",1
+"In the provided state diagram example, what input causes state $d$ to transition to state $b$?",0
+"In the provided state diagram example, which state has a self-loop when the input is 1?",State $d$ (or state $c$).
+How does a state equation represent the evolution of a system over time?,It describes the next state in terms of the current state and input variables.
+What is the general functional form of a state equation?,"$Q(t+1)=f(Q(t),X)$"
+"In the general state equation $Q(t+1)=f(Q(t),X)$, what does the variable $X$ represent?",The input.
+"In the general state equation $Q(t+1)=f(Q(t),X)$, what does the variable $Q(t)$ represent?",The current state.
+"In the general state equation $Q(t+1)=f(Q(t),X)$, what does the variable $Q(t+1)$ represent?",The next state.
+What is the specific state equation for an SR (Set-Reset) flip-flop?,$Q(t+1)=S+R^{\prime}Q(t)$
+The next state of a flip-flop depends on both the inputs and the _____.,Current state.
+Flip-flops are the fundamental building blocks of _____ electronics.,Digital.
+"In an SR flip-flop, if $S=1$ and $R=0$, the next state $Q(t+1)$ will be _____.",1
+Concept: $T$ Flip-Flop Excitation,"A toggle occurs ($0 \rightarrow 1$ or $1 \rightarrow 0$) if $T=1$; otherwise, the state remains the same if $T=0$."
+Concept: $D$ Flip-Flop Excitation,"The input $D$ must match the desired next state $Q^{+}$, regardless of the current state $Q$."
+Which state diagram notation usually indicates the transition condition and the resulting output?,"Input/Output (e.g., $1/0$)."
+"In the provided state table, which present state produces an output of 1 for both $X=0$ and $X=1$?",State $e$.
+"According to the state table, if the present state is $c$, which input $X$ keeps the system in state $c$?",$X=1$
+"In sequential logic, the state of the flip-flop is updated based on inputs only when it is _____.",Triggered.
+What component of a digital system is used to ensure all synchronous flip-flops update at the same time?,The clock pulse.
+"If $Q=1$ and $Q^{+}=0$, what is the required input for a T flip-flop?",1
+"If $Q=0$ and $Q^{+}=1$, what is the required input for an SR flip-flop?","$S=1, R=0$"
+"If $Q=1$ and $Q^{+}=1$, what is the required input for a JK flip-flop?","$J=X, K=0$"
+A state table is transformed from a pictorial _____.,State diagram.
+What does a self-loop in a state diagram indicate?,The next state is the same as the present state for a given input.
+Formula: General State Equation,"$Q(t+1) = f(Q(t), X)$"
+Process: Determining the next state of an SR flip-flop.,Apply the current state $Q(t)$ and inputs $S$ and $R$ to the equation $Q(t+1)=S+R^{\prime}Q(t)$.
+"In the state diagram, transitions are represented by _____.",Arrows.
+"In the state diagram, states are represented by _____.",Circles (or nodes).
+"In the provided state table, for present state $b$, what is the next state when $X=0$?",$e$
+"In the provided state table, for present state $d$, what is the next state when $X=0$?",$b$
+"In the provided state table, which input $X$ for present state $b$ results in an output of 1?",$X=1$
+"In a JK flip-flop, if $J=0$ and $K=0$, the next state $Q^{+}$ will be equal to _____.",$Q$ (the current state).
+"In a JK flip-flop, if $J=1$ and $K=1$, the next state $Q^{+}$ will be equal to _____.",$Q^{\prime}$ (the complement of the current state).
+The term used for input combinations that do not affect the outcome in an excitation table is _____.,Don't care (represented by $X$).
+"What visual tool is used to show how logic signals such as clock, $X$, $Y$, and $Z$ interact over a timeline?",Timing diagram.
+"According to the state equation for an SR flip-flop, if $S=0$ and $R=1$, the next state is always _____.",0
+"Under synchronous triggering, when are inputs typically sampled by the flip-flop?",Only when a clock pulse exists.
+Which triggering method allows a flip-flop to update its state immediately upon input change without waiting for a clock?,Asynchronous (or direct) triggering.
+How many stable states does a flip-flop have?,Two.
+The information contained in a state diagram is converted into a _____ for easier analysis.,State table.
+"In the SR state equation $Q(t+1)=S+R^{\prime}Q(t)$, what does the term $R^{\prime}$ signify?",The logical NOT (complement) of the Reset input.
+Which flip-flop type simply passes the input $D$ to the output $Q$ on the next clock pulse?,D flip-flop.
+What is the primary difference between synchronous and asynchronous triggering regarding the clock signal?,"Synchronous requires a clock pulse to update, while asynchronous does not."
+"In the provided state diagram, if you are in state $c$ and receive input 0, which state do you move to?",State $d$.

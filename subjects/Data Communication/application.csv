@@ -1,0 +1,75 @@
+Which layer of the OSI model provides the basis for email forwarding and storage?,The Application Layer.
+What is the primary purpose of a Network Virtual Terminal?,It allows a user to log on to a remote host through software emulation of a terminal.
+The Application Layer service that provides access to global information about various services is known as _____ Services.,Directory
+What does the acronym FTAM stand for in the context of Application Layer functions?,"File Transfer, Access, and Management."
+Which Application Layer protocol is primarily used as a 'push' protocol to transfer email between servers?,SMTP (Simple Mail Transfer Protocol).
+Which two protocols are commonly used at the receiver's side to retrieve emails from a server?,POP (Post Office Protocol) and IMAP (Internet Message Access Protocol).
+"In the basic SMTP architecture, what is the role of the User Agent (UA)?",It prepares the email message and encloses it in an envelope.
+What component in the SMTP architecture is responsible for the actual transfer of mail and maintaining a delivery queue?,The Mail Transfer Agent (MTA).
+"To receive mail in an SMTP system, what specific component must the receiving system have?",A server MTA (Mail Transfer Agent).
+What is the primary function of the Dynamic Host Configuration Protocol (DHCP)?,To automatically assign IP addresses and network configuration parameters to devices.
+"In the DHCP working mechanism, what is the name of the initial broadcast message sent by a client to find a server?",DHCPDISCOVER.
+How does a DHCP server respond to a DISCOVER packet to suggest an available IP address?,With a DHCPOFFER packet.
+What packet does a client send to a DHCP server to accept a specific offered IP address?,DHCPREQUEST.
+What is the purpose of the DHCPACK packet sent by the server?,To confirm the IP assignment and define the lease duration.
+What happens when a DHCP lease expires?,The device must request a new IP address assignment from the DHCP server.
+What is the fundamental purpose of the Domain Name System (DNS)?,To map human-readable domain names to numerical IP addresses.
+"In the DNS hierarchy, which server is the 'librarian' that receives queries from the web browser?",The DNS Recursor.
+Which DNS server serves as the first step in resolving a name and acts as an index pointing to specific TLD locations?,The Root nameserver.
+What is the specific role of a Top Level Domain (TLD) nameserver?,"It hosts the last portion of a hostname, such as '.com' or '.org'."
+"Which DNS server provides the final, actual IP address for a requested hostname?",The Authoritative nameserver.
+Why do DNS resolvers store domain names and IP addresses in a local cache?,To speed up future requests by avoiding the full resolution process.
+A DNS message used to request information like an IP address is called a _____ Message.,Query
+Which type of DNS message is used to modify DNS records dynamically?,Update Message.
+HTTP is described as 'stateless'. What does this mean?,The server does not retain information about previous interactions; each request is independent.
+Which HTTP request method is used when a client wants to retrieve a resource from a server?,GET.
+What are the three main components of an HTTP response?,"Status code, headers, and a message body."
+Who is credited with inventing the World Wide Web (WWW) at CERN in 1989-1990?,Tim Berners-Lee.
+True or False: The World Wide Web and the Internet are the same thing.,False (the Web is a subset of the Internet).
+Which Application Layer protocol relies on two communication channels: a command channel and a data channel?,FTP (File Transfer Protocol).
+"In FTP _____ mode, the server initiates a data connection back to the client.",Active
+Why is FTP passive mode preferred for connections behind firewalls?,"The client initiates all connections, including the data channel."
+Contrast HTTP and FTP data encoding.,"HTTP uses MIME format, while FTP typically uses faster binary sets."
+What does 'encapsulation' mean at the Application Layer?,Packaging user data with application-specific headers before passing it to the transport layer.
+Audio and video services like Internet radio fall into the category of _____ audio/video.,Streaming live
+What is the mathematical condition for the Nyquist theorem regarding sampling rate ($f_s$)?,$f_s \ge 2f_{max}$
+What is the formula for calculating the bit rate of a digital audio signal?,Sampling rate $\times$ Bits per sample $\times$ Number of channels.
+"Calculate the bit rate for telephone-quality voice (8,000 samples/s, 8 bits/sample, mono).",64 kbps.
+"Calculate the bit rate for CD-quality stereo music (44,100 samples/s, 16 bits/sample, 2 channels).",1.411 Mbps.
+What digitisation technique produces a sampled waveform and defines quality through sample rate and size?,PCM (Pulse Code Modulation).
+"In digitising video, what is the term for the small grids that make up a frame?",Pixels (picture elements).
+"How many bits are typically used for each pixel in a colour TV signal to represent Red, Green, and Blue?",24 bits (8 bits per primary colour).
+What is the primary difference between lossless and lossy audio compression?,"Lossless allows exact reconstruction of original data, while lossy removes information permanently."
+Which lossless compression technique replaces repeated samples with a shorter representation?,Run-Length Encoding (RLE).
+How does Predictive Coding reduce file size in lossless compression?,It predicts the next sample and stores only the difference (residual) between the prediction and the actual value.
+What is the core principle behind lossy audio compression?,Psychoacoustic masking (removing sounds less audible to the human ear).
+Which lossy compression technique converts audio from the time domain to the frequency domain?,"Transform Coding (e.g., MDCT)."
+"In the streaming process, what is 'Segmentation'?",Dividing massive quantities of digital media data into smaller segments of a few seconds each for transmission.
+What is the role of a Content Delivery Network (CDN) in live streaming?,It caches and delivers content from servers at the network edge to reduce latency for viewers.
+Which technology allows voice calls to be made over broadband connections using digital data packets?,VoIP (Voice over Internet Protocol).
+What is the primary open standard protocol used by VoIP systems to manage call connections?,SIP (Session Initiation Protocol).
+What is one financial advantage of using VoIP for businesses compared to traditional landlines?,Significant cost savings on domestic and international calls (up to 50%).
+Concept: SMTP MTA Queue,Definition: A small storage area used by the Mail Transfer Agent to schedule repeat deliveries if a receiver is unavailable.
+"In the DNS resolution process, what is the 'Root nameserver' analogised to?",A library index that points to different racks of books.
+What happens if a DHCP server sends a NACK packet?,The server denies the device the use of that specific IP address.
+What are the two main components of an SMTP client or server?,User Agent (UA) and Mail Transfer Agent (MTA).
+"Which Application Layer protocol is defined as 'text-based', making messages human-readable and easy to debug?",HTTP.
+What is 'flickering' in the context of video digitisation?,"A visual condition caused by insufficient frame refresh rates, avoided by repainting frames."
+What is the 'residual' in predictive coding?,The difference between an actual audio sample and its predicted value.
+Which audio compression method models the signal mathematically and stores model parameters instead of raw samples?,Linear Predictive Coding (LPC).
+Term: Sub-band Coding,Definition: A lossy compression technique that divides audio into frequency bands and compresses each band separately.
+"In the context of network traffic analysers, list three examples mentioned in the source material.","SNMP, Wireshark, and Packet Tracer."
+Which component of the DNS system is responsible for making additional requests to satisfy a client's query?,The DNS Recursor.
+"In FTP, what is the purpose of the 'Command Channel'?",Controlling the conversation between the client and the server.
+The process of converting raw audio/video into a series of 1s and 0s for streaming is called _____.,Encoding
+Why does a larger sample size in PCM lead to better audio quality?,It results in less quantization noise.
+"In the DNS lookup process, which server is contacted immediately after the Root nameserver?",The TLD (Top Level Domain) nameserver.
+What does a DHCP 'lease term' specify?,The duration for which an assigned IP address remains valid for a device.
+Name the protocol used for 'interactive audio/video' like Internet telephony.,VoIP.
+How does an FTP client authenticate itself to a server?,By sending a login request containing a username and password.
+What Application Layer protocol is used between the sender's mail server and the receiver's mail server?,SMTP.
+"In the context of VoIP, what does PSTN stand for?",Public Switched Telephone Network.
+What is 'Quantization' in lossy compression?,"Reducing the precision of audio samples to decrease data size, potentially introducing distortion."
+The Application Layer functionality that allows managing files on a remote computer is ____.,"FTAM (File Transfer, Access, and Management)."
+Which specific DNS message type contains the 'answer records' for a client's query?,Response Message.
+Which protocol is referred to as the foundation of data transfer on the World Wide Web?,HTTP.

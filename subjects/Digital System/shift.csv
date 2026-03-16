@@ -1,0 +1,80 @@
+What is the fundamental digital component used to store a single bit of binary data?,A flip-flop.
+What specific binary values can be stored in a single flip-flop?,The binary values 1 or 0.
+How are flip-flops typically connected to form a device that stores multiple bits of data?,They are connected in series.
+What is the name of the device used to store multiple bits of binary data using a group of flip-flops?,A Register.
+How many flip-flops are required to store a total of $n$ bits of data?,$n$ flip-flops.
+Which specific type of register allows stored bits to move within and in or out of the device?,A shift register.
+What must be applied to a shift register to make bits move within or out of the device?,Clock pulses.
+How is an $n$-bit shift register formed in terms of component quantity?,By connecting $n$ flip-flops together.
+List the four main types of shift registers based on their input and output configurations.,"SISO, SIPO, PISO, and PIPO."
+What does the acronym 'SISO' stand for in digital electronics?,Serial-In Serial-Out.
+Define 'serial input' as it relates to a SISO shift register.,One bit is entered after the other through a single data line.
+How does data leave a Serial-In Serial-Out (SISO) shift register?,One bit at a time in a serial pattern.
+"In a SISO shift register logic circuit, how many outputs are available for the data to leave?",Only one output.
+Which type of flip-flops are used in the serial-in serial-out shift register example?,D flip-flops.
+"In the provided SISO circuit example, how many D flip-flops are connected together?",Four D flip-flops.
+Why are the flip-flops in a SISO register considered synchronous with each other?,The same clock signal is applied to every flip-flop.
+"In a shift right register, from which side does the serial data input typically enter the first flip-flop?",The left side.
+What is the primary functional use of a Serial-In Serial-Out (SISO) shift register?,To act as a delay element.
+What does the acronym 'SIPO' stand for?,Serial-In Parallel-Out.
+A shift register that accepts data one bit at a time but produces all bits simultaneously is called a _____.,Serial-In Parallel-Out (SIPO) shift register.
+"In the SIPO circuit example, which signal is used in addition to the clock to reset the flip-flops?",The clear ($CLR$) signal.
+Where is the output of the first flip-flop connected in a SIPO shift register circuit?,To the input of the next flip-flop.
+What is the main application of a SIPO register regarding data conversion?,To convert serial data into parallel data.
+Why are SIPO registers used in communication lines?,To facilitate the demultiplexing of a data line into several parallel lines.
+What does the acronym 'PISO' stand for?,Parallel-In Serial-Out.
+"In a Parallel-In Serial-Out (PISO) register, how is data given to each flip-flop?",Separately and in a simultaneous manner.
+How is the serial output produced in a PISO shift register?,One bit at a time from the final flip-flop in the chain.
+"In a PISO circuit, through what component is the input data connected individually to each flip-flop?",A multiplexer (MUX).
+What are the two inputs connected to the multiplexer in a PISO shift register?,The output of the previous flip-flop and the parallel data input.
+"In a PISO register, what is the destination of the multiplexer's output?",The input of the next flip-flop.
+What is the primary function of a Parallel-In Serial-Out (PISO) shift register?,To convert parallel data to serial data.
+What does the acronym 'PIPO' stand for?,Parallel-In Parallel-Out.
+A register that allows simultaneous data input and simultaneous data output is a _____.,Parallel-In Parallel-Out (PIPO) shift register.
+Why are there no interconnections between individual flip-flops in a PIPO shift register?,No serial shifting of data is required.
+How is input data provided to a PIPO shift register?,Separately for each flip-flop.
+How is output collected from a PIPO shift register?,Individually from each flip-flop.
+What is the primary use of a Parallel-In Parallel-Out (PIPO) shift register?,As a temporary storage device.
+Which two shift register types are specifically noted for acting as delay elements?,SISO and PIPO.
+"In a PIPO register, which two control signals are connected to all four flip-flops?",The clear ($CLR$) signal and the clock signal.
+"In any $n$-bit shift register, what determines the amount of data each flip-flop can store?",Each flip-flop stores a single bit.
+Which shift register type is most appropriate for demultiplexing serial data into parallel lines?,The Serial-In Parallel-Out (SIPO) register.
+What term describes flip-flops that share the same clock signal and operate at the same time?,Synchronous.
+The process of providing data to each flip-flop at the same time is known as _____ input.,Parallel.
+The process of providing data to a register bit-by-bit through one line is known as _____ input.,Serial.
+Term: Register,Definition: A device consisting of flip-flops connected in series used to store multiple bits of data.
+Concept: Shift Register,Definition: A group of flip-flops used to store and move bits within or in and out of the register via clock pulses.
+"In the PISO circuit, what determines whether the flip-flop receives parallel input or data from the previous stage?",The multiplexer (MUX) at the input of the flip-flop.
+Which shift register type requires the fewest interconnections between flip-flops?,The Parallel-In Parallel-Out (PIPO) register.
+Concept: $n$-bit shift register,"Definition: A shift register formed by connecting $n$ flip-flops, capable of storing $n$ bits of information."
+"In a PISO register, is the clock input connected individually or directly to all flip-flops?",It is directly connected to all flip-flops.
+Which shift register type acts as a bridge between parallel computer components and serial communication lines?,The Parallel-In Serial-Out (PISO) register.
+"In the SIPO register, how is the output collected relative to the flip-flops?",Output is taken from each flip-flop simultaneously.
+Which signal is essential to ensure all flip-flops in a register change state at the same time?,The clock signal.
+Under what condition can bits be moved 'in/out' of a register?,By the application of clock pulses.
+"In a SISO register, why does the data leave one bit at a time?",There is only a single serial output line.
+True or False: A SISO register can only shift data to the right.,"False (The source specifies the example is a shift right, implying other directions exist)."
+How is 'parallel output' defined in the context of a SIPO register?,Producing the stored bits simultaneously from multiple output lines.
+Which register type is used to convert data from multiple simultaneous lines into one single data stream?,The Parallel-In Serial-Out (PISO) register.
+What does a clear ($CLR$) signal do to the binary state of a flip-flop?,It resets the state to 0.
+What is the relationship between flip-flops and bits in an 8-bit shift register?,"The register contains eight flip-flops, each storing one bit."
+"In the PISO diagram, what logic gates are typically used to construct the multiplexer function?",AND gates and an OR gate.
+What is the primary physical connection method for flip-flops in a standard register?,Serial connection.
+Can a PIPO register be used for serial-to-parallel conversion?,"No, because it has no interconnections for serial shifting."
+What is the main advantage of parallel input over serial input in terms of speed?,"Parallel input is simultaneous for all bits, whereas serial is one bit at a time."
+"In the SISO circuit, if the clock pulses stop, what happens to the stored data?",The data remains stored in the flip-flops and stops moving.
+Which shift register is described as taking serial data from the left side and moving it right?,A shift right SISO register.
+Is a SISO register synchronous or asynchronous in its operation?,Synchronous.
+"In a SIPO register, where does the parallel output originate?",From the Q output of each individual flip-flop.
+What is the function of the $Shift$ line in the PISO circuit diagram?,It controls the multiplexers to select between loading parallel data or shifting serial data.
+What logic level is typically required on the $CLR$ line to reset the register in SIPO?,"The source does not specify, but it connects to all flip-flops to reset them."
+Which component is the basic building block of all shift registers described?,The D flip-flop.
+How does a register differ from a single flip-flop?,"A register is a group of flip-flops that stores multiple bits, while a flip-flop stores only one."
+What is the specific purpose of the first flip-flop in a SISO register?,To receive the initial bit of the serial input stream.
+"In a 4-bit SIPO, how many clock pulses are required to fully load a new serial data set?",Four clock pulses.
+"In a 4-bit PISO, how many bits can be loaded simultaneously during the parallel input phase?",Four bits.
+What does the 'Parallel Output' line in a PIPO diagram represent?,A collection of individual output lines from each flip-flop.
+Why is the PIPO register referred to as a 'temporary storage device'?,It holds parallel data for a period before it is accessed simultaneously.
+What is the significance of 'single data line' in SISO and SIPO definitions?,"It indicates that input data is arriving serially, one bit after another."
+"In the PISO circuit, what happens to the data in Flip-Flop 1 when the next clock pulse occurs during shifting?",It is moved through the MUX into Flip-Flop 2.
+Which shift register type is most likely used in a device that must delay a 4-bit parallel bus by one clock cycle?,A Parallel-In Parallel-Out (PIPO) register.
