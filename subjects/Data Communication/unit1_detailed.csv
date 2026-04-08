@@ -1,0 +1,221 @@
+How is a 'computer network' defined in the source material?,"- A collection of computers and devices interconnected by communications channels.
+- Facilitates communication among users and resource sharing.
+- Interlinked via physical or wireless technologies."
+What is the primary role of 'communications protocols' in a network?,"- Acts as a system of rules governing how devices communicate.
+- Facilitates the transmission of information across diverse technologies.
+- Represents an agreement between communicating devices."
+Which four types of resources are commonly shared via a computer network?,"- Hardware (e.g. printers or specialized devices).
+- Files and data (e.g. databases or programs).
+- Network connections and user access."
+List the protocols associated with 'File Services' in a network.,"- FTP (File Transfer Protocol).
+- SMB (Server Message Block).
+- CIFS (Common Internet File System)."
+Which protocols are identified as being part of 'Email Services'?,"- POP (Post Office Protocol).
+- IMAP (Internet Message Access Protocol).
+- SMTP (Simple Mail Transfer Protocol)."
+Identify the two protocols listed for 'Addressing Services'.,"- DNS (Domain Name System).
+- DHCP (Dynamic Host Configuration Protocol)."
+Which protocols are used to facilitate 'Remote Access' or 'Terminal Services'?,"- Telnet and SSH (Secure Shell).
+- RDP (Remote Desktop Protocol)."
+What are the five essential components of a data communications system?,"- Message (the information to be sent).
+- Sender and Receiver (the devices).
+- Transmission medium and Protocol."
+Component: Message,"- The information or data to be communicated.
+- Can take forms such as text, numbers, or pictures.
+- Includes multimedia like audio and video."
+Component: Sender,"- The device that originates the data message.
+- Can be a computer or workstation.
+- Can be a telephone handset or video camera."
+Component: Receiver,"- The device intended to receive the message.
+- Can be a television or computer terminal.
+- Must be capable of processing the incoming data."
+Component: Transmission Medium,"- The physical path by which a message travels.
+- Includes wired options like twisted-pair or coaxial cable.
+- Includes wireless options like radio waves."
+Concept: Protocol,"- A set of rules governing network communication.
+- Without it, connected devices cannot understand each other.
+- Examples include IP, HTTP, and SMTP."
+What is the 'CGF2R' mnemonic for Computer Network advantages?,"- Central storage, Global business, and Faster problem solving.
+- File sharing and Resource sharing.
+- Enhances communication and information availability."
+How does central storage on a file server benefit an organisation?,"- Files are stored on a single central node.
+- Data is shared and available to every user.
+- Simplifies management and data distribution."
+Why is problem-solving faster in a networked environment?,"- Large procedures are disintegrated into smaller processes.
+- Tasks are handled simultaneously by associated gadgets.
+- Explicit issues are settled in less time."
+How does a computer network improve 'Reliability' (RISHI mnemonic)?,"- Provides a mechanism for backing up information.
+- If one computer crashes, data is available on another workstation.
+- Ensures smooth functioning without interruption."
+How do networks enhance 'Cost Efficiency'?,"- High-cost software can be stored on a single server.
+- Different workstations can access and use online software.
+- Reduces individual system requirements and software costs."
+In what way do networks provide 'Security through Authorisation'?,"- Only authorised network users can access specific records.
+- Protects confidential applications from external access.
+- Discourages unauthorised cracking of data security."
+What are the primary security issues of a networked computer compared to a standalone one?,"- Standalone systems require physical access for data theft.
+- Networked systems are vulnerable to remote hackers.
+- Requires security software to prevent theft of classified data."
+Why is the rapid spread of viruses a disadvantage of networks?,"- An infection in one system poses a threat to the entire network.
+- Viruses can travel through communication channels.
+- Increases the risk of widespread data corruption."
+Which factors contribute to the 'Expensive Set Up' of a network?,"- High cost of hardware like routers, switches, and firewalls.
+- Requirement for skilled manpower for installation.
+- Initial costs scale with the number of connected computers."
+What is meant by a 'Lack of Robustness' in a centralised network?,"- The network relies heavily on a central file server.
+- If the central server malfunctions, the entire network stops.
+- Creates a single point of failure."
+Network Criteria: Performance,"- Measured by transit time and response time.
+- Influenced by the number of users and hardware capability.
+- Evaluated using throughput and delay metrics."
+Network Criteria: Reliability,"- Measured by the frequency of link failure.
+- Determined by the time taken to recover from a failure.
+- Includes the network's robustness during a catastrophe."
+Network Criteria: Security,"- Protecting data from unauthorised access or damage.
+- Implementing policies for recovery from breaches.
+- Preventing data loss during system failures."
+Data Flow: Simplex Mode,"- Communication is unidirectional (one-way street).
+- One device only transmits, the other only receives.
+- Examples: Keyboards and traditional monitors."
+Data Flow: Half-duplex Mode,"- Each station can both transmit and receive.
+- Communication cannot happen at the same time.
+- Example: A one-lane road with traffic allowed both ways."
+Data Flow: Full-duplex Mode,"- Both stations can transmit and receive simultaneously.
+- The channel capacity is shared between both directions.
+- Examples: Modern telephone conversations."
+What is the OSI Reference Model?,"- Created by the ISO in 1994 as a framework for standards.
+- Describes how data moves from one application to another.
+- Segregates communication into seven distinct groups or layers."
+What are the six key benefits of a layered approach to networking?,"- Reduced complexity and modular engineering.
+- Improved teaching/learning and standard interfaces.
+- Accelerated evolution and interoperable technology."
+What is the mnemonic for the seven OSI layers?,"- 'All People Seem To Need Data Processing'.
+- Layers: Application, Presentation, Session, Transport, Network, Data-link, Physical."
+OSI Layer 7: Application Layer,"- Provides application services and interfaces for users.
+- Responsible for message handling and database queries.
+- Determines resource availability for programs."
+Identify common protocols used at the OSI Application Layer.,"- HTTP (port 80) and Telnet (port 23).
+- FTP (port 21) and SMTP (port 25).
+- DNS (port 53) and DHCP."
+Protocol: TELNET,"- Stands for Telecommunications Network.
+- Provides terminal emulation for remote resource access.
+- Operates on port 23."
+Protocol: NFS,"- Stands for Network File System.
+- Allows remote hosts to mount file systems as if they were local.
+- Consolidates resources onto centralized servers."
+OSI Layer 6: Presentation Layer,"- Manages the syntax and semantics of exchanged information.
+- Handles data encryption/decryption and translation.
+- Responsible for data compression and decompression."
+OSI Layer 5: Session Layer,"- Establishes, maintains, and synchronises interactions.
+- Manages 'Dialog Control' (half-duplex or full-duplex).
+- Adds synchronization points or checkpoints for long transmissions."
+What is 'Token Management' in the OSI Session Layer?,"- Prevents two parties from attempting critical operations at once.
+- Coordinates which process has control over a shared resource.
+- Ensures orderly communication flow."
+OSI Layer 4: Transport Layer,"- Provides logical, end-to-end communication between hosts.
+- Responsible for segmentation and reliable delivery.
+- Known as the 'Heart of the OSI model'."
+How does the Transport Layer handle large data packets?,"- It divides the message into smaller units called 'segments'.
+- Adds sequence numbers to segments for correct reassembly.
+- Combines received segments back into a single data packet."
+What are the two main protocols used at the Transport Layer?,"- TCP (Transmission Control Protocol): Connection-oriented.
+- UDP (User Datagram Protocol): Connection-less."
+Contrast TCP and UDP regarding reliability.,"- TCP is a reliable service that guarantees delivery.
+- UDP is an unreliable service without delivery guarantees.
+- TCP provides error and flow control; UDP does not."
+OSI Layer 3: Network Layer,"- Responsible for packet routing and logical addressing.
+- Establishes the shortest path from source to destination.
+- Manages device identification across different networks."
+Protocol: ARP,"- Stands for Address Resolution Protocol.
+- Associates a logical IP address with a physical MAC address.
+- Essential for delivering data to the correct hardware."
+Compare IPv4 and IPv6 addressing schemes.,"- IPv4 is a 32-bit addressing scheme currently in wide use.
+- IPv6 is the latest version with significantly more addresses.
+- Both are used for identifying hosts on a TCP/IP network."
+OSI Layer 2: Data Link Layer,"- Responsible for physical addressing and data framing.
+- Performs error control using parity bits or $CRC$.
+- Facilitates access control over shared communication channels."
+What are the two sublayers of the Data Link Layer?,"- LLC (Logical Link Control): Manages device communication.
+- MAC (Media Access Control): Manages medium access and hardware addresses."
+OSI Layer 1: Physical Layer,"- Deals with mechanical and electrical specifications.
+- Responsible for bit synchronization and bit rate control.
+- Defines physical topologies (e.g. star, bus, mesh)."
+Identify the devices associated with the Physical and Data-link layers.,"- Physical: Hubs, Repeaters, Cables, and Fibers.
+- Data-link: Bridges, Modems, and 2-layer Switches.
+- Network: Routers and 3-layer Switches."
+What is the TCP/IP Reference Model?,"- Created by DARPA in the 1970s as a vendor-neutral model.
+- The current architecture used for the Internet.
+- Consists of four functional layers."
+List the four layers of the TCP/IP model.,"- Network Access (Host-to-network) Layer.
+- Internet Layer.
+- Transport Layer.
+- Application Layer."
+TCP/IP Layer 1: Network Access Layer,"- Combines the functions of the OSI Physical and Data Link layers.
+- Defines how bits are encoded into electrical or optical pulses.
+- Supports protocols like Ethernet, Token Ring, and ATM."
+TCP/IP Layer 2: Internet Layer,"- Defines protocols for logical transmission (e.g. IP).
+- Handles packet routing independently from source to destination.
+- Supports only connection-less services."
+What is the function of ICMP in the TCP/IP model?,"- Stands for Internet Control Message Protocol.
+- Responsible for providing hosts with network problem info.
+- Encapsulated within IP datagrams."
+TCP/IP Layer 3: Transport Layer,"- Ensures error-free, end-to-end delivery of data.
+- Performs segmentation, flow control, and connection multiplexing.
+- Includes the TCP (connection-oriented) and UDP (connection-less) protocols."
+TCP/IP Layer 4: Application Layer,"- Defines standards an application needs to connect to a network.
+- Facilitates services like user login, emails, and file transfers.
+- Includes protocols like HTTP, FTP, and SMTP."
+Compare the number of layers in OSI versus TCP/IP.,"- OSI model has 7 layers.
+- TCP/IP model has 4 layers.
+- TCP/IP's Application Layer maps to three OSI layers (5, 6, and 7)."
+Concept: Port Address,"- A 16-bit logical address (0 to 65,535).
+- Identifies a specific process or service on a device.
+- Helps manage multiple network communications simultaneously."
+What is the range for 'Registered' port numbers?,"- Spans from 1024 to 49,151.
+- Used by less common applications that require a specific port.
+- Organisations can request these from IANA."
+Concept: MAC Address,"- A unique 48-bit hardware identifier assigned by manufacturers.
+- Formatted as six pairs of hexadecimal digits (e.g. $AA:BB:CC...$).
+- Used for communication inside a local network (LAN)."
+What do the first 3 bytes of a MAC address represent?,"- They are the OUI (Organisationally Unique Identifier).
+- Identifies the specific manufacturer of the hardware.
+- Assigned to the company by a central authority."
+Define 'The Internet'.,"- A global network of networks using the TCP/IP suite.
+- A public, self-regulating system linking devices globally.
+- The physical backbone that allows data to travel."
+Concept: Analog Signal,"- A continuous electrical signal that varies over time.
+- Amplitude can take any value in a continuous range.
+- Usually represented as a sine wave."
+Concept: Digital Signal,"- Discrete signals containing only distinct values (0 or 1).
+- Represented as square waves or clock signals.
+- More stable and less prone to noise than analog signals."
+How is digital data transmitted over an analog channel?,"- Accomplished through a process called 'Modulation'.
+- Converts discrete bits into variations of an analog signal.
+- Requires a modulator at the sender side."
+"In a basic communication system, what is the role of a 'Transducer'?","- Input transducer converts physical quantities (sound) into electrical signals.
+- Output transducer converts electrical signals back into usable forms.
+- Facilitates the bridge between the physical world and electronic circuits."
+What are the three main functions of a 'Transmitter'?,"- Modifies the message signal for efficient transmission.
+- Amplification: Boosts signal strength.
+- Modulation: Superimposes data onto a high-frequency carrier."
+Define 'Noise' in a communication system.,"- An unwanted signal that interferes with the required signal.
+- Introduced into the system primarily via the transmission channel.
+- Distorts the original message, potentially causing errors."
+What is 'Demodulation'?,"- The reverse process of modulation carried out in the receiver.
+- Extracts the original data signal from the carrier signal.
+- Removes noise and prepares data for the output transducer."
+Concept: Source Encoder (Digital System),"- Converts a sequence of symbols into a binary sequence.
+- Assigns specific 'code words' (combinations of 1s and 0s).
+- Efficiently represents information for digital processing."
+What is the purpose of a 'Channel Encoder'?,"- Adds redundancy or error control bits to the bit stream.
+- Bits added do not carry information but aid in error detection.
+- Allows the receiver to correct errors introduced by the channel."
+How does 'Channel Decoding' function in the receiver?,"- It removes redundancy bits from the bit stream.
+- Detects and corrects errors with maximum efficiency.
+- Prepares the information bits for the source decoder."
+Which network criteria measures the transit and response time?,"- Performance criteria.
+- Affected by medium type and hardware/software capability.
+- Monitored using throughput metrics."
+Explain 'Logical Addressing' at the Network Layer.,"- Defines an addressing scheme (IP) to identify devices uniquely.
+- Sender and receiver IP addresses are placed in the header.
+- Enables packets to travel across different internetworks."

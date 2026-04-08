@@ -1,0 +1,74 @@
+What are the two primary responsibilities of the network layer?,Route discovery and logical addressing.
+Which function of the network layer determines the suitable path from source to destination?,Routing.
+What is the primary purpose of logical addressing in an internetwork?,To identify each device uniquely and universally.
+An IPv4 address is a binary number consisting of _____ bits.,$32$
+What is the total address space of IPv4?,$2^{32}$
+IPv4 addresses are typically represented as four decimal values called _____.,Octets
+What are the two main components of an IP address?,The network part and the host part.
+"In classful addressing, which class is identified by a first octet range of $0$ to $127$?",Class A
+Which IPv4 address class is reserved for multicast purposes?,Class D
+Which IPv4 address class is reserved for experimental use?,Class E
+What is the first bit pattern of a Class B IP address?,10
+What is the first bit pattern of a Class C IP address?,110
+How many bits are used for the Network ID in a Class A address?,$8$ bits (including the leading $0$ bit).
+How many bits are used for the Host ID in a Class C address?,$8$ bits.
+What is the default subnet mask for a Class B network in dotted decimal?,$255.255.0.0$
+What CIDR notation corresponds to the Class C default subnet mask?,$/24$
+Which system replaced Classful networking in 1993 to prevent address wastage?,Classless Inter-Domain Routing (CIDR).
+What is the function of a subnet mask?,To separate the IP address into the network and host components.
+"In a subnet mask, what does a bit value of $1$ represent?",A network bit.
+"In a subnet mask, what does a bit value of $0$ represent?",A host bit.
+What is the specific Private IP range for Class A?,$10.0.0.0$ to $10.255.255.255$
+What is the specific Private IP range for Class B?,$172.16.0.0$ to $172.31.255.255$
+What is the specific Private IP range for Class C?,$192.168.0.0$ to $192.168.255.255$
+Which organisation has overall responsibility for managing the global IP address pool?,Internet Assigned Numbers Authority (IANA).
+What is the name of the Regional Internet Registry (RIR) for the Asia Pacific region?,APNIC
+What is the name of the Regional Internet Registry (RIR) for the European region?,RIPE NCC
+Subnetting allows an administrator to divide the _____ part of an IP address into smaller portions.,Host
+Formula: Number of subnets created by borrowing $n$ bits.,$2^n$
+Formula: Maximum number of usable hosts per subnet where $h$ is the number of host bits.,$2^h - 2$
+Why are two addresses subtracted when calculating the number of usable hosts in a subnet?,One is used for the network address and one for the broadcast address.
+How is a network address calculated using an IP and a subnet mask?,By performing a bit-wise AND operation on the IP address and the mask.
+How is a broadcast address calculated for a specific subnet?,By setting all the host bits in the address to $1$.
+"For the network $192.168.0.0/27$, what is the dotted decimal subnet mask?",$255.255.255.224$
+"For the network $192.168.0.0/27$, what is the increment (block size)?",$32$
+"For the network $192.168.0.0/27$, what is the broadcast address of the first subnet?",$192.168.0.31$
+What IPv4 header field is used to prevent packets from looping infinitely?,Time to Live (TTL).
+"In an IPv4 header, what is the protocol number for TCP?",$6$
+"In an IPv4 header, what is the protocol number for UDP?",$17$
+What is the length of an IPv6 address in bits?,$128$ bits
+IPv6 addresses are represented using _____ notation.,Colon-hexadecimal
+"In an IPv6 address, the first $64$ bits represent the _____ part.",Network
+"In an IPv6 address, the lower $64$ bits identify the node and are often derived from the _____ address.",MAC (Media Access Control)
+What are the three main types of IPv6 addresses?,"Global Unicast, Unique Local, and Link Local."
+Which IPv6 address type is only valid and reachable within a single network link?,Link Local
+List one benefit of IPv6 over IPv4 regarding network overhead.,"No IP-level checksum, reducing processing time at each router hop."
+What is 'Flow Labelling' in IPv6 headers used for?,True Quality of Service (QoS) and differentiating data flows.
+The IPv6 Hop Limit field is equivalent to the _____ field in IPv4.,Time to Live (TTL)
+What is the Routing Information Base (RIB)?,A database containing all known paths to various networks.
+Which routing method involves manually setting up and modifying the routing table?,Static Routing
+What is a 'Stub Router'?,A router with only one route to reach all other networks.
+When is the Default Route chosen by a router?,Only when no specific route for the destination is found in the routing table.
+Which type of routing protocol automatically adjusts to topology changes?,Dynamic Routing
+The Distance Vector routing algorithm is based on the _____ algorithm.,Bellman-Ford
+The Link State routing algorithm is based on the _____ algorithm.,Dijkstra (Shortest Path First)
+Which routing algorithm requires each router to have a complete map of the entire network topology?,Link State
+Which routing protocol is the standard Link State protocol used within autonomous systems?,Open Shortest Path First (OSPF)
+What is the maximum hop count allowed by the Routing Information Protocol (RIP)?,"$15$ hops (at $16$, the network is unreachable)."
+Which routing protocol is used to exchange routing information between different Autonomous Systems (AS)?,Border Gateway Protocol (BGP).
+What is the purpose of the Internet Control Message Protocol (ICMP)?,To provide error reporting and feedback for IP packet delivery.
+"In ICMP, what is Type $3$ used for?",Destination unreachable.
+"In ICMP, what are Types $8$ and $0$ used for?",Echo Request and Echo Reply (Ping).
+What protocol is used to map a known IP address to a hardware MAC address?,Address Resolution Protocol (ARP).
+Where does a computer store IP-to-MAC correlations for future reference?,ARP Cache
+Which protocol allows a diskless machine to discover its own IP address based on its MAC address?,Reverse ARP (RARP).
+What modern protocols have largely replaced RARP?,BOOTP and DHCP.
+"Which traffic shaping algorithm converts bursty traffic into a constant, uniform output rate?",Leaky Bucket Algorithm.
+Which traffic shaping algorithm allows idle hosts to accumulate credits to send bursty data later?,Token Bucket Algorithm.
+What is the size of a standard Asynchronous Transfer Mode (ATM) cell?,$53$ bytes
+"In an ATM cell, how many bytes are dedicated to the payload?",$48$ bytes
+What is 'Tunneling' (or Port Forwarding)?,A process of encapsulating private network data for secure transmission over a public network.
+Which protocol is a combination of PPTP and Layer 2 Forwarding?,Layer Two Tunneling Protocol (L2TP).
+Define 'Unicast' transmission.,Sending a packet from a single source to a single specific destination.
+Define 'Multicast' transmission.,Sending a packet from a single source to a specific group of interested destinations.
+Define 'Broadcast' transmission.,Sending a packet from a single source to all devices on a local network.

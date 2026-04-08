@@ -1,0 +1,84 @@
+What is the primary function of a 'signal' in data communications?,It is an electrical or electromagnetic current used to carry data from one device or network to another.
+Name the two basic components that make up a data communication signal.,The baseband signal (information) and the carrier signal.
+Define an 'analogue signal'.,A continuous signal in which one time-varying quantity represents another time-based variable.
+"In the analogue signal formula $x(t) = A \sin(2\pi ft + \phi)$, what does the symbol $A$ represent?","Amplitude, which controls the strength or loudness of the signal."
+Formula: Analogue signal as a function of time ($x(t)$),$x(t) = A \sin(2\pi ft + \phi)$ or $x(t) = A \sin(\omega t + \phi)$
+"In signal processing, what is 'frequency' ($f$)?","The number of cycles the wave repeats per second, measured in Hertz ($Hz$)."
+What determines the 'phase' of a signal in the equation $x(t) = A \sin(\omega t + \phi)$?,"The symbol $\phi$, representing the phase shift."
+Term: Digital Signal,"Definition: A discrete signal whose amplitude takes only limited, distinct values (typically representing binary 0 or 1)."
+How do digital signals compare to analogue signals regarding noise?,Digital signals are less susceptible to noise and more stable than analogue signals.
+Compare the typical wave shapes of analogue versus digital signals.,"Analogue signals are usually sine waves, while digital signals are usually square waves or clock signals."
+Which signal type is considered easier to troubleshoot: analogue or digital?,Digital signals are easier to troubleshoot.
+What components are typically used in 'analogue' circuits?,"Resistors, capacitors, inductors, and diodes."
+What components are typically used in 'digital' circuits?,"Transistors, logic gates, and micro-controllers."
+Term: Transmission Impairment,Definition: A condition where the received signal is different from the transmitted signal due to imperfections in the medium.
+List the four primary causes of transmission impairment.,"Attenuation, Distortion, Noise, and Dispersion."
+What is 'dispersion' in the context of signal transmission?,"The tendency of a signal to spread and overlap as it travels through a medium, depending on the frequency used."
+Term: Attenuation,Definition: The loss of signal energy/strength as it travels over distance due to the resistance of the medium.
+Formula: Attenuation in decibels ($dB$),$Attenuation(dB) = 10 \log_{10}(\frac{P_2}{P_1})$
+How is the problem of attenuation typically solved in long-distance communication?,By using amplifiers to boost the attenuated signal strength.
+Term: Distortion,Definition: A change in the form or shape of a signal due to different frequency components travelling at different speeds.
+What is a common solution for signal distortion?,The use of equalisers or wide-band channels.
+Term: Noise,"Definition: Unwanted, random signals that interfere with the original transmitted signal (e.g., thermal or impulse noise)."
+List three methods to reduce the effects of noise in transmission.,"Shielded cables, proper grounding, and filters/error-correction codes."
+Define 'Data Rate'.,"The maximum speed at which data is transferred between two devices, measured in bits per second ($bps$)."
+Identify the three factors that govern the data rate of a channel.,"Available bandwidth, number of levels in the digital signal, and the quality of the channel (noise level)."
+When is the 'Nyquist Bit Rate' formula used?,To calculate the maximum data rate for a noiseless channel.
+When is 'Shannon’s Capacity' formula used?,To calculate the maximum data rate for a noisy channel.
+Formula: Shannon Capacity ($C$),$C = B \log_2(1 + SNR)$ (where $B$ is bandwidth and $SNR$ is Signal-to-Noise Ratio).
+Term: Modulation,Definition: The process of encoding information onto a carrier signal (typically converting digital data to an analogue signal).
+What device performs both modulation and demodulation?,A Modem.
+Term: Demodulation,Definition: The process of extracting original data from a transmitted modulated carrier signal.
+What are the three main types of 'Analogue Modulation'?,"Amplitude Modulation ($AM$), Frequency Modulation ($FM$), and Phase Modulation ($PM$)."
+Concept: Amplitude Modulation ($AM$),Definition: Varying the instantaneous amplitude of the carrier signal in accordance with the message signal amplitude.
+What is a primary disadvantage of Phase Modulation ($PM$)?,The circuitry required for modulation and demodulation is more complicated than for $AM$ or $FM$.
+What are the three primary techniques for 'Digital Modulation'?,"Amplitude Shift Keying ($ASK$), Frequency Shift Keying ($FSK$), and Phase Shift Keying ($PSK$)."
+Term: Amplitude Shift Keying ($ASK$),Definition: A digital modulation technique where the carrier amplitude is varied; often called on-off keying ($OOK$).
+How does 'Frequency Shift Keying' ($FSK$) represent binary data?,It uses two predefined frequencies; one for bit 1 and another for bit 0.
+What is 'Quadrature Phase Shift Keying' ($QPSK$)?,"A version of $PSK$ where phase shifts occur in four different quadrants, allowing 2 bits of information to be sent at once."
+Term: Pulse Code Modulation ($PCM$),Definition: The most common method used to convert analogue data into digital form.
+List the three steps involved in Pulse Code Modulation ($PCM$).,"Sampling, Quantisation, and Encoding."
+State the Nyquist Theorem regarding sampling rate.,The sampling rate must be at least twice the highest frequency of the analogue signal.
+"In $PCM$, what occurs during the 'Quantisation' step?",The sampled amplitudes are approximated to the nearest discrete levels between the maximum and minimum values.
+Term: Line Coding,Definition: The process of converting digital data (binary 0s and 1s) directly into digital signals (voltage pulses).
+Concept: Uni-polar Encoding,"Definition: Uses a single voltage level where binary 1 is high voltage and 0 is no voltage ($1 \rightarrow +V, 0 \rightarrow 0$)."
+What distinguishes 'Polar Encoding' from 'Uni-polar Encoding'?,Polar encoding uses multiple voltage levels (typically positive for 1 and negative for 0) rather than just one polarity.
+What is the difference between $NRZ-L$ and $NRZ-I$?,"$NRZ-L$ changes voltage when a different bit is met, while $NRZ-I$ changes voltage specifically when a 1 is encountered."
+How does 'Return to Zero' ($RZ$) encoding function?,"It uses three voltage levels ($+, -, 0$) and the signal transitions to zero in the middle of each bit time."
+Concept: Manchester Encoding,"Definition: A combination of $RZ$ and $NRZ-L$ where a transition always occurs in the middle of the bit ($1 \rightarrow High-to-Low, 0 \rightarrow Low-to-High$)."
+What is the primary benefit of Manchester encoding?,It provides built-in synchronisation between the sender and receiver.
+Concept: Bipolar Encoding ($AMI$),Definition: Uses three levels where 0 is zero voltage and 1 is represented by alternating positive and negative voltages.
+Term: Block Coding,Definition: A technique that adds redundant bits to a data block to improve error detection and reliability.
+What are the three steps in Block Coding?,"Division, Substitution, and Combination."
+Term: Multiplexing,Definition: A set of techniques that allow the simultaneous transmission of multiple signals across a single data link.
+Name the two basic forms of multiplexing in electronic communications.,Time Division Multiplexing ($TDM$) and Frequency Division Multiplexing ($FDM$).
+How does 'Frequency Division Multiplexing' ($FDM$) allocate bandwidth?,"It divides the link bandwidth into different frequency bands, assigning each to a separate data stream."
+How does 'Time Division Multiplexing' ($TDM$) share a channel?,It divides the transmission time into non-overlapping time slots for different sources.
+Concept: Wavelength Division Multiplexing ($WDM$),Definition: An analogue multiplexing technique designed for fibre-optic cables that combines different light signals (wavelengths).
+What optical component is commonly used to handle the combining/splitting in $WDM$?,A prism.
+What type of switching is used in the traditional Telephone Network?,Circuit Switching.
+Identify the three major components of a Telephone Network.,"Local loops, Trunks, and Switching Offices."
+Term: Local Loop,Definition: The twisted-pair cable connecting a subscriber's telephone to the nearest local central office.
+What are 'Trunks' in a telephone network?,Transmission media (often optical fibre or satellite) that handle communication between switching offices using multiplexing.
+Guided Media: Twisted-pair cable,Definition: Two insulated copper strands twisted together to reduce noise and crosstalk.
+What is the difference between $UTP$ and $STP$?,"$STP$ (Shielded Twisted Pair) includes a metal foil/braid shield to reject noise, whereas $UTP$ (Unshielded) does not."
+Concept: Coaxial Cable,"Definition: A cable with two conductors sharing the same axis, providing excellent impedance control and higher data rates than twisted pair."
+What are the typical impedances for cable TV and Ethernet coaxial cables?,$75\Omega$ for cable TV and $50\Omega$ for Ethernet.
+Guided Media: Optical Fibre,Definition: A medium that transmits data as light pulses through a glass or plastic core.
+What is the difference between 'Step-index' and 'Graded-index' multi-mode fibre?,"Step-index has a constant core density with abrupt changes at the interface, while graded-index has varying density to reduce signal distortion."
+Term: Single-mode Fibre,"Definition: Fibre with a very small core ($4$ to $10\mu m$) that supports only one light mode, retaining fidelity over long distances."
+Name the three ways wireless data propagates in 'Unguided Media'.,"Radio waves, Microwaves, and Infrared."
+What frequency range is normally classified as 'Radio Waves'?,$3kHz$ to $1GHz$.
+Why is the 'omnidirectional' property of radio waves both an advantage and a disadvantage?,"It allows easy multicasting without alignment, but makes the signals susceptible to interference from other antennas."
+What frequency range is classified as 'Microwaves'?,$1GHz$ to $300GHz$.
+Contrast the antenna alignment needs of radio waves versus microwaves.,"Radio waves are omnidirectional (no alignment needed), while microwaves are unidirectional (antennas must be narrowly focused and aligned)."
+Term: Line-of-sight ($LOS$) Propagation,Definition: High-frequency signals (like microwaves) transmitted in straight lines directly from antenna-to-antenna.
+Concept: Communication Satellite,"Definition: A relay station in space that accepts, amplifies, and retransmits microwave signals between earth stations."
+What is the approximate height of high-earth orbit geosynchronous satellites?,"$22,000$ miles above the equator."
+Term: $VSAT$,Definition: Very Small Aperture Terminal; small satellite dish antennas used by companies to connect sites via satellite.
+Concept: Packet Switching,Definition: A technique where messages are divided into smaller pieces (packets) and sent individually through the shortest available path.
+What information is typically found in a packet header?,"Source address, destination address, and sequence number."
+How does packet switching handle the sequence of packets at the destination?,Packets are reassembled in the correct order using their unique sequence numbers.
+Does Circuit Switching or Packet Switching use bandwidth more efficiently?,Packet Switching uses bandwidth to its maximum efficiency.
+Which switching method typically involves 'Bandwidth Wastage'?,Circuit Switching.
+What is 'SONET'?,Synchronous Optical Network; a standard for high-speed synchronous data transmission over fibre-optic media.

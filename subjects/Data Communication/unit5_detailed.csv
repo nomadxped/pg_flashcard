@@ -1,0 +1,82 @@
+Which layer is responsible for process-to-process delivery of an entire message?,Transport Layer
+How does node-to-node delivery differ from process-to-process delivery?,"Node-to-node delivery occurs between neighbouring nodes over a link (Data Link Layer), whereas process-to-process delivery occurs between specific applications on source and destination hosts (Transport Layer)."
+Which network layer is specifically responsible for host-to-host delivery of datagrams?,Network Layer
+What is the specific address used by the Transport Layer to identify a process on a computer?,Port address (or Service Point Address).
+What is the purpose of the sequence number in Transport Layer segmentation?,It enables the reassembling of the message in the correct order and identifies packets lost during transmission.
+Which Transport Layer function handles the division of a message into smaller units and their subsequent rejoining?,Segmentation and Reassembling
+"In the context of Connection Control, how are packets treated in a connectionless Transport Layer?",Each segment is considered an independent packet and is delivered to the destination without a pre-established path.
+What must occur in a connection-oriented Transport Layer before packets can be delivered?,A connection must be established with the transport layer at the destination machine.
+Where is flow control performed within the Transport Layer?,End to end
+How does the Transport Layer perform error correction?,Through retransmission of lost or corrupted data.
+What are the two primary parts of a TCP segment?,The Header Part and the Data Part.
+"Which protocol provides reliable, connection-oriented service between processes on different hosts?",Transmission Control Protocol (TCP)
+What type of data transfer service is offered by TCP?,Stream data transfer
+"TCP provides _____ operation, allowing simultaneous data flow in both directions.",Full duplex
+What is the size of the Source Port field in a TCP header?,2 bytes (16 bits)
+"In a TCP header, which field specifies the number assigned to the current message?",Sequence Number (4 bytes/32 bits)
+What does the Acknowledgement Number in a TCP header indicate?,The sequence number of the next byte of data expected by the receiver.
+What is the size of the Acknowledgement Number field in a TCP header?,4 bytes (32 bits)
+Which TCP header field indicates the number of words in the header?,Header Length (4 bits)
+How many bits are allocated for the 'Reserved' field in a TCP header?,6 bits
+List the six flags found in the TCP header flag field.,"URG, ACK, PSH, RST, SYN, and FIN."
+TCP Flag: SYN,Purpose: Synchronise sequence numbers to initiate a connection.
+TCP Flag: ACK,Purpose: Indicates that the Acknowledgement field is valid.
+TCP Flag: FIN,Purpose: Terminate the connection (Final).
+TCP Flag: RST,Purpose: Reset the connection.
+TCP Flag: PSH,Purpose: Request for Push (send data to the application immediately).
+TCP Flag: URG,Purpose: Indicates that the Urgent Pointer field is valid.
+What information does the 'Window' field in the TCP header provide?,The size of the sender's receiving window (available buffer space for incoming data).
+What is the bit-length of the TCP Checksum field?,16 bits
+Under what condition is the TCP Urgent Pointer field valid?,Only if the URG flag bit is set to 1.
+What is the maximum size of the 'Options' field in a TCP header?,32 bytes
+Which TCP service involves storing data in temporary memory areas before transmission or after receipt?,Sending and Receiving Buffers
+What is the primary objective of the TCP 3-way handshake?,To establish a reliable connection and synchronise sequence numbers between client and server.
+Identify the three steps of the TCP 3-way handshake in order.,"1. SYN, 2. SYN-ACK, 3. ACK"
+"In the first step of a 3-way handshake, what does the 'SYN' segment inform the server?",The client intends to start communication and provides its starting sequence number.
+What does the 'ACK' bit in a SYN-ACK signal represent?,The acknowledgement of the received SYN segment from the client.
+Which Transport Layer protocol is described as connectionless and unreliable?,User Datagram Protocol (UDP)
+Why is UDP considered a 'best-effort' delivery service?,It does not provide acknowledgement mechanisms or wait for confirmation of receipt.
+How are packets addressed in UDP to ensure they reach the correct destination application?,Port numbers
+What is the range of well-known port numbers used by UDP?,$0$ to $1023$
+Why does UDP generally provide faster transmission than TCP?,It is connectionless and does not require the overhead of establishing a virtual path or error recovery.
+Which UDP header field specifies the total length of the user datagram (header plus data)?,Length (16 bits)
+What is the total size of a UDP header in bytes?,8 bytes (each of the four fields is 16 bits/2 bytes).
+Name four fields found in a UDP header.,"Source Port, Destination Port, Length, and Checksum."
+True or False: The Checksum field in a UDP datagram is mandatory.,False (it is optional).
+List three applications that typically use UDP.,"DNS (Domain Name Services), SNMP (Simple Network Management Protocol), and TFTP (Trivial File Transfer Protocol)."
+How do TCP and UDP differ regarding multicasting/broadcasting?,"TCP does not support multicasting or broadcasting, whereas UDP supports broadcasting."
+Comparison: TCP vs UDP (Data Unit),"A TCP packet is called a segment, whereas a UDP packet is called a user datagram."
+Comparison: TCP vs UDP (Stream Type),"TCP is a byte stream connection, whereas UDP is a message stream connection."
+What is 'congestion' in a network environment?,"A condition where demand for network resources exceeds available capacity, leading to packet loss and delay."
+What is the primary difference between Open Loop and Closed Loop congestion control?,"Open Loop prevents congestion before it happens, while Closed Loop removes congestion after it occurs."
+Which Open Loop policy suggests using Selective Repeat instead of Go-Back-N to reduce congestion?,Window Policy
+How does an Admission Policy prevent congestion?,Routers deny the establishment of new virtual connections if resources are unavailable or congestion is likely.
+"In Open Loop control, how does the Acknowledgment Policy reduce traffic?",The receiver sends one acknowledgement for $N$ packets (cumulative/delayed ACKs) instead of for every individual packet.
+"Which congestion control technique propagates signal bits in the opposite direction of data flow, starting from the congested node?",Backpressure
+Backpressure can only be applied to what type of networks?,Virtual circuit networks
+What is a 'choke packet'?,A special control packet sent by a congested router directly to the source to request a reduction in traffic rate.
+"In the Implicit Signalling method of congestion control, how does the source detect congestion?",The source infers congestion from the delay or absence of acknowledgements (timeouts).
+How does Explicit Signalling differ from the Choke Packet method?,"Explicit signalling includes the congestion signal within data-carrying packets, whereas Choke Packets are separate packets."
+What is Backward Signalling in explicit congestion control?,A bit is set in a packet moving in the opposite direction of the congestion to warn the source to slow down.
+What is Forward Signalling in explicit congestion control?,A bit is set in a packet moving in the same direction as the congestion to warn the destination.
+Which algorithm shapes bursty traffic into a fixed-rate flow using a finite queue?,Leaky Bucket Algorithm
+What happens in a Leaky Bucket algorithm when the bucket (queue) is full?,New incoming packets are discarded (spill over).
+What is the main advantage of the Token Bucket algorithm over the Leaky Bucket algorithm?,The Token Bucket algorithm can handle bursty data transfers by allowing accumulated tokens to be used quickly.
+"In the Token Bucket algorithm, what is required for a packet to be transmitted?",An available token must be present in the bucket.
+What are the four main flow characteristics managed by Quality of Service (QoS)?,"Reliability, Delay, Jitter, and Bandwidth."
+Define 'Jitter' in network performance.,The variation in the delay of received packets.
+"In QoS, what is the difference between 'Traffic Policing' and 'Traffic Shaping'?","Policing drops excess traffic immediately, while Shaping delays excess traffic to smooth the flow."
+QoS Technique: Classification,"Definition: Identifying and grouping traffic based on parameters like IP, port, or application type."
+QoS Technique: Marking,"Definition: Tagging classified packets with priority values (e.g., DSCP) for handling by network devices."
+Which QoS scheduling technique gives higher priority packets more weight?,Weighted Fair Queuing (WFQ)
+What are the three main QoS Service Models?,"Best Effort, Integrated Services (IntServ), and Differentiated Services (DiffServ)."
+Which QoS model is also known as a 'model without QoS' where packets are handled via FIFO?,Best Effort
+Integrated Services (IntServ) uses which signalling protocol to request resource reservations?,RSVP (Resource Reservation Protocol)
+What is the primary limitation of the Integrated Services (IntServ) model?,Poor scalability due to the need for routers to maintain state for every individual flow.
+Integrated Services: Guaranteed Service Class,Definition: A class ensuring minimum end-to-end delay by reserving specific router resources.
+How does Differentiated Services (DiffServ) achieve better scalability than IntServ?,It classifies traffic into aggregate classes rather than maintaining state for individual flows.
+What value is used in the IP header to mark packets in a Differentiated Services (DiffServ) model?,DSCP (Differentiated Services Code Point)
+"In DiffServ, what does 'Per-Hop Behavior' (PHB) refer to?","How an individual router handles a packet based on its DSCP marking (e.g., placing it in a priority queue)."
+Comparison: IntServ vs DiffServ (QoS Type),"IntServ provides Hard QoS (strict guarantees), while DiffServ provides Soft QoS (statistical preference)."
+Comparison: IntServ vs DiffServ (Analogy),IntServ is like a reserved train seat; DiffServ is like airline boarding classes (First/Economy).
+What field in the ToS (Type of Service) byte does DiffServ utilize?,DS (Differentiated Services) Field

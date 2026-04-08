@@ -1,0 +1,80 @@
+"Which OSI layer is the Data Link Layer, and what layer is immediately below it?",It is the second layer and lies above the Physical Layer.
+What is 'framing' in the context of the Data Link Layer?,The process of dividing data from the network layer into manageable units.
+How does the Data Link Layer handle physical addressing?,By adding MAC addresses to frames for proper delivery.
+What is the primary purpose of 'Flow Control' at the Data Link Layer?,To manage and regulate the rate of data transmission between sender and receiver.
+How is 'Access Control' defined for devices sharing a transmission medium?,It determines which device has control over the link at any given time.
+What is the main difference between error detection and error correction?,"Detection only identifies that an error exists, while correction identifies and fixes the error."
+Term: Single-bit error,Definition: A condition where only one bit in a data unit is corrupted.
+Term: Multiple bits error,Definition: A condition where more than one bit in a frame is in a corrupted state.
+Term: Burst error,Definition: A condition where two or more consecutive bits in a frame are corrupted.
+What are two common causes of transmission errors in communication networks?,Thermal noise and signal distortion (attenuation).
+Why are 'redundancy bits' added to digital messages during transmission?,To facilitate the detection and correction of errors.
+How is a 'Simple Parity Check' bit calculated for even parity?,"A 1 is added if the count of 1s is odd, and a 0 is added if the count of 1s is even."
+What is the advantage of a Two-dimensional Parity Check over a simple parity check?,It calculates parity bits for both rows and columns to improve detection capabilities.
+How is the 'checksum' value generated at the sender's side?,"Data segments are added using 1's complement arithmetic, and the result is complemented."
+"In checksum detection, what result at the receiver indicates the data is error-free?",A zero result after complementing the 1's complement sum of all received segments.
+What mathematical operation forms the basis of the Cyclic Redundancy Check (CRC)?,Binary division.
+"In CRC, what is a 'codeword'?",The combination of the actual data bits and the calculated remainder (CRC bits).
+"If the CRC generator polynomial is $x^3 + 1$, what is the corresponding binary divisor?",1001
+How many zeros are appended to the original message if the CRC generator is $n$ bits long?,$n - 1$ zeros.
+What is 'Backward Error Correction' (BEC)?,A method where the receiver requests the sender to retransmit the entire data unit upon discovering an error.
+What is 'Forward Error Correction' (FEC)?,A method where the receiver uses an error-correcting code to automatically fix certain errors without retransmission.
+Which error correction method is better suited for real-time systems and why?,"Forward Error Correction (FEC), because it does not require time-consuming retransmissions."
+What is the defining characteristic of Hamming Codes?,They can detect up to two simultaneous bit errors and correct single-bit errors.
+Which block code is specifically noted for its ability to correct burst errors?,Reed-Solomon Code.
+What formula determines the number of redundant bits ($r$) needed for $d$ data bits in Hamming Code?,$2^r \ge d + r + 1$
+"According to the Hamming Code formula, how many redundant bits are required for 7 data bits?",4 redundant bits.
+"In Hamming Code, at which bit positions are the redundant (parity) bits placed?","Positions that are powers of 2 (1, 2, 4, 8, etc.)."
+What does Hamming bit $R_1$ check in a 7-bit codeword?,"It checks bit positions 1, 3, 5, and 7."
+What does Hamming bit $R_2$ check in a 7-bit codeword?,"It checks bit positions 2, 3, 6, and 7."
+What does Hamming bit $R_3$ (position 4) check in a 7-bit codeword?,"It checks bit positions 4, 5, 6, and 7."
+What two mechanisms does Automatic Repeat Request (ARQ) use to achieve reliability?,Acknowledgements (ACKs) and timeouts.
+"In ARQ, what action does the receiver take if it detects an error in a packet?",It discards the packet and sends a Negative Acknowledgement (NACK).
+How does the 'Stop-and-Wait' flow control method operate?,The sender transmits one frame and must receive an ACK before sending the next frame.
+What is the main disadvantage of the Stop-and-Wait protocol?,"It is inefficient because only one frame is in transition at a time, underutilising the transmission medium."
+"In Stop-and-Wait ARQ, what happens if an ACK frame is lost?","The sender's timer expires, and the sender retransmits the frame."
+Term: Piggybacking,Definition: A technique where an acknowledgement is attached to an outgoing data frame to save bandwidth.
+What is the primary improvement of 'Sliding Window' over 'Stop-and-Wait'?,It allows multiple frames to be transmitted before needing an acknowledgement.
+"In a Sliding Window protocol with $n$ bits for the sequence number, what is the maximum window size?",$2^n - 1$
+What is the receiver's window size in the Go-Back-N ARQ protocol?,1
+How does Go-Back-N ARQ handle out-of-order frames?,"The receiver discards them and remains silent, forcing the sender to retransmit all frames from the lost one onward."
+What is the main bandwidth inefficiency of Go-Back-N ARQ in noisy links?,It retransmits not only the lost frame but also all subsequent frames that may have arrived correctly.
+How does Selective Repeat ARQ differ from Go-Back-N regarding retransmissions?,Selective Repeat retransmits only the specific frame that was lost or damaged.
+What is required of the receiver in Selective Repeat ARQ that is not required in Go-Back-N?,The receiver must have a buffer to store out-of-order frames.
+What is the Point-to-Point Protocol (PPP) primarily used for?,To transmit multiprotocol data between two directly connected nodes over a serial link.
+Which protocol was PPP designed to replace?,SLIP (Serial Line IP).
+Name three services provided by PPP.,"Connection authentication, transmission encryption, and data compression."
+How is High-Level Data Link Control (HDLC) categorised regarding its data orientation?,It is a bit-oriented protocol.
+What are the three types of HDLC frames?,"Information frames (I-frames), Supervisory frames (S-frames), and Un-numbered frames (U-frames)."
+"In HDLC, what is the purpose of an S-frame?",It is used for flow and error control when piggybacking is not required.
+Contrast HDLC and PPP regarding authentication.,"PPP supports authentication mechanisms, whereas HDLC does not."
+"Which protocol, HDLC or PPP, supports multipoint links?","HDLC supports both point-to-point and multipoint links, while PPP only supports point-to-point."
+What are the three categories of Multiple Access protocols?,"Random access, Controlled access, and Channelisation."
+What is the basic rule for transmission in the Pure ALOHA protocol?,A station transmits a frame whenever it has data to send.
+How does Slotted ALOHA improve upon Pure ALOHA?,"It restricts transmissions to the beginning of discrete time slots, reducing the collision window."
+What does the 'Carrier Sense' part of CSMA signify?,A station listens to the channel to check if it is idle or busy before transmitting.
+"In CSMA/CD, what happens immediately after a collision is detected?",The station stops transmitting the current frame to limit the duration of the collision.
+Why is CSMA/CA used in wireless networks instead of CSMA/CD?,"Wireless networks cannot effectively detect collisions while transmitting, so they must focus on avoidance."
+What is 'binary exponential back-off' in CSMA/CD?,An algorithm that doubles the wait time (collision window) after each successive collision.
+List the three main techniques used by CSMA/CA to avoid collisions.,"Interframe space (IFS), contention window, and acknowledgements."
+"In 'Controlled Access', what must a station do before it can send data?",It must be authorised or granted permission by other stations or a central controller.
+How does the 'Reservation' access method function?,Stations reserve a time slot in a reservation frame before transmitting data in that interval.
+Describe the relationship between stations in the 'Polling' access method.,There is a primary (master) station that controls the link and secondary stations that follow its instructions.
+How does 'Token Passing' regulate media access?,A special frame called a token circulates; only the station holding the token is permitted to transmit.
+What is the primary functional difference between a Hub and a Switch?,"A hub forwards data to all ports, while a switch 'filters and forwards' data only to the intended destination port."
+Term: VLAN (Virtual Local Area Network),"Definition: A logical grouping of devices that allows them to communicate as if they were on the same LAN, regardless of physical location."
+What is the main benefit of using VLANs to reduce broadcast domain size?,It reduces network congestion by limiting the scope of broadcast traffic.
+Differentiate between a 'Static VLAN' and a 'Dynamic VLAN'.,"Static VLANs are port-based (assigned by admin), while Dynamic VLANs assign membership based on device characteristics."
+What are the two types of Bluetooth networks?,Piconet and Scatternet.
+What is the maximum number of stations in a single Bluetooth Piconet?,Eight (one primary and seven secondaries).
+What is the IEEE standard for Bluetooth?,IEEE 802.15
+What encoding technique is used by Traditional Ethernet?,Manchester Encoding.
+What is the data rate of Fast Ethernet?,100 Mbps
+What is the data rate of Gigabit Ethernet?,1 Gbps (1000 Mbps)
+What is 'Virtual Circuit Switching'?,A connection-oriented packet-switching method that establishes a dedicated logical path for a session.
+How does Virtual Circuit Switching differ from Datagram routing?,"In Virtual Circuits, all packets follow the same pre-established path, ensuring ordered delivery."
+What is Frame Relay?,A high-performance WAN technology that uses packet switching and virtual circuits for data transfer.
+"In Frame Relay, what is the role of the DTE (Data Terminal Equipment)?","It is the customer-side device (e.g., a router) that generates and consumes data."
+"In Frame Relay, what is the role of the DCE (Data Circuit-terminating Equipment)?",It is the service provider's equipment that provides timing and connectivity (the network cloud).
+What is the fixed size of an Asynchronous Transfer Mode (ATM) cell?,53 bytes.
+Name one advantage of using ATM for messaging and data.,"It enables high-speed transmission of various data types, including voice, at constant rates."
