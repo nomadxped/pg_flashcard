@@ -5,7 +5,13 @@
     "network.csv",
     "osi.csv",
     "physical.csv",
-    "transport.csv"
+    "transport.csv",
+    "unit1_detailed.csv",
+    "unit2_detailed.csv",
+    "unit3_detailed.csv",
+    "unit4_detailed.csv",
+    "unit5_detailed.csv",
+    "unit6_detailed.csv"
   ],
   "Digital System": [
     "cpu.csv",
