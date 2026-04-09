@@ -1,0 +1,125 @@
+Outline the step-by-step communication flow between a client and a server during an HTTP request.,"- The user types a URL into the browser, which then checks the DNS to obtain the server's IP address.
+- The browser opens a TCP connection to the server and sends an HTTP request containing the method (GET/POST), resource path, and version.
+- The web server receives the request and processes it, either fetching static files or running server-side scripts for dynamic content.
+- The server sends an HTTP response containing a status code (e.g., 200, 404), headers, and the response body (HTML/JSON/Image).
+- The browser receives the response, renders the output for the user, and the connection is either closed or reused for further requests."
+What are the core characteristics of the HTTP protocol used in web technology?,"- It is stateless, meaning each request is independent and the server does not retain information about previous requests from the same client.
+- It is connectionless, typically ending the connection after a response is sent to the client.
+- It is media independent, allowing the transfer of various data types including text, images, video, and audio.
+- It operates on default ports, specifically port $80$ for standard HTTP and port $443$ for secure HTTPS communication."
+Compare and contrast Static Web Pages and Dynamic Web Pages across at least four distinct features.,"- Static pages display fixed content to every user, whereas dynamic pages change content per request based on logic or user data.
+- Static pages involve no server-side logic or processing, while dynamic pages require server-side scripts to generate content.
+- Databases are not used in static web pages, but they are essential in dynamic pages for storing and retrieving information.
+- Updates to static pages require manual file editing by a developer, while dynamic pages update automatically via database changes."
+Explain the primary benefits of using Dynamic Web Pages over Static Web Pages for modern applications.,"- They allow for highly personalised content, showing different output and user-specific data for each individual.
+- They facilitate real-time updates where content changes instantly without the need to manually edit HTML files.
+- They offer superior scalability and maintenance, where one update to the database or template can reflect across thousands of pages.
+- They support advanced functionality such as login systems, search features, and interactive dashboards essential for e-commerce and social media."
+Describe the key differences between Client-Side Scripting and Server-Side Scripting regarding execution and security.,"- Client-side scripts run on the user's browser (e.g., Chrome or Firefox), whereas server-side scripts run on the web server machine.
+- Code is visible to the user in client-side scripting, making it less secure, while server-side code is hidden from the user, providing better security.
+- Client-side scripting cannot access the server's database directly, whereas server-side scripting has full database access and management capabilities.
+- Client-side scripting relies on the processing power of the user's device, while server-side scripting is independent of the user's hardware."
+Provide a justification for why HTML is not considered a programming language.,"- It lacks logic and decision-making capabilities, as it cannot use conditional statements like 'if', 'else', or 'switch'.
+- It does not support loops or iteration, meaning it cannot repeat actions through structures like 'for' or 'while'.
+- It cannot store or manipulate data because it has no support for variables, memory handling, or mathematical calculations.
+- It is a markup language used to structure and display content through tags, rather than a Turing-complete language used to solve computational problems."
+Define JavaScript Objects and explain the roles of properties and methods within them.,"- A JavaScript object is a collection of related data and functions that represent a real-world entity as a single unit.
+- Properties are key-value pairs that store data or characteristics of the object, such as a student's 'name' or 'age'.
+- Methods are functions defined inside the object that describe its behaviour, such as a 'calculate()' or 'start()' action.
+- Methods can access and manipulate the object's own properties by using the 'this' keyword within the function block."
+"Discuss the differences between HTML, XHTML, and HTML5 regarding structure and multimedia support.","- HTML is based on SGML and is flexible with tag closing and case sensitivity, whereas XHTML follows strict XML rules and requires lowercase, closed tags.
+- HTML and XHTML often require third-party plugins (like Flash) for multimedia, while HTML5 has built-in support for audio and video elements.
+- HTML5 introduced semantic tags (like `<header>`, `<footer>`, and `<article>`) to improve document structure and search engine optimisation.
+- HTML5 supports modern APIs such as Geolocation and Local Storage, which were not available in older versions of HTML or XHTML."
+What is cross-browser scripting and what are some common techniques used to achieve it?,"- Cross-browser scripting is the practice of writing code that ensures a website functions and displays consistently across all different web browsers.
+- It is necessary because different browsers use different rendering engines, such as Blink for Chrome and Gecko for Firefox, which may interpret code differently.
+- Developers use vendor prefixes (e.g., `-webkit-` or `-moz-`) to ensure newer CSS features work across different browser environments.
+- Techniques like 'CSS Resets' are used to remove default browser styles, and 'Feature Detection' checks for browser support before executing specific JavaScript functions."
+Explain the purpose and categories of CSS properties in web design.,"- The main purpose of CSS properties is to define the visual appearance and layout of HTML elements independently of the content structure.
+- Text properties like `color`, `font-size`, and `text-align` control the typography and legibility of the page content.
+- Box Model properties such as `margin`, `padding`, `width`, and `height` manage the spacing and sizing of elements on the screen.
+- Layout and Display properties like `position`, `display`, and `float` determine how elements are positioned relative to each other in the browser window."
+Define jQuery and list its most significant features for web developers.,"- jQuery is a fast, lightweight JavaScript library designed to simplify common tasks through its motto 'Write Less, Do More'.
+- It makes DOM manipulation and HTML element selection much easier by using simple CSS-style selectors.
+- It simplifies event handling and the creation of animations or effects with fewer lines of code compared to standard JavaScript.
+- It provides built-in cross-browser compatibility and simplifies complex AJAX operations for exchanging data with a server."
+What is JSON and what are the specific structural rules for writing it?,"- JSON (JavaScript Object Notation) is a lightweight, text-based data-interchange format that is easy for humans to read and machines to parse.
+- Data must be written in key-value pairs, where the keys are always strings enclosed in double quotes.
+- It uses curly braces `{}` to define objects and square brackets `[]` to define arrays of data.
+- Values within JSON can be strings, numbers, booleans, arrays, or other objects, and multiple data entries must be separated by commas."
+Describe the process of Garbage Collection in the context of JavaScript memory management.,"- Garbage collection is an automatic process managed by the JavaScript engine to free up memory occupied by objects that are no longer in use.
+- Memory is allocated when objects are created or variables are declared, and it is reclaimed when those items are no longer reachable.
+- Reachability is determined by whether an object can be accessed from the global scope or the current function execution context.
+- The 'Mark-and-Sweep' algorithm is commonly used to identify unreachable objects and remove them from the heap memory to prevent memory leaks."
+Outline the theoretical structure and general flow of a PHP program.,"- A PHP program is written inside specific tags (`<?php ... ?>`) and is typically embedded directly within HTML content.
+- PHP files must be saved with a `.php` extension to be correctly identified and processed by the web server.
+- The code is executed on the server-side, and only the resulting HTML output is sent to the user's web browser.
+- The flow involves starting the PHP block, declaring variables (starting with `$`), performing logic or database operations, and using `echo` or `print` to generate output."
+Explain the essential steps involved in establishing database connectivity within a web application.,"- The application must first load the appropriate database driver (e.g., JDBC or MySQLi) to communicate with the specific database server.
+- A connection must be established using a connection string that contains the server address, database name, username, and password.
+- SQL queries are sent from the application to the database server, which processes the request (e.g., SELECT, INSERT, UPDATE).
+- The application receives the result from the database, handles any data retrieved, and finally closes the connection to free up resources."
+Compare Sessions and Cookies as methods for maintaining user state.,"- Sessions store user data on the web server, making them more secure for sensitive info, whereas Cookies store data locally on the client's browser.
+- Sessions are identified by a unique ID often stored in a cookie, while Cookies themselves are small key-value pairs with set expiry times.
+- Session data is typically temporary and ends when the browser is closed or a timeout occurs, while Cookies can be persistent and remain after the browser closes.
+- Sessions can handle larger amounts of data compared to Cookies, which have limited storage capacity and are sent with every HTTP request."
+What is a Hyperlink and what are the different types used in HTML?,"- A hyperlink is a clickable element, created using the `<a>` tag, that connects the current web page to another resource or location.
+- Text Hyperlinks are the most common, while Image Hyperlinks allow a user to click an image to navigate to a new URL.
+- Internal Hyperlinks (using `id` attributes) navigate to sections within the same page, whereas External Hyperlinks link to entirely different websites.
+- Special types include Email Hyperlinks (using `mailto:`) to open mail clients and Download Hyperlinks used for transferring files like PDFs."
+Distinguish between an 'Error' and an 'Exception' within JavaScript programming.,"- An Error is an unintentional problem, such as a syntax mistake or reference error, that can cause a program to stop or crash if unaddressed.
+- An Exception is a type of error that occurs during runtime but is specifically designed to be 'caught' and handled by the programmer.
+- Exceptions are managed using `try`, `catch`, and `finally` blocks to prevent the application from crashing and to allow for graceful error handling.
+- While errors are often fatal to script execution, exceptions provide a mechanism to maintain program reliability when unexpected events occur."
+List the major categories of HTML events and provide examples for each.,"- Mouse Events include actions like `onclick` (click), `ondblclick` (double-click), and `onmouseover` (moving the cursor over an element).
+- Keyboard Events consist of `onkeydown` (pressing a key), `onkeyup` (releasing a key), and `onkeypress` (holding a key down).
+- Form Events involve `onsubmit` (sending form data), `onfocus` (an element gaining focus), and `onchange` (changing the value of an input).
+- Window/Document Events include `onload` (page finishing loading), `onresize` (changing window size), and `onscroll` (moving the page up or down)."
+Explain the various types of Control Structures supported by JavaScript.,"- Conditional structures like `if`, `else if`, `else`, and `switch` allow the program to make decisions and branch logic based on specific criteria.
+- Looping structures such as `for`, `while`, and `do...while` enable the repetition of code blocks for a fixed or conditional number of times.
+- Jump structures like `break`, `continue`, and `return` are used to exit loops, skip iterations, or end function execution and return values.
+- Exception Handling structures (`try`, `catch`, `finally`) are used to manage runtime errors and ensure the program continues to run smoothly."
+How does HTTPS secure communication between a browser and a server?,"- It uses SSL/TLS protocols to encrypt data, converting readable information into an unreadable format that prevents interception by hackers.
+- It ensures data integrity, meaning that the information cannot be altered or tampered with during transmission without detection.
+- It provides website authentication through digital certificates issued by a trusted Certificate Authority (CA) to verify the server's identity.
+- The process involves a secure 'handshake' where keys are exchanged, ensuring that both parties use a shared session key for secure data transfer."
+Describe the working process of a DNS server when a user requests a website.,"- The browser first checks its local cache for the IP address; if not found, it sends a query to a DNS Resolver, usually provided by the ISP.
+- The Resolver contacts a Root DNS Server, which directs it to the appropriate Top-Level Domain (TLD) server (e.g., for `.com` or `.org`).
+- The TLD server directs the Resolver to the Authoritative DNS Server that holds the specific IP record for the requested domain.
+- Once the Resolver obtains the IP address, it passes it back to the browser, which then establishes a direct connection to the web server."
+Compare 3-Tier and n-Tier architectures in web application development.,"- 3-Tier architecture splits an application into three distinct layers: Presentation (UI), Application (Business Logic), and Data (Database).
+- n-Tier architecture is an expansion of the 3-tier model, further subdividing layers into more specific services like Web, Service, or Data Access layers.
+- 3-Tier is generally suitable for medium-sized applications, whereas n-Tier is designed for large-scale, complex enterprise systems.
+- Both architectures improve scalability and maintenance by allowing each layer to be developed, updated, or deployed on separate servers independently."
+Summarise the steps required to establish an online presence for a traditional paper-based newspaper.,"- Select and register a unique and memorable domain name (e.g., `.news`) through a domain registrar to establish an online identity.
+- Choose a web hosting provider based on expected traffic and storage needs, then link the domain name to the hosting server.
+- Design and develop a mobile-friendly website using HTML, CSS, and JavaScript, organising content into logical categories like 'World News' or 'Editorials'.
+- Implement a backend system and database to store digital articles, ensure security with HTTPS, and use SEO techniques to improve visibility on search engines."
+Identify the primary HTML tags used to create a table and explain their functions.,"- The `<table>` tag serves as the main container for the entire table structure and defines its beginning and end.
+- The `<tr>` (Table Row) tag is used to create horizontal rows that house either header or data cells.
+- The `<th>` (Table Header) tag defines header cells, which are typically displayed as bold and centred text to represent column titles.
+- The `<td>` (Table Data) tag is used for standard cells that contain the actual content or data of the table."
+Explain the reasons for choosing 'Tableless Design' over 'Table-Based Design' in modern web development.,"- Tableless design uses CSS for layout instead of `<table>` tags, resulting in cleaner code and significantly faster page loading speeds.
+- It supports responsive design, allowing the layout to adjust automatically to different screen sizes (mobile, tablet, desktop) using media queries.
+- It improves search engine optimisation (SEO) because search engines can read and index clean HTML content more efficiently.
+- It provides better accessibility for users with disabilities, as screen readers can navigate CSS-based layouts more accurately than complex nested tables."
+What are the three ways to embed CSS into an HTML document and when should each be used?,"- Inline CSS is written directly within an HTML tag using the `style` attribute; it is best for applying unique styles to a single element.
+- Internal CSS is placed within a `<style>` tag in the `<head>` section; it is useful for styling a single, specific web page.
+- External CSS involves linking a separate `.css` file via the `<link>` tag; this is the recommended method for large websites to maintain consistency across pages.
+- Using external CSS is the most efficient method as it separates presentation from content and allows for faster browser caching."
+Explain the concept of the DOM Hierarchy and its importance in web scripting.,"- The DOM (Document Object Model) Hierarchy is a tree-like structure where every HTML element is represented as a 'node' or object.
+- It establishes parent-child relationships, starting from the `document` root, followed by `html`, then the `head` and `body` branches.
+- This hierarchy allows JavaScript to navigate the document, accessing elements through their parents, children, or siblings to change content or styles.
+- It is essential for creating dynamic web pages, as it provides the interface through which scripts interact with and modify the static HTML structure."
+"How do the '=', '==', and '===' operators differ in JavaScript?","- The `=` operator is an assignment operator used to store a value in a variable, rather than performing any comparison.
+- The `==` operator is an equality operator that compares values only and will perform type conversion if the data types are different.
+- The `===` operator is a strict equality operator that compares both the value and the data type without performing any conversion.
+- For example, `5 == ""5""` returns true due to type conversion, whereas `5 === ""5""` returns false because one is a number and the other is a string."
+Identify the various methods for declaring and allocating arrays in JavaScript.,"- Array Literal Method: The simplest way, using square brackets to assign values directly, e.g., `let colors = [""Red"", ""Blue""];`.
+- Array Constructor: Uses the `new Array()` keyword to create an array, passing values as arguments, e.g., `let nums = new Array(1, 2, 3);`.
+- Empty Array Assignment: An array is declared first (`let fruits = [];`) and values are added later using specific index positions.
+- Fixed Size Allocation: An array is created with a pre-defined length using `new Array(size)`, with values to be populated at a later stage."
+"What are 'Entity References' and 'Character References' in HTML, and why are they used?","- Entity References are special codes starting with `&` and ending with `;` used to represent reserved characters like `<` (`&lt;`) or `&` (`&amp;`).
+- Character References represent characters using their numeric Unicode values in either decimal (e.g., `&#60;`) or hexadecimal (e.g., `&#x3C;`) format.
+- They are used to prevent the browser from misinterpreting characters as actual HTML tags or code, ensuring the content displays correctly.
+- They are also essential for displaying symbols and characters that are not easily accessible on a standard keyboard, such as the copyright symbol (`©`)."

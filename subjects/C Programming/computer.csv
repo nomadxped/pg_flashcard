@@ -1,0 +1,87 @@
+What four properties does a storage class define for a variable in C?,"Scope, lifetime, default initial value, and physical storage location."
+Where is a variable with the 'auto' storage class physically stored?,Main memory.
+What is the default initial value of an 'automatic' variable in C?,Garbage.
+Which storage class specifier requests the compiler to store a variable in the CPU's internal registers?,register
+Why is it impossible to use the address operator ($&$) on a 'register' variable?,Registers do not have memory addresses.
+What is the default initial value of a variable declared with the 'static' storage class?,Zero.
+How does the 'static' storage class affect a local variable's lifetime?,"It extends the lifetime to the entire program execution, persisting between function calls."
+Which storage class is used to declare a global variable that is visible to all program files?,extern
+Term: Scope,Definition: The region or area of a program from which a specific variable can be accessed.
+Where must a local variable be declared in a C program?,Inside or at the beginning of a specific block or function.
+"When a local and global variable share the exact same name, which one takes precedence within its block?",The local variable.
+Global variables are declared _____ of all functions.,outside
+What determines the exact memory requirements of a program during runtime rather than at compile time?,Dynamic Memory Allocation (DMA).
+Which C library function is used to release dynamically allocated memory back to the operating system?,free()
+The `malloc()` function allocates a requested size of contiguous bytes in the _____ memory.,heap
+What value does `malloc()` return if it fails to successfully allocate the requested memory?,NULL
+Concept: Switch Statement,Definition: A decision-making control structure that tests a variable against a list of specific constant values.
+Which type of computer operates using continuous physical data like voltage or pressure?,Analog computer.
+Why is the `strcpy()` function necessary for assigning string values in C?,C does not allow direct assignment of strings using the equals ($=$) sign after declaration.
+Concept: Primary Memory,Definition: Main memory that communicates directly with the CPU to hold data currently being processed. Example: RAM.
+"In file handling, which mode opens a file for reading only and results in an error if the file does not exist?","""r"" (read mode)."
+Which operator is placed before a variable name during declaration to signify it is a pointer?,The asterisk ($*$).
+The _____ operator is used to access the actual value stored at a memory location pointed to by a pointer.,indirection (or dereference) operator ($*$)
+Which core software acts as the direct intermediary between the user and the computer hardware?,Operating System (OS).
+Which type of computer is specifically designed to handle the workload of more than 100 users simultaneously?,Mainframe computer.
+Which translation tool is generally faster for executing large applications due to pre-compiled machine code?,Compiler.
+What is the role of the `break` statement inside a switch block?,It causes the program to immediately exit the switch statement and transfer control to the next line of code.
+Third Generation computers are primarily characterised by the use of _____.,Integrated Circuits (ICs)
+Which hardware component was the main processing element of First Generation computers (1946-1959)?,Vacuum Tubes.
+Where are library functions (pre-defined functions) like `printf()` stored?,Inside library files supplied by the compiler vendor.
+"What is the purpose of adding a 'b' qualifier (e.g., ""rb"") to a file opening mode?","It opens the file in binary mode, used for non-text data like .dat or .exe files."
+Which operator is used to obtain the address of a variable to store it in a pointer?,The address operator ($\&$).
+"In C file operations, what does the constant `EOF` represent?",End of File.
+What is a pictorial or diagrammatic representation of an algorithm called?,Flowchart.
+"Between the operators ($*$, $/$, $\%$) and ($+$, $-$), which group has high priority in C?","$*$, $/$, and $\%$"
+Which optical input device is heavily used for grading multiple-choice exam papers by detecting bubbles?,OMR (Optical Mark Reader).
+Every C program must contain at least one function named _____.,main()
+Which unit of the computer system coordinates and manages the flow of data between various components?,Control Unit.
+How does 'Call by Reference' affect the original variables in the calling function?,Any modifications performed inside the function directly change the original variables.
+Can the size of a standard array in C be changed during the program's execution (runtime)?,"No, the size of a standard array is static."
+What is the correct format code for a floating-point value in a `printf` statement?,%f
+"What is the fastest and most expensive type of computer, often used for weather forecasting?",Supercomputer.
+Which header file must be included to use C string handling functions like `strlen()`?,string.h
+Which file opening mode allows adding data to the end of an existing file while keeping current contents safe?,"""a"" (append mode)."
+"Which category of control statements includes `while`, `do..while`, and `for`?",Looping statements.
+How can a programmer override the standard operator precedence rules in C?,By using parentheses.
+Which operator is used to access structure members when using a pointer to that structure?,The arrow operator ($->$).
+Does the `strlen()` function include the null character ($\0$) when counting string length?,No.
+Which type of RAM uses flip-flops and does not require periodic refreshing?,SRAM (Static RAM).
+Term: Recursion,Definition: A process where a function calls itself to solve a problem in terms of smaller versions of itself.
+Concept: Micro Computer,"Definition: Smallest computer size, designed for personal use, built around a single microprocessor. Examples: Laptops, smartphones."
+What is the requirement for case labels within a switch statement regarding their data type?,"They must be constants or constant expressions, such as integers or characters."
+How many members of a union can be active or handled at the exact same time?,Only one.
+What is the difference between PROM and EPROM?,"PROM can be written once by the user, while EPROM can be erased (using UV light) and rewritten."
+What is the critical requirement for every recursive function to prevent an infinite loop?,A clear exit condition.
+Concept: Structure,Definition: A user-defined data type that packs together heterogeneous (different types) data items under a common name.
+"What happens to the existing content of a file if it is opened in ""w"" (write) mode?",The previous contents are completely deleted and overwritten.
+Term: Pointer,Definition: A specific type of variable that contains the memory address of another variable.
+What is the main purpose of using functions in a large C program?,"To break complex programs into smaller, manageable, and reusable units."
+What happens to the data in volatile memory (like RAM) if power failure occurs?,The data is lost.
+The rule applied when two operators of the same precedence level appear in an expression is called _____.,associativity
+What are the six major functions of an Operating System?,"Process, Memory, Device, File, Security, and User Interface management."
+Term: Algorithm,Definition: A step-by-step logical procedure written in English-like language for solving a specific problem.
+What is the primary difference in memory allocation between a structure and a union?,"Structures allocate space for all members combined, while unions allocate only enough space for the largest member."
+"In 'Call by Reference', what is passed to the function instead of actual data values?",The memory addresses of the variables.
+An _____ translates and executes code line-by-line during runtime.,interpreter
+Which operator is used to access the members of a structure variable?,The dot operator ($.$).
+A _____ translates the entire source code at once into an executable file before execution.,compiler
+Term: ROM (Read-Only Memory),Definition: Non-volatile memory used to permanently store boot instructions; it generally cannot be modified by the user.
+Which formatted I/O function is used to accept values from the keyboard and store them into variables?,scanf()
+What specific error typically occurs if a recursive function fails to reach an exit condition?,Out of stack space error.
+"In C, what is the starting index number for any array?",0
+Term: strrev(string),Definition: A function that reverses the characters within a given string.
+"In a switch statement, the _____ case is executed if the expression matches none of the provided case labels.",default
+Which component replaced vacuum tubes in Second Generation computers?,Transistors.
+Which string function is used to join or concatenate two strings together?,strcat()
+Which type of ROM can be erased and reprogrammed using electrical signals?,EEPROM (Electrically Erasable Programmable ROM).
+"When using `scanf()` to read a string, what special rule applies to the variable name?",The variable must not be preceded by an ampersand ($\&$).
+A _____ computer combines the properties of both analog and digital systems.,hybrid
+What input technology is used by banks to process and sort checks based on magnetic ink?,MICR (Magnetic Ink Character Reader).
+How is the total memory size of a structure variable calculated?,It is the sum of the bytes required by all of its individual members combined.
+What value does `strcmp()` return if two strings are exactly equal?,0
+Which type of RAM must be continuously refreshed to retain information due to its capacitor-based design?,DRAM (Dynamic RAM).
+Can individual structure members be initialized directly inside the structure template definition?,"No, initialization must occur when declaring actual structure variables."
+Concept: Array,Definition: A finite collection of homogeneous data items that share a common name and occupy contiguous memory.
+The use of many CPUs working in parallel to solve complex problems is known as _____.,Parallel Processing (or Multiprocessing)
+"Within the CPU, which unit handles all mathematical operations and logical functions?",Arithmetic and Logical Unit (ALU).

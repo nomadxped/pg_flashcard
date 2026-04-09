@@ -1,0 +1,85 @@
+"In client-server communication, which entity is responsible for initiating the connection?",The web browser (client).
+Which application-layer protocol follows a request-response model for web communication?,HTTP / HTTPS.
+What is the primary function of a web server like Apache or NGINX?,To store web resources and process incoming client requests.
+"During the communication flow, what does a browser check to retrieve a server's IP address?",The Domain Name System (DNS).
+Identify the transport-layer connection established by the browser before sending an HTTP request.,A TCP connection.
+How does a web server handle a request for a static resource?,It fetches the specific HTML file from storage without running logic.
+How does a web server handle a request for a dynamic resource?,It executes a server-side script to generate the response content.
+What HTTP characteristic describes the property where each request is processed independently of previous ones?,Statelessness.
+What does the 'connectionless' nature of HTTP imply regarding the server-client relationship?,The connection is terminated immediately after the response is sent.
+Specify the default port used for unsecured HTTP traffic.,Port 80.
+Specify the default port used for secured HTTPS traffic.,Port 443.
+What defines the content of a static web page?,The content is fixed and does not change per request.
+Why are static web pages generally faster to load than dynamic ones?,They require no server-side logic or database processing.
+How is content typically updated on a static website?,Through manual edits to the source HTML files.
+What is a primary benefit of dynamic web pages regarding user experience?,They provide personalised content based on user-specific data.
+Which technology allows dynamic websites to store and retrieve large amounts of data efficiently?,Database integration.
+Give an example of a type of website that requires dynamic web pages.,An E-commerce site or social media platform.
+Where is the code for client-side scripting executed?,In the user's web browser.
+Where is the code for server-side scripting executed?,On the web server machine.
+Why is client-side scripting considered less secure than server-side scripting?,The source code is visible to the end user in the browser.
+Which type of scripting has direct access to the server's file system and database?,Server-side scripting.
+"In terms of validation, how does server-side scripting differ from client-side scripting?",It provides strong data validation rather than basic form validation.
+Which scripting type is more dependent on the hardware power of the user's device?,Client-side scripting.
+Give two examples of languages used primarily for server-side scripting.,PHP and Python (or ASP.NET/JSP).
+Why is HTML not classified as a programming language?,"It lacks logic, variables, and the ability to make decisions (non-Turing complete)."
+What is the primary purpose of HTML tags like $ \langle h1 \rangle $ or $ \langle p \rangle $?,To structure content and tell the browser what to display.
+Term: JavaScript Object,Definition: A collection of related data (properties) and functions (methods) representing a real-world entity.
+"In a JavaScript object, what is the role of a method?",It defines the behaviour or actions of the object.
+Which keyword is used within a JavaScript method to access the object's own properties?,The `this` keyword.
+What is the key difference between HTML and XHTML regarding syntax strictness?,"XHTML follows strict XML rules, requiring all tags to be properly closed and case-sensitive."
+Which version of HTML introduced built-in support for audio and video elements?,HTML5.
+How does XHTML handle markup errors compared to HTML5?,"XHTML errors can stop the page from rendering, whereas HTML5 is more flexible."
+What is the purpose of 'Cross-Browser Scripting'?,To ensure web code works consistently across different rendering engines like Blink and WebKit.
+"What are 'vendor prefixes' in CSS, and why are they used?",Browser-specific strings (like `-webkit-`) used to support experimental CSS features.
+Identify the CSS property used to determine the space outside an element's border.,The `margin` property.
+"Identify the CSS property used to determine the space inside an element, between the content and the border.",The `padding` property.
+What is the motto of the jQuery library?,"""Write Less, Do More."""
+Which symbol is commonly used in jQuery to access the library's functions?,The dollar sign ($).
+Term: JSON (JavaScript Object Notation),"Definition: A lightweight, text-based data-interchange format that is language-independent."
+How are objects and arrays differentiated in JSON syntax?,Objects use curly braces `{ }` while arrays use square brackets `[ ]`.
+What is the primary application of JSON in modern web development?,Exchanging data between a client and a server via APIs or AJAX.
+What is 'Garbage Collection' in the context of JavaScript?,An automatic process that frees memory by removing unreachable objects.
+Under what condition does a JavaScript object become eligible for garbage collection?,When it has no references and is no longer reachable from the root scope.
+Which algorithm is commonly used by JavaScript engines for garbage collection?,The Mark-and-Sweep algorithm.
+How is a PHP file typically identified by a web server?,By the `.php` file extension.
+"In PHP, what symbol must precede all variable names?",The dollar sign ($).
+What acts as the 'bridge' in database connectivity between an application and a database server?,"A database driver (e.g., JDBC, MySQLi, or PDO)."
+What is the role of a 'Connection String' in database management?,"It contains the database name, username, password, and server location needed to establish a link."
+Where is session data stored during a user's visit to a website?,On the web server.
+Where is a cookie stored once it is created by the server?,On the user's local browser.
+Which is more secure for storing sensitive user information: a session or a cookie?,"A session, because data is hidden from the client."
+How does a browser indicate to a server that a specific user owns a particular session?,"By sending a unique Session ID, typically stored in a cookie."
+Which HTML tag is used to define a hyperlink?,The $ \langle a \rangle $ (anchor) tag.
+What is an 'Internal Hyperlink'?,A link that navigates to a different section within the same web page using an ID.
+How does a 'Regular Expression' function in JavaScript?,"It acts as a pattern used for searching, matching, or validating strings."
+"In JavaScript, how does an 'Exception' differ from a standard 'Error'?",An exception is a runtime error that is caught and managed using logic like `try-catch`.
+Which JavaScript method is used to check if a string matches a specific Regular Expression pattern?,The `test()` method.
+Which event is triggered when a user finishes loading a web page?,The `onload` event.
+What is the recommended modern method for handling events in JavaScript to allow multiple listeners?,The `addEventListener()` method.
+What are 'Control Structures' in programming?,"Constructs that determine the execution flow, such as loops and conditional branches."
+How can a cookie be deleted using JavaScript?,By setting its `expires` attribute to a date in the past.
+What is the 'Box Model' in CSS?,"A layout concept consisting of margins, borders, padding, and the actual content."
+How does HTTPS provide data integrity?,It uses encryption to ensure data cannot be altered during transmission.
+What is the first step in the HTTPS handshake process?,The client requests a secure connection and the server sends its SSL certificate.
+What is the 'phonebook of the Internet' that translates domain names to IP addresses?,The Domain Name System (DNS).
+Why is a TLD (Top-Level Domain) server important in a DNS query?,It directs the resolver to the authoritative server for specific extensions like `.com` or `.org`.
+What are the three distinct layers in a 3-Tier Architecture?,"Presentation Tier, Application (Business Logic) Tier, and Data Tier."
+Which tier in 3-Tier Architecture is responsible for the user interface?,The Presentation Tier.
+What is the primary advantage of n-Tier architecture over single-tier systems?,Improved scalability and the ability to update layers independently.
+What is the process of reserving a unique address on the Internet called?,Domain Registration.
+"In HTML tables, which tag is used to define a standard data cell?",The $ \langle td \rangle $ (Table Data) tag.
+Which HTML tag is used to group the header content in a table for better structural organisation?,The $ \langle thead \rangle $ tag.
+What is 'Tableless Design'?,"A modern layout method using CSS (divs, flexbox, grid) instead of HTML tables."
+Why is Tableless Design better for SEO than Table-based design?,It results in cleaner code that search engines can crawl more easily.
+What are the three ways to embed CSS into an HTML document?,"Inline, Internal, and External CSS."
+Which CSS color mechanism allows for transparency control?,"RGBA (Red, Green, Blue, Alpha)."
+Term: DOM (Document Object Model),Definition: A programming interface that represents an HTML document as a tree structure of nodes/objects.
+"In JavaScript string functions, what does the `trim()` method do?",It removes whitespace from both ends of a string.
+What is the 'Root' node of the DOM hierarchy?,The `document` object.
+How does the `===` operator differ from the `==` operator in JavaScript?,The `===` operator checks both value and data type without type conversion.
+What is the starting index of any array in JavaScript?,Index 0.
+"In JavaScript, what happens if you compare `5 == ""5""`?",It returns `true` due to type conversion.
+What are 'Entity References' in HTML used for?,To display reserved characters like `<` or `>` safely without the browser interpreting them as code.
+Identify the entity reference for the ampersand symbol ($ \& $).,`&amp;`.
+What character reference code represents the copyright symbol ($ \copyright $)?,`&#169;`.

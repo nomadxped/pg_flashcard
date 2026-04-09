@@ -1,0 +1,79 @@
+Term: Computer,"Definition: An advanced electronic machine that takes raw data as input, performs operations at high speed, and provides results as output."
+What are the three primary functions typically performed by a computer?,"Accepting information from the user, performing arithmetic and logic operations, and providing results."
+How many instructions per second can a powerful modern computer handle?,Trillions.
+Which characteristic of computers describes their ability to perform calculations at almost $100\%$ success without error?,Accuracy.
+"In a computer system, what is the most common cause of calculation errors?",Wrong human input or inaccurate data.
+"Which characteristic refers to a computer's immunity to human traits like boredom, tiredness, and lack of concentration?",Diligence.
+Term: Versatility,Definition: The ability of a computer to perform completely different kinds of work with the same accuracy and efficiency simultaneously.
+Under what condition are the results obtained by a computer considered highly reliable?,Only when the input data and the programme given to the computer are correct.
+The ability of a computer to provide the exact same result every time it is given the same set of data is called _____.,Consistency
+What is the primary purpose of computer memory?,"To store data, directions, and processing instructions."
+How does modern computer storage capacity compare to earlier systems?,"It has significantly increased, allowing for the storage of vast amounts of data."
+Which characteristic allows a user to decide how much data to store and when to recall or erase it?,Remembrance Power.
+"What tool do computers use to perform routine maintenance tasks, such as virus scanning, without manual intervention?",Task scheduler.
+Why is a computer unable to function entirely on its own?,It requires a set of instructions to perform or process any task.
+What is a major cognitive limitation of computers compared to human beings?,"Computers cannot think, feel, or learn from experiences."
+What is the main objective of computers integrated into business environments?,"Transaction processing involving suppliers, employees, or customers."
+"In healthcare, what is a Pharma Information System used for?","Checking drug labels, expiry dates, and harmful side effects."
+Which specific computerised system is used to monitor a patient's signs for abnormalities like Cardiac Arrest?,Patient Monitoring System.
+How do scientists use computers to improve the understanding of earthquakes?,By plotting and analysing data to create topographic images.
+Concept: Communication,"Definition: The use of computers to convey messages, ideas, or speech so they are received and understood correctly."
+What role do computers play in the government sector regarding taxation?,Managing the sales tax and income tax departments.
+What is the function of MIDI instruments in the entertainment industry?,Recording music using artificial instruments.
+Which computer component is known as the 'brain' and is responsible for executing instructions?,Central Processing Unit (CPU).
+What is the role of Random Access Memory (RAM)?,Temporarily storing data and instructions that the CPU is currently working on.
+Which component provides permanent storage for the operating system and user files?,Hard Disk Drive (HDD) or Solid State Drive (SSD).
+Term: Motherboard,Definition: The main circuit board that connects all computer components together.
+What is the purpose of the Power Supply Unit (PSU)?,Providing electrical power to the computer and its various internal components.
+Which component is specifically responsible for processing and displaying images on a screen?,Graphics Processing Unit (GPU).
+Term: Input Devices,"Definition: Hardware that allows a user to enter data into a computer, such as a keyboard or mouse."
+What is the function of a Network Interface Card (NIC)?,"Connecting the computer to a network, such as the Internet."
+Which technological advancement defined the Fourth Generation (1971–1980) of computers?,Very Large Scale Integration (VLSI) microprocessors.
+What does the acronym VLSI stand for?,Very Large Scale Integration.
+What type of memory is primarily used in Fourth Generation computers?,Semiconductor memory (such as RAM and ROM).
+The Fifth Generation of computers is primarily based on which technology?,Artificial Intelligence (AI) and Ultra Large-Scale Integration (ULSI).
+What does the acronym ULSI stand for?,Ultra Large-Scale Integration.
+Concept: Parallel Processing,Definition: The use of two or more microprocessors to run tasks simultaneously.
+Which generation of computers introduced the ability to understand 'Natural Language' (human language)?,Fifth Generation.
+What are the three main criteria used to classify computers?,"Size, Purpose, and Technology."
+List the four categories of computers classified by size.,"Supercomputers, Mainframe Computers, Mini Computers, and Micro Computers."
+What is the most expensive and powerful type of computer used for processing vast amounts of data?,Supercomputer.
+"In supercomputing, what is the function called where many CPUs work in parallel?",Multiprocessing or Parallel Processing.
+Name one example of a supercomputer mentioned in the text.,PARAM-1000 (or IBM Blue Gene / CRAY-XMP-14).
+What are the primary characteristics of Mainframe Computers?,"Multi-programming, high-performance, and multi-user capabilities."
+Concept: Mini Computer,"Definition: A medium-sized, multi-user computer system connected to more than one CPU, allowing multiple people to work simultaneously."
+Give an example of a Mini Computer.,PDP 11 (or IBM 8000 Series).
+In what year did the invention of microprocessors make personal computers affordable?,$1970$.
+"Besides desktops and laptops, what is another example of a Micro Computer?",Smartphone (or Tablet / PDA).
+Term: General Purpose Computer,"Definition: A computer designed to perform various everyday tasks like word processing and financial analysis, rather than a single specialised function."
+Concept: Specific Purpose Computer,"Definition: A computer designed to perform a particular or specialised task, such as weather forecasting or traffic control."
+What is an example of a Specific Purpose Computer used in banking?,Automatic Teller Machine (ATM).
+How do Analog Computers perform tasks?,By using continuous data representing physical amounts that change constantly.
+Which type of computer uses the binary numeral system ($0$ or $1$) for all calculations?,Digital Computer.
+Why are Digital Computers considered the most common form of computers today?,"Due to their versatility, speed, and power using discrete electrical signals."
+Term: Hybrid Computer,Definition: A complex unit built using both analog and digital properties united by a single control system.
+What is the main advantage of a Hybrid Computer?,"It offers the best of both types, being extremely fast at solving incredibly complex equations."
+Which category of computer is used specifically for climate research and satellite launching?,Supercomputer.
+Which computer component acts as the main circuit board linking all other parts?,Motherboard.
+Computers used for monitoring weather and predicting natural disasters belong to which size classification?,Supercomputer.
+Which generation of computers saw the introduction of semiconductor memory like RAM and ROM?,Fourth Generation.
+The use of a mouse or keyboard to enter data categorises these devices as _____.,Input devices
+What is the primary difference between a Digital and an Analog computer regarding signal type?,Digital uses discrete signals while Analog uses continuous signals.
+Which classification of computer by size is typically found in homes and offices for daily tasks?,Micro Computer.
+A computer designed specifically for military plane controlling is an example of a _____ computer.,Specific Purpose
+How does the power consumption of Fifth Generation computers compare to previous generations?,They consume less power and generate less heat.
+What is the primary function of a monitor or printer in a computer system?,To display or output data to the user.
+Which computer classification is designed for high-performance multi-user environments but is smaller than a Mainframe?,Mini Computer.
+The 'Binary System' used by digital computers consists of which two digits?,$0$ and $1$.
+"In the context of computer characteristics, what does the 'Consistency' of a computer ensure?",The same input data will always yield the same result across multiple processing instances.
+Which specific area of medicine uses computers to collect data and identify the cause of illness?,Diagnostic System.
+Which generation of computers is characterised by the use of 'parallel processing' to run tasks simultaneously?,Fifth Generation.
+A smartphone is technically classified as which type of computer based on size?,Micro Computer.
+What is the purpose of using computers in Topography?,To plot and analyse data to create images for better understanding of earthquakes.
+"In the classification by technology, which type is best for solving complex equations involving both physical variables and discrete data?",Hybrid Computer.
+Which characteristic allows a computer to handle trillions of instructions per second?,Speed.
+Which computer component stores the permanent operating system and user applications?,Hard Disk Drive (HDD) or Solid State Drive (SSD).
+Term: Usenet,Definition: An area of computer communication used for message exchange and discussion groups.
+How do MIDI instruments assist people in the entertainment industry?,By aiding in the recording of music using artificial instruments.
+"Which computer classification includes desktops, laptops, and tablets used for daily basic needs?",General Purpose.
+What is the defining electronic component of Fifth Generation computers?,ULSI (Ultra Large-Scale Integration) Microprocessors.

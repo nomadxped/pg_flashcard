@@ -1,0 +1,80 @@
+What is the definition of a storage class in C programming?,"It defines a variable's scope, lifetime, default initial value, and physical storage location."
+Which storage class is the default for all local variables in C?,The auto (Automatic) storage class.
+Where are variables using the 'register' storage class stored?,In the CPU's internal registers.
+What is the primary advantage of using 'register' variables?,They allow for much faster access compared to main memory storage.
+Why is it impossible to use the address operator (&) on a 'register' variable?,CPU registers do not have memory addresses.
+What is the default initial value of a variable declared with the 'static' storage class?,Zero.
+How does the 'static' storage class affect a variable's lifetime?,It persists through the entire program execution and is not destroyed between function calls.
+Which storage class is used to declare a global variable visible to all program files?,The extern (External) storage class.
+What does 'scope' specify in a C program?,The region or area from which a specific variable can be accessed.
+Where are local variables declared within a program?,Inside or at the beginning of a specific block or function.
+When are local variables created and removed from memory?,They are created when a block is invoked and removed when that block's execution completes.
+"If a local and global variable share the same name, which one takes precedence inside the local block?",The local variable.
+Where are global variables declared?,Outside of all functions.
+The sizeof operator is used to determine the lengths of _____ and structures.,Arrays
+What is the primary benefit of Dynamic Memory Allocation (DMA) regarding memory wastage?,It allows programmers to allocate only the exact amount of memory needed during runtime.
+Which function is used to release dynamically allocated memory back to the operating system?,The free() function.
+"In traditional static memory allocation, when must the size of an array be known?",At compile time.
+Which library header file is required for DMA functions like malloc() and free()?,<stdlib.h>
+What does the malloc() function return if it fails to allocate memory?,A NULL pointer.
+What is the purpose of the 'switch' statement in C?,It is a decision-making structure that tests a variable against a list of specific case values.
+What are the rules for 'case labels' in a switch statement?,They must be unique constants (integers or characters) and end with a colon.
+What is the function of the 'break' statement in a switch block?,It causes the program to exit the switch statement and move to the next line of code outside it.
+Which part of a switch statement is executed if no match is found for the expression?,The default case.
+Which header file contains C's predefined string-handling functions?,<string.h>
+What value does the strlen() function return for a given string?,"The number of characters, excluding the null character (\0)."
+Why is the strcpy() function used instead of the assignment operator (=) for strings?,C does not allow direct assignment of character sequences to string variables.
+What result does strcmp() return if two strings are exactly equal?,0
+What is the purpose of the strcat() function?,It joins (concatenates) two strings by appending one to the end of the other.
+What does the strrev() function perform on a string?,It reverses the order of characters within the string.
+Which operators have high priority in C arithmetic evaluation?,"Multiplication (*), Division (/), and Modulus (%)."
+What rule is applied when operators of the same precedence level appear in an expression?,Associativity.
+How can a programmer override the standard precedence rules in C?,By using parentheses to enclose the intended first operations.
+Which file open mode is used to add data to the end of an existing file?,"The ""a"" (append) mode."
+"What happens if a file is opened in ""w"" (write) mode but already exists?",Its previous contents are completely deleted and overwritten.
+"What does the qualifier ""b"" signify when added to a file open mode?",The file is opened in binary mode for non-text data.
+What is recursion in C programming?,A process where a function calls itself to solve smaller subsets of a problem.
+What is the danger of failing to include an exit condition in a recursive function?,"The program will enter an infinite loop and terminate with an ""out of stack space"" error."
+Which control statement types are used to repeat a group of statements until a condition is met?,"Looping statements (while, do..while, and for)."
+"In the block diagram of a computer, which unit manages processed data based on operator instructions?",The Control Unit (CU).
+Which unit of the computer performs mathematical operations and logical functions?,The Arithmetic and Logical Unit (ALU).
+What is the function of the Memory Unit in a computer system?,It temporarily stores processed data to manage computational activities.
+How are Micro Computers primarily defined in terms of architecture?,They are complete systems built around a single microprocessor.
+Which type of computer uses 'Parallel Processing' with many CPUs working simultaneously?,Supercomputers.
+What is a pointer variable in C?,A variable that stores the memory address of another variable.
+Which operator is used to access the actual value stored at the memory location a pointer points to?,The indirection operator (*).
+What is the definition of a 'Structure' in C?,A user-defined data type that groups heterogeneous data items under a common name.
+How is the total memory occupied by a structure variable calculated?,It is the sum of the bytes required by all of its individual members.
+Which operator is used to access members of a structure variable?,The dot operator (.).
+What is the main difference between a Compiler and an Interpreter regarding translation method?,"Compilers translate the entire program at once, while Interpreters translate line-by-line during execution."
+Which translation software generates an intermediate object file (.obj)?,A Compiler.
+What is a C function?,"A self-contained block of code that performs a specific, well-defined task."
+What is the only function that every C program must contain to begin execution?,The main() function.
+How does 'Call by Reference' differ from 'Call by Value'?,It passes memory addresses (pointers) so the function can directly modify the original variables.
+What is 'Primary Memory' also known as?,Main memory.
+What does the term 'volatile' mean in the context of RAM?,Data is lost if power failure occurs or the machine is turned off.
+What is the difference between SRAM and DRAM?,SRAM uses flip-flops and is faster; DRAM uses capacitors and must be periodically refreshed.
+Which type of ROM allows a user to write data or programs to an initially empty chip?,PROM (Programmable ROM).
+What format code is used in printf() to represent a decimal integer?,%d
+Which format code is used for single characters in C?,%c
+What is the definition of an algorithm?,A step-by-step logical procedure or method used for solving a specific problem.
+What do the arrows in a flowchart represent?,The logical flow between operations.
+What was the main electronic component used in First Generation computers?,Vacuum Tubes.
+Which generation of computers introduced Integrated Circuits (ICs)?,The Third Generation.
+How does an Operating System act as an intermediary?,It provides a bridge between the user and the computer hardware.
+What is the purpose of 'File Management' in an Operating System?,"It manages how data is created, stored, organized, and retrieved on storage media."
+What defines an 'Analog Computer'?,A machine that measures continuous physical units like voltage or pressure rather than counting.
+What is a 'Hybrid Computer'?,A system that combines the properties of both analog and digital computers.
+How is memory allocated in a 'Union'?,The compiler allocates only enough space to hold the largest member type.
+What happens in a Union if you assign a value to a second member after the first?,The data for the first member is overwritten because all members share the same storage location.
+Which keyword is used to define a Union in C?,The union keyword.
+What is an array in C programming?,A finite collection of homogeneous data items that share a common name.
+At what index does a C array always begin?,0
+What is the significance of 'Magnetic Ink Character Recognition' (MICR)?,It is a highly secure technology used by banks to process checks using magnetic ink.
+How do Optical Input Devices like OMR detect data?,"By using light beams to detect marks, such as bubbles or checkboxes, on a surface."
+Which device recognizes printed text to automate data entry?,Optical Character Reader (OCR).
+What is the difference between 'Primary Memory' and 'Secondary Memory' in terms of cost?,Primary memory is significantly faster and more expensive.
+Which generation used 'Magnetic Core' as primary memory and 'Magnetic Tape' for storage?,The Second Generation.
+"In a flowchart, what shape is typically used to represent a decision point?",A diamond-shaped box.
+What is the role of the 'Memory Unit' during program execution?,It temporarily holds data and instructions currently being processed by the CPU.
+Which function is used to input data from the keyboard into a C program?,The scanf() function.

@@ -1,0 +1,90 @@
+What is the primary definition of computer software?,"A set of instructions, data, or programs used to operate computers and execute specific tasks."
+"In the relationship between computer components, how is software contrasted with hardware?","Software represents the variable part of a computer, whereas hardware is the invariable part."
+Software characteristic: Intangibility,Definition: Software cannot be touched or seen as it exists only as electronically stored instructions and data.
+Why is software described as having the characteristic of 'non-perishability'?,"It does not deteriorate, wear out, or break down over time like physical objects do."
+What determines the level of 'complexity' in a piece of software?,"The software's intended function and purpose, ranging from a few lines to millions of lines of code."
+How does the characteristic of 'divisibility' benefit large software projects?,It allows software to be split into smaller modules that can be developed and tested independently.
+What does 'modifiability' allow developers to do with software over time?,"Easily update the code to correct errors, add new features, or adapt to changing requirements."
+Which software characteristic enables programs to be shared and used on multiple computers via electronic copying?,Reproducibility
+Term: Interoperability,Definition: The ability of software to be designed to work effectively with other software programs and systems.
+What is the definition of 'reliability' in the context of software quality?,The ability of software to perform its intended function consistently and correctly under various conditions.
+How is 'efficiency' measured in software performance?,"By how optimally the software uses system resources, such as the CPU and memory, to provide functionality."
+What constitutes 'usability' in software design?,A clear and intuitive interface that makes the software easy for a wide range of users to learn and use.
+Software characteristic: Maintainability,Definition: The ease with which software can be modified to fix bugs or adapt to new requirements over time.
+What is meant by the 'portability' of software?,The ability of the software to run on different computer systems with minimal or no modification.
+"In software characteristics, what is the role of 'security'?","Protecting the software and its data from unauthorised access, modification, or destruction."
+Define the characteristic of 'scalability' in software.,The capacity of software to be easily adapted to accommodate increasing user bases or growing demands.
+Which broad category of software acts as the intermediary between hardware and application software?,System software
+"According to the source, why is system software considered the 'backbone' of a computer?",Because it manages resources efficiently and provides the foundation for other software to function.
+What is the 'Resource Management' function of system software?,"Allocating and managing system resources like memory, CPU, and storage space effectively."
+"In system software, what is the purpose of 'Device Management'?",To control and facilitate communication with various hardware devices connected to the computer.
+How does system software perform 'File Management'?,By organising and managing files and folders on the computer's storage media.
+System software function: Process Management,"Definition: The creation, execution, and termination of active processes within the system."
+What is the 'Networking' function of system software?,Enabling communication and resource sharing between different computers on a network.
+Which type of system software manages all hardware and software resources as the system's core?,Operating System (OS)
+What is the specific role of 'Device Drivers'?,Software that enables the Operating System to communicate with specific hardware like printers or scanners.
+Term: Utility Software,"Definition: Programs designed for specific maintenance tasks like disk formatting, virus scanning, and data backup."
+What is the primary function of 'Compilers and Interpreters'?,Translating programming languages into code that the computer's hardware can understand.
+"In system software, what is the role of 'Linkers and Loaders'?",Combining program code and libraries into executable files and loading them into memory for execution.
+What is the purpose of 'Boot Software'?,Initialising the hardware and loading the operating system when the computer is turned on.
+List three major challenges faced by system software developers.,"Managing diverse hardware, maintaining compatibility with new releases, and ensuring robust security."
+What is a predicted future trend for system software regarding resource management?,The integration of artificial intelligence and machine learning for enhanced automation.
+How does application software differ from system software in terms of user interaction?,"Application software interacts directly with users to perform specific tasks, while system software works behind the scenes."
+Category: Productivity Software,"Examples: Word processors, spreadsheets, presentation software, email clients, and web browsers."
+Category: Creative Software,"Examples: Video editing software, music editing software, and graphic design software."
+What are examples of 'Business Software' tasks?,"Accounting, project management, and customer relationship management (CRM)."
+Which type of application software is designed specifically for smartphones and tablets?,Mobile applications
+What defines a 'Cloud Application'?,Software hosted on remote servers and accessed by users through the internet.
+Which application type is installed and run locally on a user's physical computer?,Desktop applications
+List three benefits of application software for the end user.,"Increased productivity, enhanced creativity, and improved communication and collaboration."
+What is a significant challenge regarding the 'Compatibility' of application software?,Ensuring it works across different operating systems and various hardware configurations.
+What is a predicted future trend for application software development?,The development of low-code and no-code platforms for citizen development.
+"Using the 'human brain' analogy, how does an Operating System (OS) function?",It receives input from senses (devices) and sends instructions to the body (hardware components like CPU).
+How does an OS perform 'Memory Management'?,By tracking how memory is used and allocating it to programs as required.
+What is the 'User Interface' function of an Operating System?,Providing a platform that allows users to interact with the computer's resources.
+Category: Desktop Operating Systems,"Examples: Windows, macOS, and Linux."
+Category: Mobile Operating Systems,Examples: Android and iOS.
+What are 'Server Operating Systems' designed to manage?,"Networks and servers, with examples like Windows Server and Ubuntu Server."
+Term: Embedded Operating System,"Definition: An OS designed for specific devices with limited resources, such as smart TVs and wearables."
+What is a key focus for the future of Operating Systems according to the source?,An increased focus on security and privacy in response to evolving cyber threats.
+What are 'Programming Languages' fundamentally?,Formal systems consisting of rules and syntax used for instructing computers.
+What is the primary characteristic of a 'low-level' programming language?,It is close to a computer's instruction set and interacts directly with hardware components.
+Language type: Machine Language,Definition: A native code composed of binary digits ($$0$$s and $$1$$s) that the CPU directly understands.
+Why is 'Machine Language' considered difficult for humans to use?,"Due to the complexity of interpreting binary commands, which can lead to errors and differing results."
+Term: Assembly Language,"Definition: A low-level, second-generation language used to write instructions for microprocessors and programmable devices."
+What issue with earlier computer languages led to the introduction of 'high-level' languages?,"Portability issues, which made it difficult to transfer code from one machine to another."
+What is the main design goal of high-level computer languages?,"To be user-friendly, allowing programmers to write code quickly and easily."
+Category: Procedural Language,Definition: A third-generation language where instructions are organised into sequences of named procedures.
+List examples of 'Procedural Languages'.,"C, Fortran, Pascal, and BASIC."
+What is the fundamental concept of a 'Functional Language'?,"It revolves around mathematical functions, treating them as variables, arguments, or return values."
+List examples of 'Functional Languages'.,LISP and Haskell.
+Term: Object-oriented programming (OOP) language,Definition: A language where development revolves around creating and interacting with 'objects' containing code and data.
+List examples of 'Object-oriented programming languages'.,"C++, Java, Ruby, and Python."
+What is the primary use of 'Scripting Languages'?,Automating repetitive tasks and creating dynamic web pages.
+Why do developers often prefer 'interpreted' scripting languages for prototyping?,"Because they do not require compilation before execution, allowing for quick testing."
+List examples of 'Scripting Languages'.,"JavaScript, Python, Shell, and Perl."
+Term: Markup Language,"Definition: Languages used to format text for display on the web or in documents, such as HTML and XML."
+What is the purpose of a 'Query Language'?,"To retrieve and manipulate data stored within databases, with SQL being a primary example."
+Term: Domain-Specific Language (DSL),Definition: A language tailored to the needs of a particular application or domain to simplify specific programming tasks.
+List examples of 'Domain-Specific Languages'.,MATLAB and R.
+The hierarchy of software shows System Software is divided into System Management and _____.,Software Development
+"According to the software hierarchy chart, which category do 'Linkers and Loaders' fall under?",Software Development (System Software)
+"In the application software hierarchy, 'Image and Video Editor' is classified as _____.",General Purpose Software
+"According to the source, 'Accounting Software' is an example of which application sub-type?",Special Purpose Software
+Which software characteristic refers to the ability to run consistently under different user inputs?,Reliability
+Which system software function involves creating and terminating processes?,Process Management
+What kind of application is 'Customer Management' categorized as in the provided chart?,Special Purpose Software
+"Programming languages are broadly categorised into Low-level, High-level, and _____ languages.",Specialized
+Assembly language is often referred to as a _____-generation language.,second
+Procedural languages are considered to be _____-generation languages.,third
+What is the specific purpose of 'NASM' in the language hierarchy?,It is an example of an Assembly Language.
+Which language category includes SQL and SPARQL?,Query Language
+Which language category includes HTML and XML?,Markup Language
+Which specialized language type is used specifically for mathematical computing and statistics?,"Domain Specific Language (e.g. MATLAB, R)"
+What software benefit relates to 'artistic expression'?,Enhanced creativity via creative application software.
+System software acts as an intermediary between hardware and _____ software.,application
+The OS manages program execution by loading them into _____ and scheduling their execution.,memory
+What OS type is Red Hat Enterprise Linux?,Server Operating System
+Software used for 'Inventory Management' belongs to which category?,Special Purpose Application Software
+Which high-level language type uses 'modules' and 'data structures' as its basis?,Object-oriented programming language
+What is the role of 'Shell' in programming?,It is an example of a Scripting Language.

@@ -1,0 +1,85 @@
+What is a block diagram of a computer system?,A high-level visual representation of major components and their interconnections.
+Which specific aspect of a computer does a block diagram represent without detailing individual components?,The flow of data and signals between various system components.
+What is the primary role of the Input Unit in a computer system?,It allows for interaction with the user by receiving information directly to command other devices.
+Identify three common examples of hardware classified as input devices.,"The keyboard, mouse, and joystick."
+What is the primary role of the Output Unit?,It sends processed data from the computer to peripheral devices to interact with the user.
+The Central Processing Unit (CPU) is often referred to as the computer's _____.,Brain
+Name the three primary components that constitute the Central Processing Unit.,"The Arithmetic and Logical Unit, the Control Unit, and the Memory Unit."
+What is the main function of the Arithmetic and Logical Unit (ALU)?,It performs mathematical operations and logical functions to process input data.
+What is the primary responsibility of the Control Unit within the CPU?,It manages data flow from input devices and executes instructions provided by system operators.
+What is the main purpose of the Memory Unit within the CPU architecture?,It stores processed data from input devices and provides space for computational activities.
+How do input devices handle raw data before it reaches the CPU?,They convert raw data into a computer-understandable language for processing.
+Input Device Function: Data Input,"Description: Entering text, numbers, and symbols into the system via hardware like keyboards."
+Which input function allows users to navigate Graphical User Interfaces (GUIs)?,Navigation and Control
+What happens after the keyboard controller sends an interrupt request to the system software?,The software responds by reading the scan code from the keyboard buffer.
+Name three common designs of scanners.,"Flatbed, sheet-fed, and handheld models."
+Output Device Function: Display,Description: Using monitors to show graphical and textual data for user interaction.
+What is the primary role of soft output devices in digital systems?,Conveying visual or auditory information through digital technology and software.
+Term: Soft Output Device,Definition: An electronic device that generates non-physical output without a tangible medium.
+How do biometric sensors act as input devices?,"By capturing unique physical characteristics, such as fingerprints, for system interaction."
+What hardware device is used to produce tactile output for the visually impaired?,A Braille Embosser.
+What is a monitor officially known as in computing terms?,A Video Display Terminal (VDT) or Video Display Unit (VDU).
+How does a drum plotter achieve multi-colour designs?,By using multiple pens with different colour inks controlled by a program.
+What is the standard input device used for entering text and commands?,The keyboard.
+What is the function of a joystick in a computer system?,Controlling the movement of objects in specialised software like games or flight simulators.
+When was the first computer monitor introduced?,1 March 1973.
+How does a CRT monitor produce an image on the screen?,Electron beams from guns strike an inner phosphorescent surface.
+What defines a trackball as a pointing device?,It controls screen objects by rolling a ball with the fingers or palm.
+What is the main difference between a standard LCD and an LED monitor?,LED monitors use LED backlighting instead of cold cathode fluorescent lamps (CCFL).
+Name the three most common technology types used in modern mice.,"Mechanical, optical, and laser."
+What is a common disadvantage of emissive display technology?,They are more prone to image retention or burn-in effects.
+Input Device: OCR,"Definition: Optical Character Reader, used to convert printed text into digital data."
+How can a digital camera or webcam serve as a document input device?,By scanning receipts or invoices to create electronic copies.
+How does a drum plotter operate?,It uses a rotating drum to hold paper while pens move perpendicularly across its surface.
+What determines the sharpness and clarity of a CRT monitor's picture?,The number and size of the pixels.
+Term: Alphanumeric Keys,"Definition: The category of keyboard keys that includes letters, numbers, and punctuation marks."
+What is a plotter used for specifically?,"Producing hard copies of large graphics, designs, and engineering drawings."
+How does MICR technology read characters on bank cheques?,By magnetising iron oxide ink which is then detected by a magnetic head.
+What are 'pixels' in the context of a CRT monitor?,"Millions of phosphorus dots in red, green, and blue that form the image."
+What is the relationship between the CPU and input devices regarding raw data?,Input devices translate raw user data into the binary language the CPU can process.
+Which component in an LCD display is responsible for the actual 'blocking' of light?,The Liquid Crystal layer.
+What is the purpose of the 'Control Unit' receiving instructions from system operators?,To manage and accomplish processed data in a controlled format.
+What is the purpose of keyboard shortcuts?,Combining keys to perform specific functions to improve user efficiency.
+Describe the design of a flatbed plotter.,It consists of one or more pens that move across a stationary flat surface to draw designs.
+Term: Hard Output Device,Definition: A device that converts digital signals into a tangible or perceptible physical form.
+What is the broad classification of output devices into two categories?,Soft Output and Hard Output.
+What is the main function of an optical scanner?,To digitise paper documents and physical media into a digital format.
+Identify two common examples of soft output devices.,Monitors and speakers.
+Input Device: OMR,"Definition: Optical Mark Reader, used to detect marks on a document."
+How does a microphone function as an input device?,It converts sound waves into electrical signals that the computer can record or amplify.
+How do input devices support accessibility for users with mobility impairments?,By utilizing voice recognition software as an alternative input method.
+Input Device Function: Sensory Input,Description: Using scanners or cameras to input visual information or read barcodes.
+"In the keyboard operation process, what is the first step when a user interacts with the device?",A key is pressed on the keyboard.
+How does LCD technology produce images?,By blocking or allowing light to pass from a source through liquid crystals.
+List three technologies used to detect touch input on screens.,"Capacitive, resistive, and infrared."
+What is the primary use of a touchpad (trackpad) in portable computers?,It serves as a built-in replacement for an external mouse to control the cursor.
+Term: Emissive Display,"Definition: A display where each pixel emits its own light, offering self-illumination."
+What are the two sub-categories of Flat-Panel Displays?,Emissive Displays and Non-Emissive Displays.
+Name two examples of output devices designed for audio playback.,Speakers and headphones.
+The process of a keyboard controller sending a signal to the system software is known as an _____ request.,Interrupt
+What does the acronym MICR stand for?,Magnetic Ink Character Recognition
+Which unit is responsible for the permanent storage of data outside the immediate CPU memory?,The Storage unit (Permanent).
+Which input device is used to read data from product packaging in retail?,A barcode reader or QR code reader.
+Term: Haptic Device,Definition: An output device that provides tactile feedback or physical sensations to the user.
+What is the function of a graphic tablet?,It allows users to hand-draw images and graphics into a computer using a stylus.
+Identify two primary examples of hard output devices.,Printers and plotters.
+Name an application field where plotters are essential.,Architectural planning or CAD (Computer-Aided Design).
+Where does the system software pass the scan code after reading it from the buffer?,To the Central Processing Unit (CPU).
+Identify two common keyboard layouts mentioned in the material.,QWERTY and AZERTY.
+"In a block diagram, what does the arrow from the Input Unit to the CPU represent?",The flow of data from the user/environment into the processing system.
+What are the two main types of monitor technologies mentioned?,Cathode-Ray Tube (CRT) and Flat-Panel Display.
+Give an example of an input device used for communication through video conferencing.,A webcam or microphone.
+How does an active stylus differ from a passive stylus?,Active styluses use sensors to detect pressure and tilt for more precise input.
+What does the acronym LED stand for?,Light Emitting Diode
+What does the acronym LCD stand for?,Liquid Crystal Display
+Give an example of an output device used for communication via data transmission.,A fax machine or a modem.
+Which output device is used specifically to produce hard copies of digital documents?,The printer.
+Which computer system included the very first computer monitor?,The Xerox Alto computer system.
+What characterizes a touchscreen as an input method?,It allows direct interaction with digital content through finger or stylus gestures.
+Why can emissive displays achieve high contrast ratios and 'true blacks'?,They possess pixel-level light control.
+Why is the first computer monitor (1973) historically significant?,It marked the transition from text-only systems to visual computer interfaces.
+Define the primary function of a computer mouse.,A pointing device used to control cursor movement and interact with screen objects.
+What is the specific function of a computer printer?,Transferring text and graphic output from a computer onto paper.
+How do projectors function as output devices?,They display visual information on large screens or walls for larger audiences.
+What is the role of the keyboard controller during a key press?,It sends a specific scan code for the pressed key to the keyboard buffer.
+Why is MICR widely used in the banking industry?,It is a secure method that is difficult to tamper with for processing financial transactions.

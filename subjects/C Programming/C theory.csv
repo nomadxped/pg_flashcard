@@ -1,0 +1,240 @@
+What are the four primary types of Storage Classes in C programming?,"A: 
+
+• auto (Automatic): The default class for local variables, stored in main memory with a 'garbage' default value.
+• register: Requests storage in CPU internal registers for faster access; the address operator ( $ \& $ ) cannot be used.
+• static: Variables stored in main memory that persist for the entire program execution and default to zero.
+• extern (External): Declares a global variable defined in another file, visible to all program files."
+Explain the characteristics of the 'static' storage class.,"A: 
+
+• The variable is stored in the main memory and initialises with a default value of zero.
+• Its scope is local to the block where it is declared, but its lifetime extends to the entire program execution.
+• The value of the variable is preserved between multiple function calls rather than being destroyed.
+• It is ideal for maintaining state across function invocations without using global variables."
+Compare and contrast local and global variables in terms of scope and lifetime.,"A: 
+
+• Local variables are declared inside a block and are accessible only within that specific region.
+• Global variables are declared outside all functions and possess a global scope accessible throughout the program.
+• Local variables are created when a block is invoked and removed when it terminates.
+• Global variables remain in memory throughout the entire execution of the program."
+Explain the precedence rule when a local and global variable share the same name.,"A: 
+
+• The local variable takes precedence over the global variable within its specific block of declaration.
+• Any reference to the variable name inside that block will access the local instance.
+• The global variable becomes 'hidden' or 'shadowed' until the local block's execution is completed.
+• This allows programmers to reuse names within functions without accidentally modifying global state."
+What are the primary reasons for using Dynamic Memory Allocation (DMA) in C?,"A: 
+
+• It allows memory to be allocated at runtime based on real-time requirements or user input.
+• It improves memory efficiency by allowing the programmer to release memory using $ free() $ when it is no longer needed.
+• It enables the creation of complex data structures that grow or shrink, such as linked lists and trees.
+• It prevents memory wastage associated with static arrays where the size must be fixed at compile-time."
+Describe the function and behaviour of the $ malloc() $ library function.,"A: 
+
+• It allocates a requested number of contiguous bytes in the heap memory during program execution.
+• It returns a $ void $ pointer to the starting address of the allocated block, which requires typecasting.
+• If the system fails to allocate the requested memory, the function returns a $ NULL $ pointer.
+• It uses the $ sizeof() $ operator to determine the exact byte requirements for the specific data type being allocated."
+What is the importance of the $ free() $ function in dynamic memory management?,"A: 
+
+• It is used to manually de-allocate memory that was previously reserved using functions like $ malloc() $.
+• It returns the released memory block to the operating system for use by other processes.
+• Unlike static variables, dynamically allocated memory is not automatically cleared by the compiler.
+• Failing to use $ free() $ results in memory leaks, which can eventually exhaust the system's available memory."
+Explain the purpose and execution flow of a 'switch' statement.,"A: 
+
+• It serves as a decision-making control structure that tests an expression against a list of unique case labels.
+• It provides a cleaner and more readable alternative to complex, deeply nested if-else chains.
+• Once a match is found, the block of statements associated with that specific case is executed.
+• If no match is found, the optional 'default' case is executed to handle unexpected values."
+What are the specific requirements for 'case' labels within a switch statement?,"A: 
+
+• Every case label must be unique within a single switch block to avoid ambiguity.
+• Labels must be constants or constant expressions, typically restricted to integers or characters.
+• Each label must conclude with a colon ( : ) to separate the value from the associated code block.
+• Labels cannot be variables or ranges (in standard C) as they must be evaluatable at compile time."
+Explain the role of the 'break' statement in a switch structure.,"A: 
+
+• It signals the end of a specific case block and causes the program to exit the switch statement immediately.
+• It transfers control to the next line of code located outside the switch's closing brace.
+• Without a 'break', the program will 'fall through' and execute subsequent case blocks regardless of their labels.
+• It is crucial for ensuring that only the matched case's logic is processed by the CPU."
+Describe the $ strlen() $ and $ strcpy() $ string handling functions.,"A: 
+
+• $ strlen() $ counts and returns the number of characters in a string, excluding the terminal null character ( $ \\0 $ ).
+• $ strcpy() $ copies the contents of one string into another, which is necessary as C doesn't allow direct string assignment.
+• Both functions require the $ <string.h> $ header file to be included in the program.
+• $ strcpy() $ overwrites the target string completely with the source string's data."
+How does the $ strcmp() $ function compare two strings in C?,"A: 
+
+• It compares two strings and returns an integer value of 0 if they are exactly identical.
+• If the strings differ, it returns a non-zero integer representing the ASCII difference of the first mismatched characters.
+• It allows programmers to perform logical comparisons since the equality operator ( == ) cannot be used directly on string values.
+• It is case-sensitive, meaning 'Apple' and 'apple' would result in a non-zero return value."
+Explain the concepts of Precedence and Associativity in C operators.,"A: 
+
+• Precedence dictates the priority level of an operator, determining which operation is performed first in a complex expression.
+• Associativity is the rule used when two operators of the same precedence level appear in the same expression.
+• Expressions are evaluated in passes, with high-priority operators (like $ * $ and $ / $ ) calculated before low-priority ones (like $ + $ ).
+• Parentheses can be used to override standard rules, as expressions inside them always assume the highest priority."
+What are the differences between 'w' (write) mode and 'a' (append) mode in file handling?,"A: 
+
+• 'w' mode opens a file for writing only, whereas 'a' mode opens a file for adding data to the end.
+• In 'w' mode, if the file already exists, its previous contents are completely deleted and overwritten.
+• In 'a' mode, the existing contents remain safe, and new data is appended after the current last character.
+• Both modes will create a new file if the specified filename does not already exist in the directory."
+"What is recursion, and what are the essential requirements for a recursive function?","A: 
+
+• Recursion is the process where a function defines itself by calling its own name within its body.
+• Every recursive function must have a clear exit condition, typically using an 'if' statement, to terminate the cycle.
+• It is often used to solve complex problems by breaking them into smaller, identical sub-problems (like factorials).
+• Without a proper exit condition, the function will call itself infinitely until it crashes with a stack overflow error."
+Describe the three sub-units of the Central Processing Unit (CPU).,"A: 
+
+• Control Unit (CU): Manages and coordinates the flow of data and instructions between various components.
+• Arithmetic and Logic Unit (ALU): Performs all mathematical calculations and logical comparisons (e.g., AND, OR).
+• Memory Unit: Provides temporary storage space for data that is being actively processed by the system.
+• These units work together to translate user inputs into processed outputs based on operator instructions."
+Contrast Microcomputers and Supercomputers based on size and processing power.,"A: 
+
+• Microcomputers are the smallest systems designed for personal use, built around a single microprocessor.
+• Supercomputers are the largest and most powerful systems, designed to process vast amounts of data in minimal time.
+• While Microcomputers handle everyday tasks, Supercomputers use parallel processing to solve complex scientific problems.
+• Supercomputers are significantly more expensive and occupy much larger physical spaces compared to Microcomputers."
+Compare Mainframe and Mini computers.,"A: 
+
+• Mainframes are high-performance systems capable of supporting hundreds of users simultaneously.
+• Mini computers are medium-sized systems that are less powerful than mainframes but more capable than microcomputers.
+• Mainframes are used by large organisations like banks and railways for massive data tasks like ticket booking.
+• Mini computers are often utilised for real-time industrial applications and engineering payroll systems."
+"Explain the three categories of computers based on technology (Analog, Digital, Hybrid).","A: 
+
+• Analog computers process continuous physical data such as voltage or pressure rather than discrete numbers.
+• Digital computers operate using binary signals (0s and 1s) to perform precise arithmetic and logical tasks.
+• Hybrid computers combine features of both, using analog components for measurement and digital components for control.
+• Digital computers are the most common today, whereas Hybrid systems are reserved for specialised, high-speed scientific equations."
+What are the key benefits of using pointers in C programming?,"A: 
+
+• They increase the overall execution speed of a program by allowing direct access to memory addresses.
+• They can reduce the complexity and length of code, especially when handling arrays or strings.
+• They enable 'Call by Reference', allowing a function to modify variables defined outside its own scope.
+• They are essential for dynamic memory allocation, providing a mechanism to manage memory during runtime."
+How do you declare a pointer and access the data it points to?,"A: 
+
+• A pointer is declared by placing an asterisk ( $ * $ ) before the variable name (e.g., $ int \ *ptr; $ ).
+• The address operator ( $ \& $ ) is used to retrieve the memory address of a standard variable to store it in a pointer.
+• The indirection operator ( $ * $ ) is used to access or modify the actual value stored at the address held by the pointer.
+• Pointers must be declared with a data type that matches the type of variable whose address they will hold."
+"What is a Structure in C, and how is its memory allocated?","A: 
+
+• A structure is a user-defined data type that packs together heterogeneous (different types) data items under one name.
+• Memory for a structure is only allocated when a structure variable is explicitly declared, not during the template definition.
+• The total memory size occupied is the sum of the bytes required by all of its individual members.
+• Members are accessed using the dot operator ( . ) when using a variable name or the arrow operator ( -> ) when using a pointer."
+Differentiate between Structures and Unions regarding memory management.,"A: 
+
+• In a structure, every member is allocated its own distinct memory location, and all can be active simultaneously.
+• In a union, all members share the exact same storage location in memory.
+• The size of a structure is the sum of its members, while a union's size is only as large as its largest member.
+• Only one member of a union can be used at a time, as assigning a value to one member overwrites the others."
+Explain the fundamental differences between a Compiler and an Interpreter.,"A: 
+
+• A compiler translates the entire source code into machine code at once before execution, creating an executable file.
+• An interpreter translates and executes the program line-by-line during runtime without creating a standalone file.
+• Compiled programs generally run faster because the translation is finished before the program starts.
+• Interpreters are often preferred for debugging as they stop and report errors immediately upon encountering them."
+Define a 'Function' and list the benefits of using them in a program.,"A: 
+
+• A function is a self-contained block of code designed to perform a specific, well-defined task.
+• They facilitate reusability, allowing a single block of code to be called multiple times throughout a program.
+• They help in modularity by breaking down a large, complex program into smaller, manageable units.
+• Functions make debugging easier by isolating specific logic into independent segments with unique names."
+What are the four categories of User-Defined Functions based on arguments and return values?,"A: 
+
+• Functions with no arguments and no return value: They operate independently without receiving or sending data.
+• Functions with arguments and no return value: They receive data from the caller but do not send a result back.
+• Functions with no arguments and a return value: They do not receive data but send a result back to the caller.
+• Functions with arguments and a return value: They both receive data for processing and return a calculated result."
+Explain the concept of 'Call by Reference' in C.,"A: 
+
+• It involves passing the actual memory addresses of variables (using pointers) to a function instead of their values.
+• Because the function has the addresses, any changes made to the parameters inside the function affect the original variables.
+• This technique is commonly used to 'return' multiple values from a function or to swap variable contents.
+• It is more memory-efficient for large data structures as it avoids creating a copy of the data."
+Describe the types and characteristics of Primary Memory.,"A: 
+
+• Primary memory (Main Memory) communicates directly with the CPU and holds data being actively processed.
+• RAM (Random Access Memory) is volatile, meaning all stored data is lost when the power is turned off.
+• ROM (Read-Only Memory) is non-volatile and stores permanent instructions needed for booting the computer.
+• Primary memory is faster and more expensive than secondary storage, but has a much more limited capacity."
+Contrast SRAM and DRAM.,"A: 
+
+• SRAM (Static RAM) uses flip-flops to store data and does not require periodic refreshing to maintain information.
+• DRAM (Dynamic RAM) uses capacitors and transistors and must be continuously refreshed to retain data.
+• SRAM is significantly faster and more expensive, often used for cache memory.
+• DRAM is slower and cheaper, making it the standard choice for the main system memory in computers."
+"What are the differences between PROM, EPROM, and EEPROM?","A: 
+
+• PROM (Programmable ROM) is an empty chip that can be written to only once by a user.
+• EPROM (Erasable Programmable ROM) can be erased by exposing the chip to high-intensity ultraviolet light.
+• EEPROM (Electrically Erasable Programmable ROM) can be erased and reprogrammed using electrical signals.
+• While PROM is permanent once written, EEPROM offers the most flexibility for updates without removing the chip."
+Explain the functions of an Operating System (OS).,"A: 
+
+• Process Management: Coordinates the execution of programs and allocates CPU time to various tasks.
+• Memory Management: Tracks memory usage and dynamically allocates space to applications as needed.
+• File Management: Organises how data is stored, retrieved, and named on storage devices.
+• Device Management: Controls and communicates with hardware peripherals like printers, mice, and keyboards."
+"What is an 'Array' in C, and what are its core properties?","A: 
+
+• An array is a finite, ordered collection of homogeneous data items sharing a common name.
+• All elements must be of the same data type (e.g., all integers or all characters).
+• Array elements are stored in contiguous memory locations, allowing for efficient sequential access.
+• Indexing in C always starts at 0 and ends at $ size - 1 $, and the total size is static once declared."
+"Describe the features of Magnetic Input Devices, such as MICR.","A: 
+
+• They use specialised magnetic ink containing iron oxide to print characters on documents.
+• Documents pass through a reader where characters are magnetised and read by a magnetic head.
+• The technology is highly secure and difficult to tamper with, making it ideal for the banking industry.
+• It allows for the rapid and efficient processing of massive volumes of financial documents like cheques."
+Explain how Optical Input Devices (OCR and OMR) function.,"A: 
+
+• They use light beams and sensors to detect marks, shapes, or text on a physical surface.
+• OMR (Optical Mark Reader) detects marks in specific positions, such as bubbles on exam answer sheets.
+• OCR (Optical Character Reader) recognises printed or handwritten text characters to digitise documents.
+• These devices improve speed and accuracy by automating the entry of data into computer systems."
+Define 'Algorithm' and list its essential properties.,"A: 
+
+• An algorithm is a step-by-step logical procedure used to solve a specific problem in a finite amount of time.
+• It must be 'definite', meaning every step is precise, clear, and unambiguous.
+• It must be 'effective', ensuring that all operations are basic enough to be performed exactly.
+• It must be 'general', capable of handling all instances of the problem for which it was designed."
+"What is a 'Flowchart', and how does it represent logic?","A: 
+
+• It is a diagrammatic representation that visually illustrates the sequence of operations in a process.
+• It uses standard geometric shapes, such as ovals for start/stop and diamonds for decision points.
+• Interconnecting arrows are used to show the direction of the logical flow between steps.
+• It serves as a universal tool for programmers to plan and communicate the logic of a program before coding."
+Describe the characteristics of First-Generation computers.,"A: 
+
+• They used Vacuum Tubes as the primary internal component, which were bulky and unreliable.
+• They consumed massive amounts of electricity and generated significant heat during operation.
+• Machine Language was the primary programming method, making them very difficult to program.
+• Examples include ENIAC and UNIVAC-1, which occupied entire rooms due to their size."
+Describe the improvements made in Second-Generation computers.,"A: 
+
+• Vacuum tubes were replaced by Transistors, which were smaller, faster, and more reliable.
+• They consumed less power and generated significantly less heat than first-generation systems.
+• Assembly Language was introduced, making programming more accessible than machine code.
+• Magnetic cores were used for primary memory, improving data storage and retrieval speeds."
+What were the defining features of Third-Generation computers?,"A: 
+
+• They utilised Integrated Circuits (ICs), which allowed thousands of transistors to be placed on a single silicon chip.
+• They were much smaller, cheaper, and more reliable than previous generations.
+• High-level languages like COBOL and FORTRAN became standard for development.
+• They introduced the use of keyboards and monitors for input and output, replacing punched cards."
+Explain the use of 'Format Codes' in C input and output functions.,"A: 
+
+• Format codes are special characters beginning with $ \% $ used to tell the compiler the type of data being processed.
+• $ \%d $ is used for decimal integers, while $ \%f $ is used for floating-point values.
+• $ \%c $ is used for a single character, and $ \%s $ is used for a sequence of characters (a string).
+• These codes are essential for the $ printf() $ and $ scanf() $ functions to correctly interpret variable data."

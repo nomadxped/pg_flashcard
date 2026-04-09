@@ -1,0 +1,71 @@
+"In client-server communication, which entity initiates the request?","The client, typically a web browser running on a user's device, initiates communication."
+What is the primary role of a web server such as Apache or NGINX?,"The web server stores resources, processes incoming requests, and sends responses to the client."
+At which layer of the OSI model does the HTTP protocol operate?,HTTP is an application-layer protocol.
+What is the first step a browser takes after a user types a URL?,The browser checks the DNS to retrieve the server's IP address.
+Which transport-layer connection is opened by the browser before sending an HTTP request?,The browser opens a TCP connection to the server.
+What are the two most common HTTP methods used in requests?,The GET and POST methods are the most common.
+How does a server process a request for a dynamic web page compared to a static one?,The server runs a server-side script for dynamic pages instead of simply fetching a fixed HTML file.
+"What do HTTP status codes like $200$, $404$, and $500$ represent in a response?","They represent the status of the request, such as success, not found, or server error."
+Why is HTTP described as a 'stateless' protocol?,"Each request is treated as independent, and the server does not retain information from previous requests."
+Which default port is utilised by the HTTP protocol?,The default port for HTTP is $80$.
+Which default port is utilised by the HTTPS protocol?,The default port for HTTPS is $443$.
+How is the content updated on a static web page versus a dynamic web page?,"Static pages require manual file editing, while dynamic pages update automatically via a database."
+What is a primary benefit of using dynamic web pages regarding user experience?,Dynamic pages allow for personalised content and user-specific data display.
+Term: Client-side Scripting,Definition: Code that runs on the user's browser to improve UI and interaction.
+Term: Server-side Scripting,Definition: Code that runs on the web server to handle business logic and data.
+Why is server-side scripting considered more secure than client-side scripting?,The code is hidden from the user and remains on the server machine.
+Which type of scripting has direct access to the web server's database?,Server-side scripting can access databases.
+What is the main purpose of basic form validation in client-side scripting?,It provides immediate feedback and reduces server load by catching errors before submission.
+Why is HTML not considered a programming language?,"It lacks logic, decision-making capabilities, loops, variables, and the ability to perform calculations."
+What is the actual functional role of HTML in web development?,HTML structures web content by telling the browser what to display using tags.
+"In JavaScript, what is the relationship between an object, its properties, and its methods?",An object is a collection where properties represent data (adjectives) and methods represent actions (verbs).
+Which keyword is used inside a JavaScript method to access the properties of its parent object?,The `this` keyword is used to refer to the current object's properties.
+What distinguishes XHTML from standard HTML regarding syntax rules?,"XHTML is a stricter version that follows XML rules, requiring all tags to be properly closed and case-sensitive."
+What are two major features introduced in HTML5 for modern web support?,HTML5 introduced built-in multimedia support (audio/video) and semantic tags.
+What is the objective of cross-browser scripting?,"It ensures that web code works consistently across different browsers like Chrome, Firefox, and Safari."
+What are CSS vendor prefixes like `-webkit-` or `-moz-` used for?,They help ensure that new or browser-specific CSS features are supported correctly by different rendering engines.
+Which CSS property is used to create space outside an element's border?,The `margin` property creates space outside the element.
+Which CSS property is used to create space between an element's content and its border?,The `padding` property creates space inside the element.
+What is the core motto of the jQuery library?,"The motto is ""Write Less, Do More."""
+Which symbol is commonly used as a shorthand for the jQuery function?,The dollar sign `$` symbol is used.
+What does JSON stand for in the context of data interchange?,JSON stands for JavaScript Object Notation.
+What are the two primary structural elements used to organise data in a JSON file?,JSON uses curly braces `{ }` for objects and square brackets `[ ]` for arrays.
+How is garbage collection defined in the context of programming?,It is an automatic memory management process that frees memory by removing unused or unreachable objects.
+Which algorithm does the JavaScript engine typically use for garbage collection?,The engine typically uses the Mark-and-Sweep algorithm.
+What is the mandatory file extension for a PHP script?,The mandatory extension is `.php`.
+"In PHP, which symbol must precede all variable names?",All PHP variables must start with the dollar sign `$` symbol.
+What are the two primary statements used to output data to the browser in PHP?,The `echo` and `print` statements are used.
+What is the purpose of database connectivity in web applications?,"It acts as a bridge allowing applications to store, retrieve, update, and delete data in a database."
+Where is session data stored compared to cookie data?,"Session data is stored on the server, while cookie data is stored on the client's browser."
+Why are sessions considered more secure than cookies?,"Sessions store data on the server, making it hidden from the user, whereas cookies are stored on the user's device."
+Which HTML tag is used to create a hyperlink?,The anchor `<a>` tag is used.
+What is the purpose of a 'Bookmark' hyperlink?,It allows the user to jump to a specific location or section within the same web page.
+"In JavaScript, what is the difference between an Error and an Exception?","An error is an unintentional problem that stops execution, while an exception is an error that is caught and handled."
+What is a Regular Expression (RegExp) primarily used for?,"It is a pattern used for searching, matching, and validating strings of text."
+Which JavaScript method tests a string for a match and returns a boolean value?,The `test()` method checks for a match and returns true or false.
+Which HTML event is triggered when a user moves the mouse pointer over an element?,The `onmouseover` event is triggered.
+Which HTML event is triggered when a user submits a form?,The `onsubmit` event is triggered.
+What is the difference between the `onkeydown` and `onkeyup` events?,"The `onkeydown` event occurs when a key is pressed, while `onkeyup` occurs when the key is released."
+Which modern JavaScript method is recommended for attaching events to elements without using inline HTML?,The `addEventListener()` method is the recommended modern approach.
+What are the three main types of control structures in JavaScript?,"They are conditional (decision-making), looping (iteration), and jump (branching) structures."
+Which JavaScript loop is used specifically to iterate through the properties of an object?,The `for...in` loop is used for iterating through object properties.
+How can a cookie be deleted using JavaScript?,A cookie is deleted by re-assigning it with an expiry date set in the past.
+What is the primary purpose of using CSS with HTML?,"CSS is used to separate content from presentation, allowing control over the design and layout of web pages."
+How does HTTPS ensure data integrity during transmission?,It uses encryption to ensure that data cannot be altered by attackers while moving between the browser and server.
+What is the role of a Certificate Authority (CA) in the HTTPS process?,A CA issues and verifies the digital SSL certificates that confirm a website's identity.
+What is the 'phonebook' of the internet that translates domain names into IP addresses?,The Domain Name System (DNS) performs this translation.
+Why are domain names used instead of IP addresses for accessing websites?,"Domain names are easy for humans to remember, whereas IP addresses are long numeric strings."
+What are the three layers typically found in a 3-Tier architecture?,"The three layers are the Presentation Tier (UI), the Application Tier (Logic), and the Data Tier (Database)."
+What defines an n-Tier architecture compared to a standard 3-Tier model?,"It is an extension that divides the application into multiple layers, such as separate service and data access layers."
+What is the first step in establishing an online presence for a business?,"The first step is domain registration, which involves reserving a unique domain name."
+Which HTML tag is used to define a standard data cell within a table row?,The `<td>` (Table Data) tag is used.
+What is the difference between the `<th>` and `<td>` tags in an HTML table?,"The `<th>` tag is used for header cells (bold and centred), while `<td>` is used for standard data cells."
+Why is tableless design preferred over table-based design in modern web development?,"Tableless design uses CSS for layout, which results in faster loading, better accessibility, and easier responsive design."
+What are the three ways to embed CSS into an HTML document?,"The three ways are inline CSS, internal CSS (within a `<style>` tag), and external CSS (using a `.css` file)."
+Which CSS color mechanism allows for the control of transparency (opacity)?,"The RGBA mechanism, which includes an 'alpha' value, allows for transparency control."
+What is the Document Object Model (DOM)?,It is a programming interface that represents a web page as a tree structure of objects (nodes) that JavaScript can manipulate.
+How does the `==` operator differ from the `===` operator in JavaScript?,"The `==` operator compares values with type conversion, while `===` compares both value and data type strictly."
+What is a JavaScript array?,An array is a dynamic data structure used to store multiple values in a single variable using indexed positions.
+How can an array be declared using the constructor method in JavaScript?,It is declared using the `new Array()` syntax.
+What are entity references used for in HTML?,They are special codes (like `&lt;`) used to represent reserved characters that have special meaning in HTML.
+How are character references written in HTML?,"They are written using numeric codes, either in decimal (e.g., `&#60;`) or hexadecimal format."

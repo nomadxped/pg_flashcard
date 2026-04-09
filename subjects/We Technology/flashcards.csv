@@ -1,0 +1,60 @@
+What does the acronym WWW stand for in web technology?,World Wide Web.
+"Which system identifies web resources such as text, images, and video using URLs or URIs?",The World Wide Web (WWW).
+What is the primary web protocol used for the request and response of web resources?,Hypertext Transfer Protocol (HTTP).
+What does the acronym URL stand for?,Uniform Resource Locator.
+What does the acronym URI stand for?,Uniform Resource Identifier.
+"In web architecture, what term refers to the user side of the Web, such as a browser?",Web client.
+Name three examples of common web browsers.,"Google Chrome, Safari, and Mozilla Firefox."
+How does a user typically initiate an HTTP request using a web browser?,By typing a web address into the address bar and pressing Enter.
+A web server consists of _____ and software working together to fulfill client requests.,hardware
+Name two popular web server software packages mentioned in the material.,Apache Server and Microsoft IIS (Internet Information Server).
+What are the three major functions of a web server?,"To store, process, and deliver web pages to clients."
+"Besides Apache and IIS, name another modern web server mentioned in the text.",NGINX (or Google Web Server/IBM Domino).
+What is the definition of a 'web page'?,A document holding hypertext contents that can be displayed in a browser.
+What is the definition of a 'web site'?,A set of related web pages located under a single domain.
+Which type of web page displays the exact same content every time it is viewed?,A static web page.
+Why are static websites often described as 'hardcoded'?,The content is fixed directly within the HTML file and does not change automatically.
+Which type of web page has content that changes based on requested parameters or user input?,A dynamic web page.
+What technologies are typically used to generate content for dynamic web pages?,Server-side scripting languages and databases.
+Name two server-side scripting languages used for dynamic web pages.,PHP and ASP (or JSP).
+What is the file extension commonly used for static web pages?,.html or .htm.
+How does a server process a request for a static web page?,It retrieves the HTML file from the disk and sends it to the client without additional processing.
+"In dynamic web page processing, where does the web server pass the request for execution?",To the application server.
+What is the role of the application server during a dynamic web page request?,It executes the web application to generate an HTML document.
+What action does an application server take if it needs to retrieve information to build a dynamic page?,It sends a request to the Database Server.
+What does 'Tier Technology' refer to in web architecture?,A layered architecture where different layers perform distinct tasks.
+"In which tier technology are presentation, business, and data logic all installed on a single standalone computer?",1-tier technology.
+The Client-Server model is a primary example of _____ architecture.,2-tier
+How are units divided in a 2-tier architecture?,"Presentation and business units work as one layer, while the data unit works as another."
+List three advantages of using multi-tier architecture.,"Scalability, security, and ease of maintenance."
+Concept: Scalability in Tier Technology,Definition: The ability to handle increasing amounts of work or be enlarged to accommodate growth.
+What is the definition of a URL?,The global and unique address of a resource on the Web.
+Which layer of the OSI model does the HTTP protocol belong to?,The Application layer.
+Why is HTTP described as a 'connectionless' protocol?,The client and server disconnect immediately after the request-response cycle is completed.
+HTTP is _____ because it does not retain information about the communicating partner between different requests.,stateless
+What are the four layers of the TCP/IP protocol stack mentioned in the reference?,"Application, Transport, Networking, and Datalink/Physical."
+Which protocol is used for sending emails between servers?,SMTP (Simple Mail Transfer Protocol).
+Name two protocols used by email clients to retrieve messages from a mail server.,POP3 and IMAP.
+What is the purpose of FTP?,To transfer files between a client and a server on a computer network.
+"In the context of dynamic pages, what does the browser ultimately receive from the server?",An HTML document (the processed output of the script).
+"Which protocol provides secure, encrypted communication between a browser and a web server?",HTTPS (Hypertext Transfer Protocol Secure).
+What is the primary function of the Domain Name System (DNS)?,To translate human-readable domain names into machine-readable IP addresses.
+Which tier of technology allows for collaborative development by separating concerns across different layers?,Multi-tier (or 3-tier) architecture.
+The communication between a web client and server takes place using which specific protocol?,Hypertext Transfer Protocol (HTTP).
+What term describes a computer equipped with server software and web application files?,A web server.
+"Static pages are often referred to by the acronym WYSIWYG, which stands for _____.",What You See Is What You Get
+Which type of web page requires more logical work and complex programming to create?,Dynamic web pages.
+"In the TCP/IP stack, which layer is responsible for protocols like TCP and UDP?",The Transport layer.
+"In the OSI model, which layer is positioned directly below the Application layer?",The Presentation layer.
+Name the specific email protocol used by clients to manage their mailbox on a server without downloading all content.,IMAP (Internet Message Access Protocol).
+Which component of a dynamic website is responsible for storing persistent user data?,The database.
+What happens to the network connection after an HTTP server sends a response to a client?,The client disconnects the connection.
+How do web browsers render the received output from a server?,They process the HTML code and display it as a formatted document.
+Which technology refers to a global system of interconnected computer networks?,The Internet.
+What is the primary advantage of a 2-tier architecture over a 1-tier architecture?,It allows for centralized data management and multi-user access via a network.
+What term describes the global address used by browsers to retrieve any published resource on the Web?,URL (Uniform Resource Locator).
+Name the protocol used for 'transactional' web requests as listed in the syllabus section 1.6.,HTTP & HTTPS.
+Which layer of the TCP/IP model corresponds to the Physical and Datalink layers of the OSI model?,The Datalink and Physical layer.
+What is the common purpose of scripting languages like PHP and JSP in web development?,"To create dynamic, server-side content and interact with databases."
+A collection of related web pages is known as a _____.,website
+"In a URL, the global address must be _____ to ensure browsers find the correct resource.",unique

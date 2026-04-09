@@ -1,0 +1,85 @@
+"In computer architecture, what is the primary function of memory?",To store data and instructions for processing.
+Computer memory is divided into a large number of small parts called _____.,Cells
+What is the typical range for unique addresses in a memory unit of size $N$?,Zero to $N-1$.
+"If a computer has 64k words, how many total memory locations does it possess?",$65536$ (calculated as $64 \times 1024$).
+Primary memory is typically made of what type of material?,Semiconductors
+Why is primary memory generally described as 'volatile'?,The stored data is lost when power is disconnected.
+Which memory type is essential for a computer system to run?,Primary memory
+Where is a computer program initially stored when it is written and executed?,Primary memory
+"When a processor no longer needs specific items for a long period, where is that data automatically saved?",Secondary memory
+Term: Cell Address,"Definition: A unique identifier for each location in memory, starting from zero."
+What is the relationship between primary memory and the CPU regarding communication?,Primary memory communicates directly with the CPU.
+How does the capacity of primary memory generally compare to secondary memory?,Primary memory has limited capacity compared to secondary memory.
+How does the cost of primary memory compare to secondary memory?,It is more expensive (costlier) than secondary memory.
+What does the acronym RAM stand for?,Random Access Memory
+RAM is used to store data temporarily until the _____.,Machine stops working (or power is lost).
+What is the effect of increasing RAM on a computer system's performance?,It increases performance and the ability to multitask.
+Why is RAM considered unreliable compared to ROM?,Because it is volatile and requires electricity to preserve data.
+What does the acronym DRAM stand for?,Dynamic Random Access Memory
+A DRAM cell consists of two physical parts: a transistor and a _____.,Capacitor
+Why does a DRAM capacitor need to be continuously refreshed?,To retain the information stored in the volatile cell.
+Which RAM type can hold more data on a single chip: SRAM or DRAM?,DRAM
+What is the speed of DRAM relative to SRAM?,DRAM is slower than SRAM.
+What does the acronym SRAM stand for?,Static Random Access Memory
+"In SRAM, data remains active as long as the system has _____.",A power supply
+What is the primary usage of SRAM in a computer system?,Cache memory
+How does the power consumption of SRAM compare to DRAM?,SRAM has higher power consumption.
+Which RAM type uses flip-flops to store each bit of information?,SRAM
+Which RAM type has a simpler physical structure: SRAM or DRAM?,DRAM
+What does the acronym ROM stand for?,Read-Only Memory
+"ROM is described as 'non-volatile', which means data is not lost when _____.",The power is turned off.
+What kind of instructions are typically stored in a computer's ROM?,Instructions required to start or boot the computer.
+How does the speed of ROM compare to RAM for data access?,ROM is slower than RAM.
+What does the acronym PROM stand for?,Programmable Read-Only Memory
+How many times can a user write information onto a PROM chip?,Only once.
+What special device is used to write content onto a PROM chip?,A PROM programmer (or PROM burner).
+What does the acronym EPROM stand for?,Erasable and Programmable Read-Only Memory
+How is the stored data on an EPROM chip typically erased?,By exposure to a high charge of ultraviolet (UV) light.
+Approximately how long does it take to destroy existing data on an EPROM using UV light?,Around 40 minutes.
+What does the acronym EEPROM stand for?,Electrically Erasable and Programmable Read-Only Memory
+How is data erased and reprogrammed in an EEPROM?,Using a high voltage electrical charge.
+Which type of ROM allows data to be erased and reprogrammed electrically while remaining non-volatile?,EEPROM
+How does the CPU access data stored in secondary memory?,The data is first loaded into RAM and then sent to the processor.
+Secondary memory is also known as _____ memory.,External (or auxiliary)
+"Which type of storage media includes hard drives, USBs, and CDs?",Secondary memory
+What is the maximum storage capacity of a standard 3.5-inch floppy disk?,1.44 MB
+"Floppy disks are made of a thin, flexible _____ coating.",Magnetic
+Where is the hard disk drive typically located within a computer?,Internally on the motherboard.
+What physical component does a hard disk use to store and retrieve data?,Rigid fast-rotating disk platters.
+What does the acronym CD stand for?,Compact Disc
+What technology is used by a CD drive to read and write data?,Laser light
+What is the approximate storage capacity of a standard CD?,783 MB
+What are the three common types of Compact Discs?,"CD-ROM, CD-R, and CD-RW."
+What does the 'RW' stand for in CD-RW?,Rewritable
+What does the acronym DVD stand for?,Digital Versatile Disc (or Digital Video Display).
+In what year was the DVD developed?,1995
+What is the typical storage capacity range for a DVD?,4.7 GB to 17 GB
+Which companies developed the DVD technology?,"Sony, Panasonic, Toshiba, and Philips."
+Blu-ray Discs use laser technology to store data at a _____ density than DVDs.,Greater
+What is the storage capacity of a standard Blu-ray Disc?,28 GB
+What is the storage capacity range of a typical Pen Drive?,64 MB to 128 GB (or more).
+"Unlike HDDs, Pen Drives use an _____ chip to store data rather than moving parts.",Integrated circuit (IC)
+What does the acronym SSD stand for?,Solid State Drive
+Why are SSDs considered more durable than traditional HDDs?,They have no spinning disks and are resistant to shocks.
+How does the cost of an SSD compare to a traditional HDD?,SSDs are more expensive.
+Where is cache memory physically located in relation to the CPU and main memory?,Between the CPU and main memory.
+What is the primary purpose of cache memory?,To enhance CPU performance by reducing data access time.
+Which cache level is built directly into the CPU chip?,L1 Cache (Internal or Onboard)
+What is the typical size range of the L1 cache?,8 KB to 128 KB
+The L2 cache is built into a separate chip on the _____.,Motherboard
+Which cache level has the slowest speed but the largest size (up to 8 MB)?,L3 Cache
+What is the smallest and fastest type of memory in a computer?,Register memory
+Register memory is located directly within the _____.,CPU
+What are the common sizes for register memory bits?,"16, 32, and 64 bits."
+How does NAND flash memory compare to NOR flash in terms of density?,NAND flash has higher density (stores more data in less space).
+Which type of NAND flash stores exactly one bit of data per cell?,Single-Level Cell (SLC)
+Which NAND flash type offers the lowest cost per bit but the lowest endurance?,Triple-Level Cell (TLC)
+Multi-Level Cell (MLC) NAND flash stores _____ bits of data per cell.,Two
+Which NAND flash type is mainly used for low-cost applications where data retention is not critical?,Quad-Level Cell (QLC)
+"In the memory hierarchy pyramid, which memory type has the fastest access but the highest cost?",Registers
+"In the memory hierarchy pyramid, as you move from top to bottom, storage capacity _____.",Increases
+Approximately how many CPU cycles are required to access Main Memory?,$\\sim 100$ cycles
+Approximately how many CPU cycles are required to access Register memory?,1 cycle
+"Remote secondary storage (e.g., the Internet) sits at the very _____ of the memory hierarchy.",Bottom
+"Which memory classification includes RAM, ROM, Registers, and Cache?",Primary Memory
+"Which memory classification is used for permanent, long-term storage of large data collections?",Secondary Memory
