@@ -1,4 +1,13 @@
 {
+  "C Programming": [
+    "C short theory.csv",
+    "C theory.csv",
+    "Memory.csv",
+    "computer intro.csv",
+    "computer.csv",
+    "inout.csv",
+    "software.csv"
+  ],
   "Data Communication": [
     "application.csv",
     "data.csv",
@@ -22,5 +31,11 @@
     "register.csv",
     "rtl.csv",
     "shift.csv"
+  ],
+  "Web": [
+    "flashcards.csv",
+    "tech.csv",
+    "theory points.csv",
+    "web.csv"
   ]
 }
